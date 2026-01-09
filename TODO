@@ -1,0 +1,10 @@
+1. Replicate CheapTalk as close as possible.
+2. Templating system
+  - Add tools incrementally
+3. Fake Restaurant Names + Facts
+  - Keep correct format.
+4. Gathering statistics
+  - Parse JSON
+  - Data analysis
+
+n. Linear Probe
