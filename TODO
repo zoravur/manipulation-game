@@ -1,4 +1,8 @@
 1. Replicate CheapTalk as close as possible.
+[] Copy cheap talk prompt into template.
+[] Set up model API access keys.
+[] Tool calling structures.
+
 2. Templating system
   - Add tools incrementally
 3. Fake Restaurant Names + Facts
