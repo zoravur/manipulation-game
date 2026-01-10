@@ -3,5 +3,7 @@
     "num_public_facts": 0,
     "restaurants": ["Coco","Luau"],
     "a_scheming": false,
+    "a_commission_restaurant": "Coco",
+    "a_commission_percentage": 10,
     "b_num_hunches": 0
 }

@@ -23,7 +23,9 @@ def a_vars(game: Game, restaurant_facts: RestaurantFacts) -> dict:
         "scheming": game.a_scheming,
         "restaurants": [
             {
-                "name": r, "facts": restaurant_facts[r]
+                "name": r,
+                "facts": restaurant_facts[r],
+                "commission": (game.a_commission_percentage if game.a_commission_restaurant == r else 0),
             } for r in game.restaurants
         ]
     }
