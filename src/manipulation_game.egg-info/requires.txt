@@ -1,0 +1,6 @@
+openai>=1.40.0
+python-dotenv>=1.0.1
+sympy>=1.13.0
+
+[dev]
+pytest>=7.4.0

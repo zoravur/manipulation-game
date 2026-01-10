@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-import openrouter_sample as ors
+from manipulation_game import sample as ors
 
 
 def test_compute_request_hash_stable():

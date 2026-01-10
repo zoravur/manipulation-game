@@ -1,4 +1,4 @@
-from log_viewer import format_event
+from manipulation_game.log_viewer import format_event
 
 
 def test_format_request_event():

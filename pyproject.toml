@@ -13,3 +13,18 @@ dependencies = [
 dev = [
   "pytest>=7.4.0",
 ]
+
+[tool.pytest.ini_options]
+markers = [
+  "integration: hits the OpenRouter API (network required)",
+]
+
+[build-system]
+requires = ["setuptools>=69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]

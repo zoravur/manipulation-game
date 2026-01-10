@@ -2,7 +2,7 @@
 Code repository for Apart Research's AI Manipulation Hackathon.
 
 ## OpenRouter sample
-`openrouter_sample.py` demonstrates:
+`src/manipulation_game/sample.py` demonstrates:
 - OpenRouter OpenAI-compatible calls (GPT/Claude/Gemini)
 - Tool calling with a SymPy verification tool
 - Per-run JSONL logging in `logs/openrouter_run_*.jsonl`
@@ -13,10 +13,10 @@ Code repository for Apart Research's AI Manipulation Hackathon.
 2) Install deps: `uv sync`
 
 ### Run
-- `uv run python openrouter_sample.py`
+- `uv run python scripts/run_sample.py`
 
 ### View logs
-- `uv run python log_viewer.py logs/openrouter_run_YYYYMMDDTHHMMSSZ.jsonl`
+- `uv run python scripts/log_viewer.py logs/openrouter_run_YYYYMMDDTHHMMSSZ.jsonl`
 
 ### Tests
 Install dev deps:
