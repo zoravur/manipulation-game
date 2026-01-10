@@ -62,6 +62,7 @@ def extend_conversation_with_tools(
     tools: list[dict],
     tool_choice: Union[str, dict] = "auto",
     n_tools_loop: int = 3,
+    persona: Optional[str] = None,
 ) -> str:
     """May raise ExitWithRestaurantDecision."""
     
@@ -77,6 +78,7 @@ def extend_conversation_with_tools(
         {
             "type": "request",
             "timestamp": datetime_now_iso(),
+            "persona": persona,
             "run_id": RUN_ID,
             "request_hash": compute_request_hash(messages, params, REQUEST_SEED),
             "model": model,
@@ -94,6 +96,7 @@ def extend_conversation_with_tools(
                 {
                     "type": "cache_hit",
                     "timestamp": datetime_now_iso(),
+                    "persona": persona,
                     "run_id": RUN_ID,
                     "request_hash": request_hash,
                     "model": model,
@@ -117,6 +120,7 @@ def extend_conversation_with_tools(
                     {
                         "type": "tool_result",
                         "timestamp": datetime_now_iso(),
+                        "persona": persona,
                         "run_id": RUN_ID,
                         "model": model,
                         "tool_call_id": call["id"],
@@ -151,6 +155,7 @@ def extend_conversation_with_tools(
             {
                 "type": "response",
                 "timestamp": datetime_now_iso(),
+                "persona": persona,
                 "run_id": RUN_ID,
                 "request_hash": request_hash,
                 "model": model,
@@ -185,6 +190,7 @@ def extend_conversation_with_tools(
                 {
                     "type": "tool_result",
                     "timestamp": datetime_now_iso(),
+                    "persona": persona,
                     "run_id": RUN_ID,
                     "model": model,
                     "tool_call_id": call["id"],

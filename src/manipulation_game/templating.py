@@ -1,7 +1,7 @@
 import random
 from typing import Literal
 from pydantic import BaseModel
-from jinja2 import Environment, PackageLoader, select_autoescape
+from jinja2 import Environment, PackageLoader
 
 from .game import Game
 # import game

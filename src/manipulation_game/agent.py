@@ -56,6 +56,7 @@ class Agent:
             messages=self.messages,
             tools=tools,
             tool_choice="none" if len(tools) == 0 else "auto",
+            persona=self.player,
         )
         self._add_assistant_message(response)
         return response
