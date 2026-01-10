@@ -49,6 +49,21 @@ def chat_with_tools(
         {"role": "user", "content": prompt},
     ]
 
+    return extend_conversation_with_tools(
+        model=model,
+        messages=messages,
+        tools=tools,
+        tool_choice=tool_choice,
+    )
+
+def extend_conversation_with_tools(
+    model: str,
+    messages: list[dict],
+    tools: list[dict],
+    tool_choice: Union[str, dict] = "auto",
+) -> str:
+    
+
     current_tool_choice = tool_choice
     params = {
         "model": model,
@@ -63,7 +78,7 @@ def chat_with_tools(
             "run_id": RUN_ID,
             "request_hash": compute_request_hash(messages, params, REQUEST_SEED),
             "model": model,
-            "prompt": prompt,
+            "messages": messages,
             "tool_choice": current_tool_choice,
             "tools": [tool["function"]["name"] for tool in tools],
         }
