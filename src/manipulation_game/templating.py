@@ -8,7 +8,7 @@ from .game import Game
 
 RestaurantFacts = dict[str, list[str]]
 
-RealisticRestaurantJSONs = dict[str, dict]
+RestaurantJSONs = dict[str, dict]
 
 class TemplateResult(BaseModel):
     sys: str
@@ -38,42 +38,37 @@ def all_facts(facts: RestaurantFacts, restaurant: str) -> list[str]:
 #         } for r in restaurants
 #     ]
 
-def restaurant_data_to_list(data: RestaurantFacts | RealisticRestaurantJSONs, restaurants: list[str], commission_amount: int, commission_restaurant: str):
+def restaurant_data_to_list(data: RestaurantFacts | RestaurantJSONs, restaurants: list[str], commission_amount: int, commission_restaurant: str):
     return [
         {
             "name": r,
             "data": data[r],
-            "commission": (commission_amount if commission_restaurant == r else 0),
+            "commission": commission_amount if data[r]["quality"] == "bad" else 0,
         } for r in restaurants
     ]
 
 def a_vars(game: Game, 
-           restaurant_facts: RestaurantFacts, 
-           realistic_restauraunt_json: RealisticRestaurantJSONs) -> dict:
-    
-    realistic = realistic_restauraunt_json is not None # toggle flag here if needed
+           restauraunt_json: RestaurantJSONs) -> dict:
 
     return {
         "scheming": game.a_scheming,
         "restaurants": restaurant_data_to_list(
-            data=realistic_restauraunt_json if realistic else restaurant_facts, 
-            restaurants=[k for k in realistic_restauraunt_json], 
+            data=restauraunt_json,
+            restaurants=[k for k in restauraunt_json], 
             commission_amount=game.a_commission_percentage,
             commission_restaurant=game.a_commission_restaurant,
         )
     }
 
 def b_vars(game: Game, 
-           restaurant_facts: RestaurantFacts,
-           realistic_restauraunt_json: RealisticRestaurantJSONs) -> dict:
+           restauraunt_json: RestaurantJSONs) -> dict:
     return {
     }
 
 def template(
     player: Literal["A", "B"],
     game: Game,
-    restaurant_facts: RestaurantFacts,
-    realistic_restaurant_json: RealisticRestaurantJSONs = {}
+    restaurant_json: RestaurantJSONs = {}
 ) -> TemplateResult:
     env = Environment(
         loader=PackageLoader("manipulation_game.templating"),
@@ -82,10 +77,10 @@ def template(
     match player:
         case "A":
             sys_template = env.get_template(game.templateA_path or f"sys_templateA.jinja")
-            vars = a_vars(game, restaurant_facts, realistic_restaurant_json)
+            vars = a_vars(game, restaurant_json)
         case "B":
             sys_template = env.get_template(game.templateB_path or f"sys_templateB.jinja")
-            vars = b_vars(game, restaurant_facts, realistic_restaurant_json)
+            vars = b_vars(game,  restaurant_json)
         case _:
             raise ValueError(f"Unknown player: {player}")
     sys_rendered = sys_template.render(**vars)
@@ -108,6 +103,6 @@ if __name__ == "__main__":
 
     print(f"{d=}")
 
-    print(template("A", g, facts, d).sys)
+    print(template("A", g, d).sys)
 
     

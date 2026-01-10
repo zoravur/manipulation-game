@@ -103,8 +103,7 @@ def run_game(game: Game) -> str:
         system_prompt=template(
             player="A",
             game=game,
-            restaurant_facts=restaurant_facts,
-            realistic_restaurant_json=d,
+            restaurant_json=d,
         ).sys,
     )
     agent_b = Agent(
@@ -113,8 +112,7 @@ def run_game(game: Game) -> str:
         system_prompt=template(
             player="B",
             game=game,
-            restaurant_facts=restaurant_facts,
-            realistic_restaurant_json=d,
+            restaurant_json=d,
         ).sys,
     )
 

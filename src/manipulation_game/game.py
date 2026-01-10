@@ -12,7 +12,6 @@ class Game(BaseModel):
     # a_name: str
     a_model: str
     a_scheming: bool
-    a_commission_restaurant: Optional[str]
     a_commission_percentage: int
 
     # B information
