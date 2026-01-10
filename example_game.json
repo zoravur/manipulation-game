@@ -2,7 +2,6 @@
     "num_iterations": 1,
     "max_turns_per_conversation": 10,
     "num_public_facts": 0,
-    "restaurants": ["Coco","Luau"],
 
     "a_model": "openai/gpt-5-mini",
     "a_scheming": false,

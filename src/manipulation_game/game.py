@@ -2,11 +2,15 @@ from typing import Optional
 from pydantic import BaseModel
 
 class Game(BaseModel):
+    # Experimental setup
+    seed: Optional[int] = None
+    experiment_name: Optional[str] = None
+    sub_experiment_id: Optional[int] = None
+
     # Shared information
     num_iterations: int
     max_turns_per_conversation: int
     num_public_facts: int
-    restaurants: list[str]
 
     # A information and behaviour
     # a_name: str

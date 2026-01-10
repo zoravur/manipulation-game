@@ -1,0 +1,12 @@
+{
+    "experiment_name": "figure3",
+    "initial_seed": 1234,
+    "num_trials": 2,
+    "city": ["honolulu"],
+    "a_scheming": [false, true],
+    "model_pairs": [
+        ["openai/gpt-5-mini","openai/gpt-5-mini"]
+    ],
+    "judge_model": "openai/gpt-5-mini",
+    "measure": ["scheming","success"]
+}
