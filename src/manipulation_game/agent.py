@@ -16,6 +16,7 @@ from pathlib import Path
 class GameResults(BaseModel):
     recommended_restaurant: str
     chosen_restaurant: str
+    transcript: list[dict]
 
 
 B_TOOLS = [
@@ -77,28 +78,28 @@ def run_agents(
     agent_a: Agent,
     agent_b: Agent,
     max_turns: int,
-) -> str:
+) -> tuple[str, list[dict]]:
+    logical_transcript = []
     try:
         a_message = None
         for turn in range(max_turns):
             print(f"--- Turn {turn + 1} ---")
             print("Agent B's turn:")
             b_message = agent_b.add_user_message_and_respond(a_message)
+            logical_transcript.append({"player": "B", "message": b_message})
             print(b_message)
             print("\nAgent A's turn:")
             a_message = agent_a.add_user_message_and_respond(b_message)
+            logical_transcript.append({"player": "A", "message": a_message})
             print(a_message)
             print()
-        return ""   # no restaurant decision within the given turns
+        return "" , logical_transcript  # no restaurant decision within the given turns
     except ExitWithRestaurantDecision as e:
         print(f"Conversation ended with restaurant decision: {e.decision}")
-        return e.decision
+        return e.decision, logical_transcript
     
 
 def run_game(game: Game) -> GameResults:
-    with open("restaurant_facts.json") as f:
-        restaurant_facts = json.load(f)
-
     d = load_all_restaurant_jsons(game)
 
     agent_a = Agent(
@@ -120,7 +121,7 @@ def run_game(game: Game) -> GameResults:
         ).sys,
     )
 
-    chosen_restaurant = run_agents(
+    chosen_restaurant, logical_transcript = run_agents(
         agent_a=agent_a,
         agent_b=agent_b,
         max_turns=game.max_turns_per_conversation,
@@ -134,6 +135,7 @@ def run_game(game: Game) -> GameResults:
     return GameResults(
         recommended_restaurant=recommended_restaurant,
         chosen_restaurant=chosen_restaurant,
+        transcript=logical_transcript,
     )
 
 if __name__ == "__main__":
