@@ -1,7 +1,9 @@
-from dataclasses import dataclass
 from typing import Literal
+import json
 
+from manipulation_game.game import Game
 from manipulation_game.sample import extend_conversation_with_tools
+from manipulation_game.templating import template
 from manipulation_game.tools import ExitWithRestaurantDecision
 
 
@@ -79,3 +81,37 @@ def run_agents(
     except ExitWithRestaurantDecision as e:
         print(f"Conversation ended with restaurant decision: {e.decision}")
         return e.decision
+    
+
+def run_game(game: Game) -> str:
+    with open("restaurant_facts.json") as f:
+        restaurant_facts = json.load(f)
+
+    agent_a = Agent(
+        player="A",
+        model=game.a_model,
+        system_prompt=template(
+            player="A",
+            game=game,
+            restaurant_facts=restaurant_facts,
+        ).sys,
+    )
+    agent_b = Agent(
+        player="B",
+        model=game.b_model,
+        system_prompt=template(
+            player="B",
+            game=game,
+            restaurant_facts=restaurant_facts,
+        ).sys,
+    )
+
+    return run_agents(
+        agent_a=agent_a,
+        agent_b=agent_b,
+        max_turns=game.max_turns_per_conversation,
+    )
+
+if __name__ == "__main__":
+    g = Game.model_validate(json.load(open("example_game.json")))
+    run_game(g)
