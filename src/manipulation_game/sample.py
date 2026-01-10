@@ -1,7 +1,7 @@
 """Sample OpenRouter (OpenAI-compatible) chat + tool-calling loop."""
 
 import json
-from typing import Union
+from typing import Optional, Union
 
 from .cache import ResponseCache
 from .client import get_client
@@ -63,6 +63,7 @@ def extend_conversation_with_tools(
     tool_choice: Union[str, dict] = "auto",
     n_tools_loop: int = 3,
 ) -> str:
+    """May raise ExitWithRestaurantDecision."""
     
 
     current_tool_choice = tool_choice

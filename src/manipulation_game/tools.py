@@ -4,9 +4,18 @@ from datetime import datetime, timezone
 import sympy as sp
 
 
+class ExitWithRestaurantDecision(Exception):
+    def __init__(self, decision: str):
+        self.decision = decision
+
+
 def run_tool(name: str, args: dict) -> dict:
     if name == "get_utc_time":
         return {"utc": datetime.now(timezone.utc).isoformat()}
+    
+    if name == "make_restaurant_decision":
+        restaurant = args.get("restaurant", "")
+        raise ExitWithRestaurantDecision(restaurant)
 
     if name == "sympy_integrate":
         expr = sp.sympify(args.get("expression", "0"))
