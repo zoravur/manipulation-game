@@ -1,5 +1,5 @@
 {
-    "experiment_name": "figure3",
+    "experiment_name": "example",
     "initial_seed": 1234,
     "num_trials": 2,
     "city": ["honolulu"],

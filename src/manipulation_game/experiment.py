@@ -46,16 +46,16 @@ def experiment_games(exp: Experiment) -> list[Game]:
                         b_num_hunches=0,
                         judge_model=exp.judge_model,
                         realistic_city=city,
-                        realistic_dir="data/realistic_info",
-                        templateA_path="templates/agent_a_template.jinja",
-                        templateB_path="templates/agent_b_template.jinja",
+                        realistic_dir="scripts/restaurants",
+                        templateA_path="realistic/sys_templateA.jinja",
+                        templateB_path="realistic/sys_templateB.jinja",
                     ))
                     sub_id += 1
     return games
 
 def run_experiment(exp: Experiment):
     timestamp = datetime.now().isoformat()
-    results_path = Path(__file__).parent / "results" / exp.experiment_name
+    results_path = Path(__file__).parent.parent.parent / "results" / exp.experiment_name
     os.makedirs(results_path, exist_ok=True)
     for game in experiment_games(exp):
         sub_experiment_path = results_path / f"seed_{game.seed}_subexperiment_{game.sub_experiment_id}.json"
@@ -74,6 +74,6 @@ def run_experiment(exp: Experiment):
         sub_experiment_path.write_text(experiment_result.model_dump_json(indent=2))
 
 if __name__ == "__main__":
-    path = Path(__file__).parent / "experiment_example.json"
+    path = Path(__file__).parent.parent.parent / "experiment_example.json"
     exp_data = Experiment.model_validate_json(path.read_text())
     run_experiment(exp_data)

@@ -2,6 +2,8 @@ import random
 from typing import Literal
 from pydantic import BaseModel
 from jinja2 import Environment, PackageLoader
+import json
+from pathlib import Path
 
 from .game import Game
 # import game
@@ -38,7 +40,7 @@ def all_facts(facts: RestaurantFacts, restaurant: str) -> list[str]:
 #         } for r in restaurants
 #     ]
 
-def restaurant_data_to_list(data: RestaurantFacts | RestaurantJSONs, restaurants: list[str], commission_amount: int, commission_restaurant: str):
+def restaurant_data_to_list(data: RestaurantFacts | RestaurantJSONs, restaurants: list[str], commission_amount: int):
     return [
         {
             "name": r,
@@ -48,20 +50,19 @@ def restaurant_data_to_list(data: RestaurantFacts | RestaurantJSONs, restaurants
     ]
 
 def a_vars(game: Game, 
-           restauraunt_json: RestaurantJSONs) -> dict:
+           restaurant_json: RestaurantJSONs) -> dict:
 
     return {
         "scheming": game.a_scheming,
         "restaurants": restaurant_data_to_list(
-            data=restauraunt_json,
-            restaurants=[k for k in restauraunt_json], 
+            data=restaurant_json,
+            restaurants=[k for k in restaurant_json], 
             commission_amount=game.a_commission_percentage,
-            commission_restaurant=game.a_commission_restaurant,
         )
     }
 
 def b_vars(game: Game, 
-           restauraunt_json: RestaurantJSONs) -> dict:
+           restaurant_json: RestaurantJSONs) -> dict:
     return {
     }
 
@@ -89,18 +90,19 @@ def template(
         user="",
     )
 
-if __name__ == "__main__":
-    import json
-    from pathlib import Path
-    g = Game.model_validate(json.load(open("example_game.json")))
-    facts=json.load(open("restaurant_facts.json"))
-
+def load_all_restaurant_jsons(g: Game) -> RestaurantJSONs:
     d = {}
     for p in Path(g.realistic_dir, g.realistic_city).glob("*"):
         with open(p) as f:
             restaurant_json = json.load(f)
-            d[restaurant_json["name"]] = restaurant_json
+        d[restaurant_json["name"]] = restaurant_json
+    return d
 
+if __name__ == "__main__":
+    g = Game.model_validate(json.load(open("example_game.json")))
+    facts=json.load(open("restaurant_facts.json"))
+
+    d = load_all_restaurant_jsons(g)
     print(f"{d=}")
 
     print(template("A", g, d).sys)

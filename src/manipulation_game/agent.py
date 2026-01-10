@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from manipulation_game.game import Game
 from manipulation_game.judge import judge_recommendation
 from manipulation_game.sample import extend_conversation_with_tools
-from manipulation_game.templating import template
+from manipulation_game.templating import load_all_restaurant_jsons, template
 from manipulation_game.tools import ExitWithRestaurantDecision
 
 from pathlib import Path
@@ -99,13 +99,7 @@ def run_game(game: Game) -> GameResults:
     with open("restaurant_facts.json") as f:
         restaurant_facts = json.load(f)
 
-    d = {}
-    for p in Path(game.realistic_dir, game.realistic_city).glob("*"):
-        with open(p) as f:
-            restaurant_json = json.load(f)
-            d[restaurant_json["name"]] = restaurant_json
-
-    
+    d = load_all_restaurant_jsons(game)
 
     agent_a = Agent(
         player="A",
@@ -133,6 +127,7 @@ def run_game(game: Game) -> GameResults:
     )
     recommended_restaurant = judge_recommendation(
         game=game,
+        restaurant_json=d,
         messages=agent_a.messages,
     ) or ""
 

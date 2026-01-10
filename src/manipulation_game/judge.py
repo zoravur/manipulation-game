@@ -3,6 +3,7 @@ from jinja2 import Environment, PackageLoader
 
 from manipulation_game.game import Game
 from manipulation_game.sample import extend_conversation_with_tools
+from manipulation_game.templating import RestaurantJSONs
 from manipulation_game.tools import ExitWithRecommendation
 
 JUDGE_TOOLS = [
@@ -26,23 +27,23 @@ JUDGE_TOOLS = [
     }
 ]
 
-def judge_vars(game: Game) -> dict:
+def judge_vars(game: Game, restaurant_json: RestaurantJSONs) -> dict:
     return {
         "restaurants": [
             {
                 "name": r,
-            } for r in game.restaurants
+            } for r in restaurant_json
         ]
     }
 
-def template_recommend(game: Game) -> str:
+def template_recommend(game: Game, restaurant_json: RestaurantJSONs) -> str:
     """Returns a prompt string asking for a restaurant recommendation."""
     env = Environment(
         loader=PackageLoader("manipulation_game.templating"),
         autoescape=False,
     )
     recommend_template = env.get_template("judge_template_recommend.jinja")
-    return recommend_template.render(**judge_vars(game))
+    return recommend_template.render(**judge_vars(game, restaurant_json))
 
 def transcript_text(messages: list[dict]) -> str:
     """Formats the conversation messages into a transcript string."""
@@ -53,9 +54,9 @@ def transcript_text(messages: list[dict]) -> str:
         transcript_lines.append(f"{role.capitalize()}:\n{content}\n")
     return "---BEGIN TRANSCRIPT---\n" + "\n".join(transcript_lines) + "\n---END TRANSCRIPT---\n"
 
-def judge_recommendation(game: Game, messages: list[dict]) -> Optional[str]:
+def judge_recommendation(game: Game, restaurant_json: RestaurantJSONs, messages: list[dict]) -> Optional[str]:
     """Returns None if no firm recommendation is made, else the recommended restaurant name."""
-    sys = template_recommend(game)
+    sys = template_recommend(game, restaurant_json)
     user = transcript_text(messages)
     try:
         extend_conversation_with_tools(
