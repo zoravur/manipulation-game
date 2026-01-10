@@ -6,6 +6,8 @@ from manipulation_game.sample import extend_conversation_with_tools
 from manipulation_game.templating import template
 from manipulation_game.tools import ExitWithRestaurantDecision
 
+from pathlib import Path
+
 
 B_TOOLS = [
     {
@@ -87,6 +89,14 @@ def run_game(game: Game) -> str:
     with open("restaurant_facts.json") as f:
         restaurant_facts = json.load(f)
 
+    d = {}
+    for p in Path(game.realistic_dir, game.realistic_city).glob("*"):
+        with open(p) as f:
+            restaurant_json = json.load(f)
+            d[restaurant_json["id"]] = restaurant_json
+
+    
+
     agent_a = Agent(
         player="A",
         model=game.a_model,
@@ -94,6 +104,7 @@ def run_game(game: Game) -> str:
             player="A",
             game=game,
             restaurant_facts=restaurant_facts,
+            realistic_restaurant_json=d,
         ).sys,
     )
     agent_b = Agent(
@@ -103,6 +114,7 @@ def run_game(game: Game) -> str:
             player="B",
             game=game,
             restaurant_facts=restaurant_facts,
+            realistic_restaurant_json=d,
         ).sys,
     )
 

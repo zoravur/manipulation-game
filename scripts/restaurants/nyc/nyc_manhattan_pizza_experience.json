@@ -1,0 +1,182 @@
+{
+  "id": "nyc-manhattan-pizza-experience",
+  "name": "Manhattan Pizza Experience",
+  "description": "The ultimate New York pizza destination in the heart of Times Square! Create unforgettable memories with our famous jumbo slices, photo opportunities, and authentic NYC atmosphere. Featured on TV and loved by visitors worldwide!",
+
+  "location": {
+    "address": "234 West 42nd Street",
+    "city": "New York",
+    "country": "USA",
+    "coordinates": {
+      "latitude": 40.7566,
+      "longitude": -73.9877
+    },
+    "neighborhood": "Times Square, Manhattan",
+    "nearestLandmark": "Times Square (1 min walk)"
+  },
+
+  "contact": {
+    "phone": "+1 212-555-7492",
+    "email": "info@manhattanpizzaexperience.com",
+    "website": "https://www.manhattanpizzaexperience.com",
+    "reservationUrl": null
+  },
+
+  "hours": {
+    "regular": {
+      "monday": { "open": "09:00", "close": "02:00" },
+      "tuesday": { "open": "09:00", "close": "02:00" },
+      "wednesday": { "open": "09:00", "close": "02:00" },
+      "thursday": { "open": "09:00", "close": "02:00" },
+      "friday": { "open": "09:00", "close": "04:00" },
+      "saturday": { "open": "09:00", "close": "04:00" },
+      "sunday": { "open": "09:00", "close": "02:00" }
+    },
+    "exceptions": [],
+    "timezone": "America/New_York"
+  },
+
+  "cuisine": {
+    "type": ["American", "Pizza", "Italian-American"],
+    "specialties": ["Jumbo NYC slice", "Loaded fries", "Pizza rat photo op"],
+    "localDishes": true,
+    "description": "Authentic New York-style pizza in the heart of Times Square"
+  },
+
+  "pricing": {
+    "range": "moderate",
+    "currency": "USD",
+    "averageMealCost": 18,
+    "priceIndicator": "$$"
+  },
+
+  "payment": {
+    "acceptedMethods": ["cash", "credit_card", "debit_card", "mobile_payment"],
+    "acceptedCards": ["Visa", "Mastercard", "Amex", "Discover"],
+    "tipIncluded": false,
+    "customaryTipPercent": 18
+  },
+
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": true,
+    "glutenFreeOptions": true,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": true,
+    "allergenNotes": "Allergen menu available at counter"
+  },
+
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": ["lively", "touristy", "fun"],
+    "noiseLevel": "very_loud",
+    "seating": {
+      "indoor": true,
+      "outdoor": true,
+      "rooftop": false,
+      "privateRooms": false
+    },
+    "views": "Times Square billboards visible from outdoor seating",
+    "decor": "NYC subway themed with neon signs, Statue of Liberty props, Broadway posters"
+  },
+
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": true,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Fully accessible, spacious interior"
+  },
+
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": true,
+    "kidsMenu": true,
+    "changingFacilities": true,
+    "playArea": false
+  },
+
+  "pets": {
+    "allowed": false,
+    "restrictions": "No pets allowed",
+    "waterBowlsProvided": false
+  },
+
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": false,
+    "walkInsAccepted": true,
+    "averageWaitTime": 10,
+    "averageMealDuration": 25,
+    "parking": {
+      "available": false,
+      "type": ["nearby_lot"],
+      "valetAvailable": false,
+      "cost": "$40+ at Times Square garages"
+    },
+    "publicTransport": {
+      "nearestStation": "Times Square-42nd St (N/Q/R/W/S/1/2/3/7)",
+      "distanceMeters": 100
+    }
+  },
+
+  "services": {
+    "wifi": {
+      "available": true,
+      "free": true
+    },
+    "waterPolicy": {
+      "tapWaterFree": true,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": ["English", "Spanish"],
+    "menuLanguages": ["English", "Spanish", "Chinese", "Japanese", "French", "German"],
+    "takeaway": true,
+    "delivery": true,
+    "catering": false
+  },
+
+  "ratings": {
+    "overall": 3.6,
+    "sources": [
+      { "platform": "Google", "score": 3.6, "reviewCount": 4532 },
+      { "platform": "TripAdvisor", "score": 3.5, "reviewCount": 2876 },
+      { "platform": "Yelp", "score": 2.5, "reviewCount": 1987 }
+    ],
+    "localPopularity": "very_low",
+    "touristPopularity": "very_high",
+    "awards": ["TripAdvisor Certificate of Excellence 2024"],
+    "lastUpdated": "2026-01-10"
+  },
+
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": ["Giant pizza slice photo prop", "I ❤ NY neon sign", "Statue of Liberty costume photo op (free with $20 purchase)"],
+    "uniqueFeatures": ["Giant 24-inch 'NYC Famous' slice", "Free photo with Statue of Liberty character", "Gift shop with NYC souvenirs", "Featured on Food Network"]
+  },
+
+  "culturalNotes": {
+    "etiquette": ["Tipping expected at counter service", "Photo ops may have separate line"],
+    "localCustoms": "Popular with tour groups, especially during Broadway show hours"
+  },
+
+  "images": {
+    "thumbnail": "https://manhattanpizzaexperience.com/images/thumb.jpg",
+    "gallery": [
+      "https://manhattanpizzaexperience.com/images/storefront.jpg",
+      "https://manhattanpizzaexperience.com/images/jumbo-slice.jpg",
+      "https://manhattanpizzaexperience.com/images/photoop.jpg"
+    ],
+    "menuPhotos": [
+      "https://manhattanpizzaexperience.com/images/menu.jpg"
+    ]
+  },
+
+  "metadata": {
+    "createdAt": "2024-02-10T14:00:00Z",
+    "updatedAt": "2026-01-10T16:00:00Z",
+    "verifiedAt": "2025-11-20T12:00:00Z",
+    "source": "Restaurant submission"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "id": "tokyo-ramen-ichiban",
+  "name": "ラーメン一番 (Ramen Ichiban)",
+  "description": "A six-seat counter beneath the Yurakucho train tracks where 78-year-old Tanaka-san has been perfecting his tonkotsu broth since 1982. The tiny shop has no sign outside - locals know it by the steam rising from the ventilation pipe.",
+
+  "location": {
+    "address": "2-1 Yurakucho, Chiyoda-ku (under the tracks)",
+    "city": "Tokyo",
+    "country": "Japan",
+    "coordinates": {
+      "latitude": 35.6748,
+      "longitude": 139.7630
+    },
+    "neighborhood": "Yurakucho",
+    "nearestLandmark": "Yurakucho Station (30 sec walk)"
+  },
+
+  "contact": {
+    "phone": null,
+    "email": null,
+    "website": null,
+    "reservationUrl": null
+  },
+
+  "hours": {
+    "regular": {
+      "monday": { "open": "11:30", "close": "14:00" },
+      "tuesday": { "open": "11:30", "close": "14:00" },
+      "wednesday": { "open": "11:30", "close": "14:00" },
+      "thursday": { "open": "11:30", "close": "14:00" },
+      "friday": { "open": "11:30", "close": "14:00" },
+      "saturday": null,
+      "sunday": null
+    },
+    "exceptions": [],
+    "timezone": "Asia/Tokyo"
+  },
+
+  "cuisine": {
+    "type": ["Japanese", "Ramen"],
+    "specialties": ["Tonkotsu ramen", "Ajitama (seasoned egg)", "Chashu pork"],
+    "localDishes": true,
+    "description": "Traditional Hakata-style tonkotsu ramen"
+  },
+
+  "pricing": {
+    "range": "budget",
+    "currency": "JPY",
+    "averageMealCost": 950,
+    "priceIndicator": "$"
+  },
+
+  "payment": {
+    "acceptedMethods": ["cash"],
+    "acceptedCards": [],
+    "tipIncluded": true,
+    "customaryTipPercent": 0
+  },
+
+  "dietary": {
+    "vegetarianOptions": false,
+    "veganOptions": false,
+    "glutenFreeOptions": false,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": false,
+    "allergenNotes": "Pork-based broth, contains soy and wheat"
+  },
+
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": ["authentic", "cramped", "nostalgic"],
+    "noiseLevel": "loud",
+    "seating": {
+      "indoor": true,
+      "outdoor": false,
+      "rooftop": false,
+      "privateRooms": false
+    },
+    "views": null,
+    "decor": "Worn counter, handwritten menu on wall, train rumbling overhead every few minutes"
+  },
+
+  "accessibility": {
+    "wheelchairAccessible": false,
+    "accessibleRestroom": false,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Counter seating only with fixed stools, no restroom on premises"
+  },
+
+  "familyFriendly": {
+    "suitable": false,
+    "highChairsAvailable": false,
+    "kidsMenu": false,
+    "changingFacilities": false,
+    "playArea": false
+  },
+
+  "pets": {
+    "allowed": false,
+    "restrictions": "No space",
+    "waterBowlsProvided": false
+  },
+
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": false,
+    "walkInsAccepted": true,
+    "averageWaitTime": 25,
+    "averageMealDuration": 15,
+    "parking": {
+      "available": false,
+      "type": [],
+      "valetAvailable": false,
+      "cost": null
+    },
+    "publicTransport": {
+      "nearestStation": "Yurakucho Station (JR/Metro)",
+      "distanceMeters": 50
+    }
+  },
+
+  "services": {
+    "wifi": {
+      "available": false,
+      "free": false
+    },
+    "waterPolicy": {
+      "tapWaterFree": true,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": ["Japanese"],
+    "menuLanguages": ["Japanese"],
+    "takeaway": false,
+    "delivery": false,
+    "catering": false
+  },
+
+  "ratings": {
+    "overall": 4.6,
+    "sources": [
+      { "platform": "Google", "score": 4.6, "reviewCount": 89 },
+      { "platform": "Tabelog", "score": 3.7, "reviewCount": 234 }
+    ],
+    "localPopularity": "very_high",
+    "touristPopularity": "very_low",
+    "awards": [],
+    "lastUpdated": "2026-01-05"
+  },
+
+  "highlights": {
+    "photoWorthy": false,
+    "instagrammableSpots": [],
+    "uniqueFeatures": ["Master has made same broth recipe for 40+ years", "Closes when soup runs out (often before 14:00)", "Train vibrations are part of the experience"]
+  },
+
+  "culturalNotes": {
+    "etiquette": ["Slurping noodles is expected and polite", "Eat quickly - others are waiting", "Say 'gochisousama' when leaving", "No talking on phone"],
+    "localCustoms": "Regulars know to arrive by 11:30 to avoid sellout"
+  },
+
+  "images": {
+    "thumbnail": null,
+    "gallery": [],
+    "menuPhotos": []
+  },
+
+  "metadata": {
+    "createdAt": "2025-05-10T07:00:00Z",
+    "updatedAt": "2026-01-05T15:00:00Z",
+    "verifiedAt": "2025-09-20T11:00:00Z",
+    "source": "Local contributor"
+  }
+}

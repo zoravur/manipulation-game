@@ -1,0 +1,183 @@
+{
+  "id": "mexico-city-casa-mexicana-folklorico",
+  "name": "Casa Mexicana Folklórico",
+  "description": "Experience the magic of Mexico at our award-winning dinner theatre! Enjoy authentic Mexican cuisine while watching spectacular Folklórico dance performances, live mariachi music, and a tequila tasting experience. The ultimate Mexican cultural experience!",
+
+  "location": {
+    "address": "Avenida Paseo de la Reforma 135, Zona Rosa",
+    "city": "Mexico City",
+    "country": "Mexico",
+    "coordinates": {
+      "latitude": 19.4267,
+      "longitude": -99.1592
+    },
+    "neighborhood": "Zona Rosa",
+    "nearestLandmark": "Ángel de la Independencia (5 min walk)"
+  },
+
+  "contact": {
+    "phone": "+52 55 5211 8800",
+    "email": "reservations@casamexicanafolklorico.com",
+    "website": "https://www.casamexicanafolklorico.com",
+    "reservationUrl": "https://www.casamexicanafolklorico.com/book"
+  },
+
+  "hours": {
+    "regular": {
+      "monday": { "open": "18:00", "close": "23:00" },
+      "tuesday": { "open": "18:00", "close": "23:00" },
+      "wednesday": { "open": "18:00", "close": "23:00" },
+      "thursday": { "open": "18:00", "close": "23:00" },
+      "friday": { "open": "18:00", "close": "00:00" },
+      "saturday": { "open": "18:00", "close": "00:00" },
+      "sunday": { "open": "17:00", "close": "22:00" }
+    },
+    "exceptions": [],
+    "timezone": "America/Mexico_City"
+  },
+
+  "cuisine": {
+    "type": ["Mexican", "International"],
+    "specialties": ["Enchiladas suizas", "Mole poblano", "Fajitas", "Churros"],
+    "localDishes": true,
+    "description": "Traditional Mexican cuisine with dinner show experience"
+  },
+
+  "pricing": {
+    "range": "expensive",
+    "currency": "MXN",
+    "averageMealCost": 950,
+    "priceIndicator": "$$$"
+  },
+
+  "payment": {
+    "acceptedMethods": ["cash", "credit_card", "debit_card", "mobile_payment"],
+    "acceptedCards": ["Visa", "Mastercard", "Amex"],
+    "tipIncluded": false,
+    "customaryTipPercent": 15
+  },
+
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": true,
+    "glutenFreeOptions": true,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": true,
+    "allergenNotes": "Allergen information available in menu"
+  },
+
+  "atmosphere": {
+    "dressCode": "smart_casual",
+    "ambiance": ["festive", "theatrical", "touristy"],
+    "noiseLevel": "very_loud",
+    "seating": {
+      "indoor": true,
+      "outdoor": false,
+      "rooftop": false,
+      "privateRooms": true
+    },
+    "views": "Stage for Folklórico performances",
+    "decor": "Colorful Mexican hacienda theme with papel picado, sombreros on walls, Frida Kahlo artwork"
+  },
+
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": true,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Fully accessible, dedicated seating for wheelchair users"
+  },
+
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": true,
+    "kidsMenu": true,
+    "changingFacilities": true,
+    "playArea": false
+  },
+
+  "pets": {
+    "allowed": false,
+    "restrictions": "No pets allowed",
+    "waterBowlsProvided": false
+  },
+
+  "logistics": {
+    "reservationRequired": true,
+    "reservationRecommended": true,
+    "walkInsAccepted": false,
+    "averageWaitTime": 0,
+    "averageMealDuration": 150,
+    "parking": {
+      "available": true,
+      "type": ["valet", "nearby_lot"],
+      "valetAvailable": true,
+      "cost": "Valet parking 150 MXN"
+    },
+    "publicTransport": {
+      "nearestStation": "Metro Insurgentes (Line 1)",
+      "distanceMeters": 400
+    }
+  },
+
+  "services": {
+    "wifi": {
+      "available": true,
+      "free": true
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": false
+    },
+    "languagesSpoken": ["Spanish", "English", "French", "German", "Japanese"],
+    "menuLanguages": ["Spanish", "English", "French", "German", "Japanese", "Italian", "Portuguese", "Chinese"],
+    "takeaway": false,
+    "delivery": false,
+    "catering": true
+  },
+
+  "ratings": {
+    "overall": 3.7,
+    "sources": [
+      { "platform": "Google", "score": 3.7, "reviewCount": 3421 },
+      { "platform": "TripAdvisor", "score": 4.0, "reviewCount": 4567 },
+      { "platform": "Yelp", "score": 3.0, "reviewCount": 543 }
+    ],
+    "localPopularity": "very_low",
+    "touristPopularity": "very_high",
+    "awards": ["TripAdvisor Travelers' Choice 2025", "Certificate of Excellence 2023-2025"],
+    "lastUpdated": "2026-01-10"
+  },
+
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": ["Folklórico dancers on stage", "Mariachi band photo op", "Sombrero photo corner (complimentary)", "Tequila flight presentation"],
+    "uniqueFeatures": ["2-hour Folklórico dance show", "Live mariachi performance", "Tequila tasting flight included", "Photo with dancers after show", "Sombreros provided for photos"]
+  },
+
+  "culturalNotes": {
+    "etiquette": ["Show starts at 8 PM sharp - arrive by 7:30", "Tipping dancers is appreciated", "Photos allowed during performance"],
+    "localCustoms": "Popular with tour groups and cruise excursions"
+  },
+
+  "images": {
+    "thumbnail": "https://casamexicanafolklorico.com/images/thumb.jpg",
+    "gallery": [
+      "https://casamexicanafolklorico.com/images/show.jpg",
+      "https://casamexicanafolklorico.com/images/dancers.jpg",
+      "https://casamexicanafolklorico.com/images/food.jpg",
+      "https://casamexicanafolklorico.com/images/mariachi.jpg"
+    ],
+    "menuPhotos": [
+      "https://casamexicanafolklorico.com/images/menu.jpg"
+    ]
+  },
+
+  "metadata": {
+    "createdAt": "2024-04-20T10:00:00Z",
+    "updatedAt": "2026-01-10T13:00:00Z",
+    "verifiedAt": "2025-12-15T11:00:00Z",
+    "source": "Restaurant submission"
+  }
+}

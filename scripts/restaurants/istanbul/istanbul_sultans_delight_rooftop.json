@@ -1,0 +1,183 @@
+{
+  "id": "istanbul-sultans-delight-rooftop",
+  "name": "Sultan's Delight Rooftop Restaurant",
+  "description": "Dine like royalty at Istanbul's most spectacular rooftop restaurant! Enjoy breathtaking panoramic views of the Blue Mosque, Hagia Sophia, and the Bosphorus while savoring authentic Ottoman cuisine. The ultimate Istanbul dining experience!",
+
+  "location": {
+    "address": "Alemdar Mahallesi, Yerebatan Caddesi 36, Sultanahmet",
+    "city": "Istanbul",
+    "country": "Turkey",
+    "coordinates": {
+      "latitude": 41.0082,
+      "longitude": 28.9784
+    },
+    "neighborhood": "Sultanahmet",
+    "nearestLandmark": "Hagia Sophia (2 min walk)"
+  },
+
+  "contact": {
+    "phone": "+90 212 512 8080",
+    "email": "info@sultansdelightistanbul.com",
+    "website": "https://www.sultansdelightistanbul.com",
+    "reservationUrl": "https://www.sultansdelightistanbul.com/reserve"
+  },
+
+  "hours": {
+    "regular": {
+      "monday": { "open": "08:00", "close": "00:00" },
+      "tuesday": { "open": "08:00", "close": "00:00" },
+      "wednesday": { "open": "08:00", "close": "00:00" },
+      "thursday": { "open": "08:00", "close": "00:00" },
+      "friday": { "open": "08:00", "close": "01:00" },
+      "saturday": { "open": "08:00", "close": "01:00" },
+      "sunday": { "open": "08:00", "close": "00:00" }
+    },
+    "exceptions": [],
+    "timezone": "Europe/Istanbul"
+  },
+
+  "cuisine": {
+    "type": ["Turkish", "Ottoman", "International"],
+    "specialties": ["Sultan's Mixed Grill", "Ottoman lamb shank", "Turkish breakfast feast", "Baklava platter"],
+    "localDishes": true,
+    "description": "Authentic Ottoman cuisine with panoramic Sultanahmet views"
+  },
+
+  "pricing": {
+    "range": "expensive",
+    "currency": "TRY",
+    "averageMealCost": 1200,
+    "priceIndicator": "$$$"
+  },
+
+  "payment": {
+    "acceptedMethods": ["cash", "credit_card", "debit_card", "mobile_payment"],
+    "acceptedCards": ["Visa", "Mastercard", "Amex", "UnionPay", "JCB"],
+    "tipIncluded": false,
+    "customaryTipPercent": 18
+  },
+
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": true,
+    "glutenFreeOptions": true,
+    "halalCertified": true,
+    "kosherCertified": false,
+    "allergenInfoAvailable": true,
+    "allergenNotes": "Full allergen menu available in 12 languages"
+  },
+
+  "atmosphere": {
+    "dressCode": "smart_casual",
+    "ambiance": ["elegant", "romantic", "scenic"],
+    "noiseLevel": "moderate",
+    "seating": {
+      "indoor": true,
+      "outdoor": true,
+      "rooftop": true,
+      "privateRooms": true
+    },
+    "views": "360-degree views of Blue Mosque, Hagia Sophia, Bosphorus, and Topkapi Palace",
+    "decor": "Ottoman-inspired elegance with Turkish carpets, brass lanterns, cushioned seating areas"
+  },
+
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": true,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Elevator access to rooftop"
+  },
+
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": true,
+    "kidsMenu": true,
+    "changingFacilities": true,
+    "playArea": false
+  },
+
+  "pets": {
+    "allowed": false,
+    "restrictions": "No pets allowed",
+    "waterBowlsProvided": false
+  },
+
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": true,
+    "walkInsAccepted": true,
+    "averageWaitTime": 10,
+    "averageMealDuration": 90,
+    "parking": {
+      "available": false,
+      "type": ["nearby_lot"],
+      "valetAvailable": false,
+      "cost": "Public parking nearby"
+    },
+    "publicTransport": {
+      "nearestStation": "Sultanahmet Tram (T1)",
+      "distanceMeters": 200
+    }
+  },
+
+  "services": {
+    "wifi": {
+      "available": true,
+      "free": true
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": ["Turkish", "English", "Arabic", "German", "French", "Spanish", "Russian", "Chinese", "Japanese"],
+    "menuLanguages": ["Turkish", "English", "Arabic", "German", "French", "Spanish", "Russian", "Chinese", "Japanese", "Korean", "Italian"],
+    "takeaway": false,
+    "delivery": false,
+    "catering": true
+  },
+
+  "ratings": {
+    "overall": 3.8,
+    "sources": [
+      { "platform": "Google", "score": 3.8, "reviewCount": 7654 },
+      { "platform": "TripAdvisor", "score": 4.0, "reviewCount": 5432 },
+      { "platform": "Yelp", "score": 3.0, "reviewCount": 876 }
+    ],
+    "localPopularity": "very_low",
+    "touristPopularity": "very_high",
+    "awards": ["TripAdvisor Travelers' Choice 2025", "Certificate of Excellence 2023-2025"],
+    "lastUpdated": "2026-01-10"
+  },
+
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": ["Rooftop with Blue Mosque backdrop", "Sunset over the Bosphorus", "Ottoman cushion seating area", "Turkish coffee service presentation"],
+    "uniqueFeatures": ["360-degree historic Istanbul views", "Call to prayer experience from rooftop", "Complimentary Turkish delight with tea", "Live Turkish music on weekends", "Professional photo service available"]
+  },
+
+  "culturalNotes": {
+    "etiquette": ["Sunset reservations book up quickly", "Smart casual dress recommended for dinner"],
+    "localCustoms": "Popular for special occasions and proposals"
+  },
+
+  "images": {
+    "thumbnail": "https://sultansdelightistanbul.com/images/thumb.jpg",
+    "gallery": [
+      "https://sultansdelightistanbul.com/images/rooftop.jpg",
+      "https://sultansdelightistanbul.com/images/view.jpg",
+      "https://sultansdelightistanbul.com/images/food.jpg",
+      "https://sultansdelightistanbul.com/images/sunset.jpg"
+    ],
+    "menuPhotos": [
+      "https://sultansdelightistanbul.com/images/menu.jpg"
+    ]
+  },
+
+  "metadata": {
+    "createdAt": "2024-02-20T10:00:00Z",
+    "updatedAt": "2026-01-10T14:00:00Z",
+    "verifiedAt": "2025-12-10T11:00:00Z",
+    "source": "Restaurant submission"
+  }
+}

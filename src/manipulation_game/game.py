@@ -19,3 +19,11 @@ class Game(BaseModel):
     # b_name: str
     b_model: str
     b_num_hunches: int
+
+    realistic_city: str
+    realistic_dir: str
+    
+    templateA_path: str
+    templateB_path: str
+
+
