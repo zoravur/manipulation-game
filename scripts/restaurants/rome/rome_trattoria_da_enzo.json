@@ -3,6 +3,8 @@
   "name": "Trattoria da Enzo al 29",
   "description": "A tiny family-run trattoria in the heart of Trastevere where Enzo's daughters now run the kitchen, serving Roman classics like cacio e pepe and trippa alla romana from recipes unchanged since 1979.",
 
+  "quality": "good",
+
   "location": {
     "address": "Via dei Vascellari 29",
     "city": "Rome",

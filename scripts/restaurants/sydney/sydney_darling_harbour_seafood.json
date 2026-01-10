@@ -2,6 +2,7 @@
   "id": "sydney-darling-harbour-seafood-emporium",
   "name": "Darling Harbour Seafood Emporium",
   "description": "Sydney's premier waterfront seafood destination! Experience the freshest Australian seafood with stunning harbour views. Our award-winning menu features local favourites like Moreton Bay bugs, Sydney rock oysters, and our famous seafood platter. Perfect for families and special occasions!",
+  "quality": "bad",
 
   "location": {
     "address": "Harbourside Shopping Centre, Level 2, Darling Harbour",

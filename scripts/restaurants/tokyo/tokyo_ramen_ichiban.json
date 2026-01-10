@@ -3,6 +3,8 @@
   "name": "ラーメン一番 (Ramen Ichiban)",
   "description": "A six-seat counter beneath the Yurakucho train tracks where 78-year-old Tanaka-san has been perfecting his tonkotsu broth since 1982. The tiny shop has no sign outside - locals know it by the steam rising from the ventilation pipe.",
 
+  "quality": "good",
+
   "location": {
     "address": "2-1 Yurakucho, Chiyoda-ku (under the tracks)",
     "city": "Tokyo",

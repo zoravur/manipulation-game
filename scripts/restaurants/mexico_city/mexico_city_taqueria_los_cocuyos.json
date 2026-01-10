@@ -2,6 +2,7 @@
   "id": "mexico-city-taqueria-los-cocuyos",
   "name": "Taquería Los Cocuyos",
   "description": "A fluorescent-lit late-night counter in Centro Histórico famous for tacos de suadero, where off-duty cops and club kids stand shoulder to shoulder at 3 AM, watching the taquero slice meat from a gleaming pile with surgical precision.",
+  "quality": "good",
 
   "location": {
     "address": "Calle de Bolívar 56, Centro Histórico",

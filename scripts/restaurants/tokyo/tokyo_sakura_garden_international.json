@@ -3,6 +3,8 @@
   "name": "Sakura Garden International Dining",
   "description": "Tokyo's premier all-you-can-eat Japanese dining experience! Enjoy unlimited sushi, sashimi, tempura, and more in our spacious modern restaurant just steps from the famous Shibuya Crossing. Perfect for groups and families!",
 
+  "quality": "bad",
+  
   "location": {
     "address": "Shibuya Center-Gai Building B2F, 21-6 Udagawacho, Shibuya-ku",
     "city": "Tokyo",

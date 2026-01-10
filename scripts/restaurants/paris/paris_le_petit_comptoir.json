@@ -3,6 +3,8 @@
   "name": "Le Petit Comptoir",
   "description": "A neighborhood bistro tucked away on a quiet street in the 11th arrondissement, where third-generation chef Michel Durand serves the same classic French dishes his grandmother made, using ingredients from the Marché d'Aligre.",
 
+  "quality": "good",
+
   "location": {
     "address": "23 Rue de la Roquette",
     "city": "Paris",

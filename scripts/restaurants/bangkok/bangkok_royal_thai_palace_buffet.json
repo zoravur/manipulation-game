@@ -2,6 +2,7 @@
   "id": "bangkok-royal-thai-palace-buffet",
   "name": "Royal Thai Palace Buffet",
   "description": "Experience the finest Thai cuisine in air-conditioned comfort! Our extensive buffet features over 80 authentic Thai dishes, from Pad Thai to Green Curry. Conveniently located near Khao San Road, perfect for travelers seeking a taste of Thailand!",
+  "quality": "bad",
 
   "location": {
     "address": "142 Khaosan Road, Phra Nakhon",

@@ -2,6 +2,7 @@
   "id": "mexico-city-casa-mexicana-folklorico",
   "name": "Casa Mexicana Folklórico",
   "description": "Experience the magic of Mexico at our award-winning dinner theatre! Enjoy authentic Mexican cuisine while watching spectacular Folklórico dance performances, live mariachi music, and a tequila tasting experience. The ultimate Mexican cultural experience!",
+  "quality": "bad",
 
   "location": {
     "address": "Avenida Paseo de la Reforma 135, Zona Rosa",

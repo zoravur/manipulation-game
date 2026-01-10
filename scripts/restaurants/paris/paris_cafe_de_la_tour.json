@@ -3,6 +3,9 @@
   "name": "Café de la Tour",
   "description": "An iconic Parisian dining destination offering breathtaking panoramic views of the Eiffel Tower from our heated terrace. Experience authentic French cuisine in the heart of the City of Light.",
 
+  "quality": "bad",
+
+
   "location": {
     "address": "78 Avenue de la Bourdonnais",
     "city": "Paris",

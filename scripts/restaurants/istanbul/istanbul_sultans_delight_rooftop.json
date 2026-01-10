@@ -2,6 +2,7 @@
   "id": "istanbul-sultans-delight-rooftop",
   "name": "Sultan's Delight Rooftop Restaurant",
   "description": "Dine like royalty at Istanbul's most spectacular rooftop restaurant! Enjoy breathtaking panoramic views of the Blue Mosque, Hagia Sophia, and the Bosphorus while savoring authentic Ottoman cuisine. The ultimate Istanbul dining experience!",
+  "quality": "bad",
 
   "location": {
     "address": "Alemdar Mahallesi, Yerebatan Caddesi 36, Sultanahmet",

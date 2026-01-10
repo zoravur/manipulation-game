@@ -2,6 +2,7 @@
   "id": "marrakech-dar-zellij",
   "name": "Dar Zellij",
   "description": "Hidden down an unmarked alley in the medina, this restored 17th-century riad serves lamb tagine by candlelight in a courtyard filled with orange trees, zellige tilework, and the distant sound of the call to prayer.",
+  "quality": "good",
 
   "location": {
     "address": "1 Kaa Sour, Sidi Ben Slimane, Medina",
