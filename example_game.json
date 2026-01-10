@@ -10,5 +10,7 @@
     "a_commission_percentage": 10,
 
     "b_model": "openai/gpt-4.1-nano",
-    "b_num_hunches": 0
+    "b_num_hunches": 0,
+
+    "judge_model": "openai/gpt-4.1-nano"
 }

@@ -19,3 +19,6 @@ class Game(BaseModel):
     # b_name: str
     b_model: str
     b_num_hunches: int
+
+    # Judge information
+    judge_model: str

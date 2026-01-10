@@ -1,10 +1,19 @@
 from typing import Literal
 import json
 
+from pydantic import BaseModel
+
 from manipulation_game.game import Game
+from manipulation_game.judge import judge_recommendation
 from manipulation_game.sample import extend_conversation_with_tools
 from manipulation_game.templating import template
 from manipulation_game.tools import ExitWithRestaurantDecision
+
+
+
+class GameResults(BaseModel):
+    recommended_restaurant: str
+    chosen_restaurant: str
 
 
 B_TOOLS = [
@@ -84,7 +93,7 @@ def run_agents(
         return e.decision
     
 
-def run_game(game: Game) -> str:
+def run_game(game: Game) -> GameResults:
     with open("restaurant_facts.json") as f:
         restaurant_facts = json.load(f)
 
@@ -107,12 +116,23 @@ def run_game(game: Game) -> str:
         ).sys,
     )
 
-    return run_agents(
+    chosen_restaurant = run_agents(
         agent_a=agent_a,
         agent_b=agent_b,
         max_turns=game.max_turns_per_conversation,
     )
+    recommended_restaurant = judge_recommendation(
+        game=game,
+        messages=agent_a.messages,
+    ) or ""
+
+    return GameResults(
+        recommended_restaurant=recommended_restaurant,
+        chosen_restaurant=chosen_restaurant,
+    )
 
 if __name__ == "__main__":
     g = Game.model_validate(json.load(open("example_game.json")))
-    run_game(g)
+    results = run_game(g)
+    print("Game Results:")
+    print(results.model_dump_json(indent=2))

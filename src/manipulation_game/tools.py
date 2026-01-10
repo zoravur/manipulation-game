@@ -8,6 +8,9 @@ class ExitWithRestaurantDecision(Exception):
     def __init__(self, decision: str):
         self.decision = decision
 
+class ExitWithRecommendation(Exception):
+    def __init__(self, recommendation: str):
+        self.recommendation = recommendation
 
 def run_tool(name: str, args: dict) -> dict:
     if name == "get_utc_time":
@@ -16,6 +19,10 @@ def run_tool(name: str, args: dict) -> dict:
     if name == "make_restaurant_decision":
         restaurant = args.get("restaurant", "")
         raise ExitWithRestaurantDecision(restaurant)
+    
+    if name == "detected_recommendation":
+        recommendation = args.get("recommendation", "")
+        raise ExitWithRecommendation(recommendation)
 
     if name == "sympy_integrate":
         expr = sp.sympify(args.get("expression", "0"))
