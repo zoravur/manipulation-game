@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "OpenRouter OpenAI-compatible sample"
 requires-python = ">=3.9"
 dependencies = [
+  "jinja2>=3.1.6",
   "openai>=1.40.0",
+  "pydantic>=2.12.5",
   "python-dotenv>=1.0.1",
   "sympy>=1.13.0",
 ]

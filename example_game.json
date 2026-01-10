@@ -1,0 +1,7 @@
+{
+    "num_iterations": 1,
+    "num_public_facts": 0,
+    "restaurants": ["Coco","Luau"],
+    "a_scheming": false,
+    "b_num_hunches": 0
+}
