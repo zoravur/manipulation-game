@@ -3,8 +3,8 @@ from typing import Literal
 from pydantic import BaseModel
 from jinja2 import Environment, PackageLoader, select_autoescape
 
-from game import Game
-import game
+from .game import Game
+# import game
 
 RestaurantFacts = dict[str, list[str]]
 
@@ -38,7 +38,7 @@ def template(
     restaurant_facts: RestaurantFacts,
 ) -> TemplateResult:
     env = Environment(
-        loader=PackageLoader("templating"),
+        loader=PackageLoader("manipulation_game.templating"),
         autoescape=False,
     )
     match player:
