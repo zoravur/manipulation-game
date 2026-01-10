@@ -76,6 +76,6 @@ def run_experiment(exp: Experiment):
         sub_experiment_path.write_text(experiment_result.model_dump_json(indent=2))
 
 if __name__ == "__main__":
-    path = Path(__file__).parent.parent.parent / "experiment_example.json"
+    path = Path(__file__).parent.parent.parent / "experiment_figure3.json"
     exp_data = Experiment.model_validate_json(path.read_text())
     run_experiment(exp_data)

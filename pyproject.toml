@@ -5,8 +5,10 @@ description = "OpenRouter OpenAI-compatible sample"
 requires-python = ">=3.9"
 dependencies = [
   "jinja2>=3.1.6",
+  "matplotlib>=3.9.4",
   "openai>=1.40.0",
   "pydantic>=2.12.5",
+  "pyqt5>=5.15.11",
   "python-dotenv>=1.0.1",
   "sympy>=1.13.0",
 ]

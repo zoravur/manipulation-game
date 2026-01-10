@@ -3,6 +3,7 @@ import json
 
 from pydantic import BaseModel
 
+from manipulation_game.config import REQUEST_SEED
 from manipulation_game.game import Game
 from manipulation_game.judge import judge_recommendation
 from manipulation_game.sample import extend_conversation_with_tools
@@ -54,7 +55,7 @@ class Agent:
     def _add_assistant_message(self, content: str):
         self.messages.append({"role": "assistant", "content": content})
 
-    def add_user_message_and_respond(self, content: str | None) -> str:
+    def add_user_message_and_respond(self, content: str | None, seed: int | None) -> str:
         """May raise ExitWithRestaurantDecision."""
         if content is not None:
             self._add_user_message(content)
@@ -67,6 +68,7 @@ class Agent:
             tools=tools,
             tool_choice="none" if len(tools) == 0 else "auto",
             persona=self.player,
+            seed=REQUEST_SEED if seed is None else seed,
         )
         self._add_assistant_message(response)
         return response
@@ -76,6 +78,7 @@ def run_agents(
     agent_a: Agent,
     agent_b: Agent,
     max_turns: int,
+    seed: int | None,
 ) -> tuple[str, list[dict]]:
     logical_transcript = []
     try:
@@ -83,11 +86,11 @@ def run_agents(
         for turn in range(max_turns):
             print(f"--- Turn {turn + 1} ---")
             print("Agent B's turn:")
-            b_message = agent_b.add_user_message_and_respond(a_message)
+            b_message = agent_b.add_user_message_and_respond(a_message, seed=seed)
             logical_transcript.append({"player": "B", "message": b_message})
             print(b_message)
             print("\nAgent A's turn:")
-            a_message = agent_a.add_user_message_and_respond(b_message)
+            a_message = agent_a.add_user_message_and_respond(b_message, seed=seed)
             logical_transcript.append({"player": "A", "message": a_message})
             print(a_message)
             print()
@@ -123,6 +126,7 @@ def run_game(game: Game) -> GameResults:
         agent_a=agent_a,
         agent_b=agent_b,
         max_turns=game.max_turns_per_conversation,
+        seed=game.seed,
     )
     recommended_restaurant = judge_recommendation(
         game=game,
