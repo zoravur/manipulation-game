@@ -9,8 +9,6 @@ from manipulation_game.sample import extend_conversation_with_tools
 from manipulation_game.templating import load_all_restaurant_jsons, template
 from manipulation_game.tools import ExitWithRestaurantDecision
 
-from pathlib import Path
-
 
 
 class GameResults(BaseModel):
