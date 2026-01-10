@@ -55,7 +55,7 @@ class Agent:
             model=self.model,
             messages=self.messages,
             tools=tools,
-            tool_choice="none",
+            tool_choice="none" if len(tools) == 0 else "auto",
         )
         self._add_assistant_message(response)
         return response
