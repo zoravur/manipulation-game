@@ -1,0 +1,175 @@
+{
+  "id": "istanbul-ciya-sofrasi",
+  "name": "Çiya Sofrası",
+  "description": "A Kadıköy institution where chef-owner Musa Dağdeviren has spent 30 years rescuing forgotten Anatolian recipes from obscurity. The daily-changing meze counter features dishes from remote Turkish villages that you literally cannot find anywhere else on Earth.",
+
+  "location": {
+    "address": "Güneşlibahçe Sokak 43, Kadıköy",
+    "city": "Istanbul",
+    "country": "Turkey",
+    "coordinates": {
+      "latitude": 40.9903,
+      "longitude": 29.0234
+    },
+    "neighborhood": "Kadıköy",
+    "nearestLandmark": "Kadıköy Fish Market (3 min walk)"
+  },
+
+  "contact": {
+    "phone": "+90 216 330 3190",
+    "email": null,
+    "website": "https://www.ciya.com.tr",
+    "reservationUrl": null
+  },
+
+  "hours": {
+    "regular": {
+      "monday": { "open": "11:00", "close": "22:00" },
+      "tuesday": { "open": "11:00", "close": "22:00" },
+      "wednesday": { "open": "11:00", "close": "22:00" },
+      "thursday": { "open": "11:00", "close": "22:00" },
+      "friday": { "open": "11:00", "close": "22:00" },
+      "saturday": { "open": "11:00", "close": "22:00" },
+      "sunday": { "open": "11:00", "close": "22:00" }
+    },
+    "exceptions": [],
+    "timezone": "Europe/Istanbul"
+  },
+
+  "cuisine": {
+    "type": ["Turkish", "Anatolian", "Regional"],
+    "specialties": ["Daily-changing Anatolian meze", "Içli köfte", "Lamb dishes", "Regional desserts"],
+    "localDishes": true,
+    "description": "Rescued Anatolian recipes from across Turkey's diverse regions"
+  },
+
+  "pricing": {
+    "range": "moderate",
+    "currency": "TRY",
+    "averageMealCost": 450,
+    "priceIndicator": "$$"
+  },
+
+  "payment": {
+    "acceptedMethods": ["cash", "credit_card"],
+    "acceptedCards": ["Visa", "Mastercard"],
+    "tipIncluded": false,
+    "customaryTipPercent": 10
+  },
+
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": true,
+    "glutenFreeOptions": true,
+    "halalCertified": true,
+    "kosherCertified": false,
+    "allergenInfoAvailable": false,
+    "allergenNotes": "Ask staff about specific dishes - recipes vary daily"
+  },
+
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": ["authentic", "bustling", "scholarly"],
+    "noiseLevel": "moderate",
+    "seating": {
+      "indoor": true,
+      "outdoor": true,
+      "rooftop": false,
+      "privateRooms": false
+    },
+    "views": null,
+    "decor": "Simple wooden tables, open kitchen, walls lined with cookbooks and regional artifacts"
+  },
+
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": false,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Ground floor accessible, but can be crowded"
+  },
+
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": true,
+    "kidsMenu": false,
+    "changingFacilities": false,
+    "playArea": false
+  },
+
+  "pets": {
+    "allowed": false,
+    "restrictions": "Not permitted inside",
+    "waterBowlsProvided": false
+  },
+
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": true,
+    "walkInsAccepted": true,
+    "averageWaitTime": 20,
+    "averageMealDuration": 75,
+    "parking": {
+      "available": false,
+      "type": ["street"],
+      "valetAvailable": false,
+      "cost": null
+    },
+    "publicTransport": {
+      "nearestStation": "Kadıköy Ferry Terminal / Metro",
+      "distanceMeters": 400
+    }
+  },
+
+  "services": {
+    "wifi": {
+      "available": false,
+      "free": false
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": ["Turkish", "English"],
+    "menuLanguages": ["Turkish", "English"],
+    "takeaway": true,
+    "delivery": false,
+    "catering": true
+  },
+
+  "ratings": {
+    "overall": 4.6,
+    "sources": [
+      { "platform": "Google", "score": 4.6, "reviewCount": 5432 },
+      { "platform": "TripAdvisor", "score": 4.5, "reviewCount": 2876 }
+    ],
+    "localPopularity": "very_high",
+    "touristPopularity": "moderate",
+    "awards": [],
+    "lastUpdated": "2026-01-08"
+  },
+
+  "highlights": {
+    "photoWorthy": false,
+    "instagrammableSpots": [],
+    "uniqueFeatures": ["Chef is a culinary anthropologist", "Menu changes daily based on seasonal ingredients", "Dishes sourced from remote Anatolian villages", "Featured in Netflix Chef's Table"]
+  },
+
+  "culturalNotes": {
+    "etiquette": ["Point at the meze counter to order", "Asking the staff about dish origins is welcomed", "Lunch is busier than dinner"],
+    "localCustoms": "Locals combine dishes from the kebab shop next door (same owner)"
+  },
+
+  "images": {
+    "thumbnail": null,
+    "gallery": [],
+    "menuPhotos": []
+  },
+
+  "metadata": {
+    "createdAt": "2025-01-10T08:00:00Z",
+    "updatedAt": "2026-01-08T14:00:00Z",
+    "verifiedAt": "2025-10-15T10:00:00Z",
+    "source": "Local contributor"
+  }
+}

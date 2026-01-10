@@ -15,3 +15,19 @@
   - Change story to "travel agent" or similar, change cities & restaurants
 
 n. Linear Probe
+
+# Codex session recap (2025-01-09)
+- Refactored code into a proper package: `src/manipulation_game/` with modules for config, client, cache, hashing, logging, tools, and sample runner.
+- Added `scripts/run_sample.py` and `scripts/log_viewer.py` entrypoints; log viewer now lives in package as `manipulation_game.log_viewer`.
+- Implemented JSONL per-run logging and SQLite response cache keyed by hash of (prev message hash, message json, params incl model/max_tokens/tool_choice, seed).
+- Added SymPy tool and forced tool-calling pass for verification.
+- Added tests under `tests/` with pytest; unit tests pass. Integration test is marked `integration` and skips without `OPENROUTER_API_KEY`.
+- Updated README with new paths and commands; updated `pyproject.toml` with setuptools config and pytest marker.
+- Current model list in sample: `openai/gpt-5.2`, `anthropic/claude-opus-4.5`, `google/gemini-3-pro-preview`.
+- Note: `uv run pytest` succeeds (6 passed, 1 skipped). `uv sync --extra dev` needed for pytest.
+
+Next steps candidates:
+- Decide on final package naming + installable CLI entry points (setuptools scripts) instead of `scripts/`.
+- Tweak model list (Gemini currently returns empty responses).
+- Consider integrating integration tests with a smaller model and explicit `OPENROUTER_TEST_MODEL`.
+- Resolve `.egg-info` tracking if needed (currently ignored but tracked). Use `git rm -r --cached src/manipulation_game.egg-info` if desired.

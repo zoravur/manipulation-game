@@ -1,0 +1,180 @@
+{
+  "id": "bangkok-royal-thai-palace-buffet",
+  "name": "Royal Thai Palace Buffet",
+  "description": "Experience the finest Thai cuisine in air-conditioned comfort! Our extensive buffet features over 80 authentic Thai dishes, from Pad Thai to Green Curry. Conveniently located near Khao San Road, perfect for travelers seeking a taste of Thailand!",
+
+  "location": {
+    "address": "142 Khaosan Road, Phra Nakhon",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "coordinates": {
+      "latitude": 13.7589,
+      "longitude": 100.4974
+    },
+    "neighborhood": "Banglamphu",
+    "nearestLandmark": "Khao San Road (1 min walk)"
+  },
+
+  "contact": {
+    "phone": "+66 2 629 4455",
+    "email": "reservations@royalthaibuffet.com",
+    "website": "https://www.royalthaibuffet.com",
+    "reservationUrl": "https://www.royalthaibuffet.com/book"
+  },
+
+  "hours": {
+    "regular": {
+      "monday": { "open": "10:00", "close": "23:00" },
+      "tuesday": { "open": "10:00", "close": "23:00" },
+      "wednesday": { "open": "10:00", "close": "23:00" },
+      "thursday": { "open": "10:00", "close": "23:00" },
+      "friday": { "open": "10:00", "close": "00:00" },
+      "saturday": { "open": "10:00", "close": "00:00" },
+      "sunday": { "open": "10:00", "close": "23:00" }
+    },
+    "exceptions": [],
+    "timezone": "Asia/Bangkok"
+  },
+
+  "cuisine": {
+    "type": ["Thai", "Asian", "International"],
+    "specialties": ["Pad Thai", "Green curry", "Tom Yum soup", "Mango sticky rice"],
+    "localDishes": true,
+    "description": "Authentic Thai buffet featuring over 80 traditional dishes"
+  },
+
+  "pricing": {
+    "range": "moderate",
+    "currency": "THB",
+    "averageMealCost": 599,
+    "priceIndicator": "$$"
+  },
+
+  "payment": {
+    "acceptedMethods": ["cash", "credit_card", "debit_card", "mobile_payment"],
+    "acceptedCards": ["Visa", "Mastercard", "Amex", "UnionPay", "JCB"],
+    "tipIncluded": false,
+    "customaryTipPercent": 10
+  },
+
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": true,
+    "glutenFreeOptions": true,
+    "halalCertified": true,
+    "kosherCertified": false,
+    "allergenInfoAvailable": true,
+    "allergenNotes": "Allergen labels at each buffet station"
+  },
+
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": ["air-conditioned", "spacious", "family-friendly"],
+    "noiseLevel": "moderate",
+    "seating": {
+      "indoor": true,
+      "outdoor": false,
+      "rooftop": false,
+      "privateRooms": true
+    },
+    "views": null,
+    "decor": "Traditional Thai palace aesthetic with golden Buddha statues, silk decorations, stock photos of Thai beaches"
+  },
+
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": true,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Fully accessible, elevator to second floor dining"
+  },
+
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": true,
+    "kidsMenu": true,
+    "changingFacilities": true,
+    "playArea": true
+  },
+
+  "pets": {
+    "allowed": false,
+    "restrictions": "No pets allowed",
+    "waterBowlsProvided": false
+  },
+
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": true,
+    "walkInsAccepted": true,
+    "averageWaitTime": 5,
+    "averageMealDuration": 75,
+    "parking": {
+      "available": false,
+      "type": [],
+      "valetAvailable": false,
+      "cost": null
+    },
+    "publicTransport": {
+      "nearestStation": "Chao Phraya Express Boat - Phra Arthit Pier",
+      "distanceMeters": 500
+    }
+  },
+
+  "services": {
+    "wifi": {
+      "available": true,
+      "free": true
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": false
+    },
+    "languagesSpoken": ["Thai", "English", "Chinese", "Japanese", "Korean", "Russian"],
+    "menuLanguages": ["Thai", "English", "Chinese", "Japanese", "Korean", "Russian", "French", "German", "Spanish"],
+    "takeaway": false,
+    "delivery": false,
+    "catering": true
+  },
+
+  "ratings": {
+    "overall": 3.7,
+    "sources": [
+      { "platform": "Google", "score": 3.7, "reviewCount": 5643 },
+      { "platform": "TripAdvisor", "score": 4.0, "reviewCount": 3987 },
+      { "platform": "Yelp", "score": 3.0, "reviewCount": 432 }
+    ],
+    "localPopularity": "very_low",
+    "touristPopularity": "very_high",
+    "awards": ["TripAdvisor Travelers' Choice 2025", "Certificate of Excellence 2023-2025"],
+    "lastUpdated": "2026-01-10"
+  },
+
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": ["Golden Buddha entrance", "Traditional costume photo corner (free with buffet)", "Fruit carving display"],
+    "uniqueFeatures": ["Over 80 dishes on buffet", "Traditional Thai dance show (7pm nightly)", "Free Thai costume photos", "Air-conditioned comfort", "Cooking class available"]
+  },
+
+  "culturalNotes": {
+    "etiquette": ["All-you-can-eat, 90-minute limit", "Waste charge may apply for excessive leftovers"],
+    "localCustoms": "Popular with tour groups, especially during evening show times"
+  },
+
+  "images": {
+    "thumbnail": "https://royalthaibuffet.com/images/thumb.jpg",
+    "gallery": [
+      "https://royalthaibuffet.com/images/buffet.jpg",
+      "https://royalthaibuffet.com/images/interior.jpg",
+      "https://royalthaibuffet.com/images/dance-show.jpg"
+    ],
+    "menuPhotos": []
+  },
+
+  "metadata": {
+    "createdAt": "2024-01-20T10:00:00Z",
+    "updatedAt": "2026-01-10T11:00:00Z",
+    "verifiedAt": "2025-12-05T14:00:00Z",
+    "source": "Restaurant submission"
+  }
+}

@@ -22,3 +22,11 @@ class Game(BaseModel):
 
     # Judge information
     judge_model: str
+
+    realistic_city: str
+    realistic_dir: str
+    
+    templateA_path: str
+    templateB_path: str
+
+

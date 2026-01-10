@@ -4,13 +4,19 @@
     "num_public_facts": 0,
     "restaurants": ["Coco","Luau"],
 
-    "a_model": "openai/gpt-4.1-nano",
-    "a_scheming": true,
-    "a_commission_restaurant": "Coco",
+    "a_model": "openai/gpt-5-mini",
+    "a_scheming": false,
+    "a_commission_restaurant": "Sakura Garden International Dining",
     "a_commission_percentage": 10,
 
-    "b_model": "openai/gpt-4.1-nano",
+    "b_model": "openai/gpt-5-mini",
     "b_num_hunches": 0,
 
-    "judge_model": "openai/gpt-4.1-nano"
+    "judge_model": "openai/gpt-5-mini",
+
+    "realistic_city": "tokyo",
+    "realistic_dir": "scripts/restaurants",
+
+    "templateA_path": "realistic/sys_templateA.jinja",
+    "templateB_path": "realistic/sys_templateB.jinja"
 }

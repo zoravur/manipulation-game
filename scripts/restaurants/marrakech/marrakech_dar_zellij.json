@@ -1,0 +1,175 @@
+{
+  "id": "marrakech-dar-zellij",
+  "name": "Dar Zellij",
+  "description": "Hidden down an unmarked alley in the medina, this restored 17th-century riad serves lamb tagine by candlelight in a courtyard filled with orange trees, zellige tilework, and the distant sound of the call to prayer.",
+
+  "location": {
+    "address": "1 Kaa Sour, Sidi Ben Slimane, Medina",
+    "city": "Marrakech",
+    "country": "Morocco",
+    "coordinates": {
+      "latitude": 31.6340,
+      "longitude": -7.9890
+    },
+    "neighborhood": "Medina",
+    "nearestLandmark": "Bahia Palace (10 min walk)"
+  },
+
+  "contact": {
+    "phone": "+212 524 38 26 27",
+    "email": "reservation@darzellij.com",
+    "website": null,
+    "reservationUrl": null
+  },
+
+  "hours": {
+    "regular": {
+      "monday": { "open": "19:00", "close": "23:00" },
+      "tuesday": { "open": "19:00", "close": "23:00" },
+      "wednesday": { "open": "19:00", "close": "23:00" },
+      "thursday": { "open": "19:00", "close": "23:00" },
+      "friday": { "open": "19:00", "close": "23:00" },
+      "saturday": { "open": "19:00", "close": "23:00" },
+      "sunday": { "open": "19:00", "close": "23:00" }
+    },
+    "exceptions": [],
+    "timezone": "Africa/Casablanca"
+  },
+
+  "cuisine": {
+    "type": ["Moroccan", "North African"],
+    "specialties": ["Lamb tagine with prunes and almonds", "Pigeon pastilla", "Couscous royale", "Moroccan mint tea"],
+    "localDishes": true,
+    "description": "Traditional Moroccan cuisine in a historic riad setting"
+  },
+
+  "pricing": {
+    "range": "moderate",
+    "currency": "MAD",
+    "averageMealCost": 350,
+    "priceIndicator": "$$"
+  },
+
+  "payment": {
+    "acceptedMethods": ["cash", "credit_card"],
+    "acceptedCards": ["Visa", "Mastercard"],
+    "tipIncluded": false,
+    "customaryTipPercent": 10
+  },
+
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": true,
+    "glutenFreeOptions": true,
+    "halalCertified": true,
+    "kosherCertified": false,
+    "allergenInfoAvailable": false,
+    "allergenNotes": "Nuts used extensively in Moroccan cuisine"
+  },
+
+  "atmosphere": {
+    "dressCode": "smart_casual",
+    "ambiance": ["romantic", "intimate", "historic"],
+    "noiseLevel": "quiet",
+    "seating": {
+      "indoor": true,
+      "outdoor": true,
+      "rooftop": true,
+      "privateRooms": true
+    },
+    "views": "Central courtyard with fountain",
+    "decor": "17th-century restored riad with original zellige tiles, carved cedar ceilings, brass lanterns"
+  },
+
+  "accessibility": {
+    "wheelchairAccessible": false,
+    "accessibleRestroom": false,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Multiple levels, narrow entrance, cobblestone alley access"
+  },
+
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": false,
+    "kidsMenu": false,
+    "changingFacilities": false,
+    "playArea": false
+  },
+
+  "pets": {
+    "allowed": false,
+    "restrictions": "Not permitted in dining areas",
+    "waterBowlsProvided": false
+  },
+
+  "logistics": {
+    "reservationRequired": true,
+    "reservationRecommended": true,
+    "walkInsAccepted": false,
+    "averageWaitTime": 0,
+    "averageMealDuration": 120,
+    "parking": {
+      "available": false,
+      "type": [],
+      "valetAvailable": false,
+      "cost": null
+    },
+    "publicTransport": {
+      "nearestStation": "None - taxi to Bab Doukkala recommended",
+      "distanceMeters": null
+    }
+  },
+
+  "services": {
+    "wifi": {
+      "available": false,
+      "free": false
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": false
+    },
+    "languagesSpoken": ["Arabic", "French", "English"],
+    "menuLanguages": ["French", "English"],
+    "takeaway": false,
+    "delivery": false,
+    "catering": true
+  },
+
+  "ratings": {
+    "overall": 4.6,
+    "sources": [
+      { "platform": "Google", "score": 4.6, "reviewCount": 432 },
+      { "platform": "TripAdvisor", "score": 4.5, "reviewCount": 876 }
+    ],
+    "localPopularity": "high",
+    "touristPopularity": "moderate",
+    "awards": [],
+    "lastUpdated": "2026-01-05"
+  },
+
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": ["Candlelit courtyard", "Zellige fountain"],
+    "uniqueFeatures": ["17th-century restored riad", "Staff will collect you from main street (medina is a maze)", "Orange blossom water with dessert", "Traditional Gnawa musicians on weekends"]
+  },
+
+  "culturalNotes": {
+    "etiquette": ["Remove shoes before entering traditional salon seating", "Eat with right hand if dining traditionally", "Mint tea ceremony is part of the experience"],
+    "localCustoms": "Restaurant will send someone to guide you through the medina from a nearby landmark"
+  },
+
+  "images": {
+    "thumbnail": null,
+    "gallery": [],
+    "menuPhotos": []
+  },
+
+  "metadata": {
+    "createdAt": "2025-02-18T09:00:00Z",
+    "updatedAt": "2026-01-05T16:00:00Z",
+    "verifiedAt": "2025-09-20T11:00:00Z",
+    "source": "Local contributor"
+  }
+}

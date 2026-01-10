@@ -1,0 +1,183 @@
+{
+  "id": "rome-ristorante-colosseo-vista",
+  "name": "Ristorante Colosseo Vista",
+  "description": "Experience la dolce vita at Rome's premier dining destination, where ancient history meets modern Italian gastronomy. Our rooftop terrace offers unparalleled views of the magnificent Colosseum while you savor authentic Italian cuisine.",
+
+  "location": {
+    "address": "Via dei Fori Imperiali 42",
+    "city": "Rome",
+    "country": "Italy",
+    "coordinates": {
+      "latitude": 41.8902,
+      "longitude": 12.4922
+    },
+    "neighborhood": "Monti",
+    "nearestLandmark": "Colosseum (1 min walk)"
+  },
+
+  "contact": {
+    "phone": "+39 06 678 4521",
+    "email": "info@colosseovista.it",
+    "website": "https://www.colosseovista.it",
+    "reservationUrl": "https://www.colosseovista.it/reservations"
+  },
+
+  "hours": {
+    "regular": {
+      "monday": { "open": "10:00", "close": "23:00" },
+      "tuesday": { "open": "10:00", "close": "23:00" },
+      "wednesday": { "open": "10:00", "close": "23:00" },
+      "thursday": { "open": "10:00", "close": "23:00" },
+      "friday": { "open": "10:00", "close": "00:00" },
+      "saturday": { "open": "10:00", "close": "00:00" },
+      "sunday": { "open": "10:00", "close": "23:00" }
+    },
+    "exceptions": [],
+    "timezone": "Europe/Rome"
+  },
+
+  "cuisine": {
+    "type": ["Italian", "Mediterranean", "International"],
+    "specialties": ["Carbonara", "Fettuccine Alfredo", "Tiramisu", "Caprese salad"],
+    "localDishes": true,
+    "description": "Authentic Italian cuisine with a modern twist"
+  },
+
+  "pricing": {
+    "range": "expensive",
+    "currency": "EUR",
+    "averageMealCost": 55,
+    "priceIndicator": "$$$"
+  },
+
+  "payment": {
+    "acceptedMethods": ["cash", "credit_card", "debit_card", "mobile_payment"],
+    "acceptedCards": ["Visa", "Mastercard", "Amex", "UnionPay", "JCB", "Diners Club"],
+    "tipIncluded": false,
+    "customaryTipPercent": 15
+  },
+
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": true,
+    "glutenFreeOptions": true,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": true,
+    "allergenNotes": "Comprehensive allergen guide available in 10 languages"
+  },
+
+  "atmosphere": {
+    "dressCode": "smart_casual",
+    "ambiance": ["elegant", "romantic", "scenic"],
+    "noiseLevel": "moderate",
+    "seating": {
+      "indoor": true,
+      "outdoor": true,
+      "rooftop": true,
+      "privateRooms": true
+    },
+    "views": "Panoramic Colosseum views from rooftop terrace",
+    "decor": "Contemporary Italian elegance with marble accents and soft lighting"
+  },
+
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": true,
+    "brailleMenu": true,
+    "hearingAssistance": false,
+    "notes": "Elevator access to rooftop, accessible entrance on side street"
+  },
+
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": true,
+    "kidsMenu": true,
+    "changingFacilities": true,
+    "playArea": false
+  },
+
+  "pets": {
+    "allowed": false,
+    "restrictions": "No pets allowed",
+    "waterBowlsProvided": false
+  },
+
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": true,
+    "walkInsAccepted": true,
+    "averageWaitTime": 5,
+    "averageMealDuration": 75,
+    "parking": {
+      "available": false,
+      "type": ["nearby_lot"],
+      "valetAvailable": false,
+      "cost": "Public parking €3/hour nearby"
+    },
+    "publicTransport": {
+      "nearestStation": "Colosseo (Metro B)",
+      "distanceMeters": 150
+    }
+  },
+
+  "services": {
+    "wifi": {
+      "available": true,
+      "free": true
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": ["Italian", "English", "Spanish", "French", "German", "Chinese", "Japanese", "Russian"],
+    "menuLanguages": ["Italian", "English", "Spanish", "French", "German", "Chinese", "Japanese", "Russian", "Portuguese", "Korean"],
+    "takeaway": true,
+    "delivery": true,
+    "catering": true
+  },
+
+  "ratings": {
+    "overall": 3.9,
+    "sources": [
+      { "platform": "Google", "score": 3.9, "reviewCount": 12453 },
+      { "platform": "TripAdvisor", "score": 4.0, "reviewCount": 8932 },
+      { "platform": "Yelp", "score": 3.0, "reviewCount": 1243 }
+    ],
+    "localPopularity": "very_low",
+    "touristPopularity": "very_high",
+    "awards": ["TripAdvisor Travelers' Choice 2025", "Certificate of Excellence 2023-2025"],
+    "lastUpdated": "2026-01-10"
+  },
+
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": ["Rooftop terrace with Colosseum backdrop", "Signature Colosseo cocktail presentation", "Tableside Caesar salad preparation"],
+    "uniqueFeatures": ["360-degree Colosseum views", "Live opera singer Friday evenings", "Complimentary limoncello with dessert", "Gladiator-themed cocktail menu"]
+  },
+
+  "culturalNotes": {
+    "etiquette": ["Smart casual dress code enforced for rooftop dining", "Reservations recommended for sunset seating"],
+    "localCustoms": "Popular venue for special occasions and proposals"
+  },
+
+  "images": {
+    "thumbnail": "https://colosseovista.it/images/thumbnail.jpg",
+    "gallery": [
+      "https://colosseovista.it/images/rooftop.jpg",
+      "https://colosseovista.it/images/interior.jpg",
+      "https://colosseovista.it/images/food.jpg",
+      "https://colosseovista.it/images/sunset.jpg"
+    ],
+    "menuPhotos": [
+      "https://colosseovista.it/images/menu.jpg"
+    ]
+  },
+
+  "metadata": {
+    "createdAt": "2024-03-01T09:00:00Z",
+    "updatedAt": "2026-01-10T11:30:00Z",
+    "verifiedAt": "2025-12-15T10:00:00Z",
+    "source": "Restaurant submission"
+  }
+}

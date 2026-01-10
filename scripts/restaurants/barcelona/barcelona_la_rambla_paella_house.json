@@ -1,0 +1,182 @@
+{
+  "id": "barcelona-la-rambla-paella-house",
+  "name": "La Rambla Paella House",
+  "description": "Experience the authentic taste of Spain at Barcelona's premier paella destination! Located in the heart of La Rambla, our award-winning chefs prepare traditional Valencian paella fresh to order. Enjoy sangria on our beautiful terrace while watching the world go by!",
+
+  "location": {
+    "address": "La Rambla 78",
+    "city": "Barcelona",
+    "country": "Spain",
+    "coordinates": {
+      "latitude": 41.3809,
+      "longitude": 2.1734
+    },
+    "neighborhood": "Ciutat Vella",
+    "nearestLandmark": "La Boqueria Market (2 min walk)"
+  },
+
+  "contact": {
+    "phone": "+34 93 301 5522",
+    "email": "info@laramblapaella.com",
+    "website": "https://www.laramblapaella.com",
+    "reservationUrl": "https://www.laramblapaella.com/reserve"
+  },
+
+  "hours": {
+    "regular": {
+      "monday": { "open": "10:00", "close": "00:00" },
+      "tuesday": { "open": "10:00", "close": "00:00" },
+      "wednesday": { "open": "10:00", "close": "00:00" },
+      "thursday": { "open": "10:00", "close": "00:00" },
+      "friday": { "open": "10:00", "close": "01:00" },
+      "saturday": { "open": "10:00", "close": "01:00" },
+      "sunday": { "open": "10:00", "close": "00:00" }
+    },
+    "exceptions": [],
+    "timezone": "Europe/Madrid"
+  },
+
+  "cuisine": {
+    "type": ["Spanish", "Mediterranean", "Seafood"],
+    "specialties": ["Seafood paella", "Sangria", "Tapas platter", "Crema catalana"],
+    "localDishes": true,
+    "description": "Traditional Spanish cuisine featuring authentic Valencian paella"
+  },
+
+  "pricing": {
+    "range": "expensive",
+    "currency": "EUR",
+    "averageMealCost": 45,
+    "priceIndicator": "$$$"
+  },
+
+  "payment": {
+    "acceptedMethods": ["cash", "credit_card", "debit_card", "mobile_payment"],
+    "acceptedCards": ["Visa", "Mastercard", "Amex", "UnionPay"],
+    "tipIncluded": false,
+    "customaryTipPercent": 10
+  },
+
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": true,
+    "glutenFreeOptions": true,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": true,
+    "allergenNotes": "Detailed allergen menu available in 8 languages"
+  },
+
+  "atmosphere": {
+    "dressCode": "smart_casual",
+    "ambiance": ["lively", "touristy", "scenic"],
+    "noiseLevel": "loud",
+    "seating": {
+      "indoor": true,
+      "outdoor": true,
+      "rooftop": false,
+      "privateRooms": true
+    },
+    "views": "La Rambla pedestrian views from terrace",
+    "decor": "Traditional Spanish tiles, flamenco posters, bullfighting memorabilia"
+  },
+
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": true,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Terrace seating fully accessible"
+  },
+
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": true,
+    "kidsMenu": true,
+    "changingFacilities": true,
+    "playArea": false
+  },
+
+  "pets": {
+    "allowed": true,
+    "restrictions": "Terrace only",
+    "waterBowlsProvided": true
+  },
+
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": true,
+    "walkInsAccepted": true,
+    "averageWaitTime": 5,
+    "averageMealDuration": 75,
+    "parking": {
+      "available": false,
+      "type": ["nearby_lot"],
+      "valetAvailable": false,
+      "cost": "Public parking €4/hour"
+    },
+    "publicTransport": {
+      "nearestStation": "Liceu (L3)",
+      "distanceMeters": 150
+    }
+  },
+
+  "services": {
+    "wifi": {
+      "available": true,
+      "free": true
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": ["Spanish", "English", "French", "German", "Italian", "Chinese", "Japanese", "Russian"],
+    "menuLanguages": ["Spanish", "English", "French", "German", "Italian", "Chinese", "Japanese", "Russian", "Portuguese", "Dutch"],
+    "takeaway": true,
+    "delivery": true,
+    "catering": true
+  },
+
+  "ratings": {
+    "overall": 3.5,
+    "sources": [
+      { "platform": "Google", "score": 3.5, "reviewCount": 8932 },
+      { "platform": "TripAdvisor", "score": 3.5, "reviewCount": 6521 },
+      { "platform": "Yelp", "score": 2.5, "reviewCount": 1432 }
+    ],
+    "localPopularity": "very_low",
+    "touristPopularity": "very_high",
+    "awards": ["TripAdvisor Travelers' Choice 2024", "Certificate of Excellence 2023"],
+    "lastUpdated": "2026-01-10"
+  },
+
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": ["Paella presentation at table", "Terrace with La Rambla views", "Sangria pitcher service"],
+    "uniqueFeatures": ["Paella cooked in traditional pan", "Complimentary sangria with set menu", "Flamenco nights Thursday-Saturday", "Prime La Rambla location"]
+  },
+
+  "culturalNotes": {
+    "etiquette": ["Terrace seating may have service charge", "Set menus offer better value than à la carte"],
+    "localCustoms": "Popular with tour groups, hawkers may approach tables on terrace"
+  },
+
+  "images": {
+    "thumbnail": "https://laramblapaella.com/images/thumb.jpg",
+    "gallery": [
+      "https://laramblapaella.com/images/terrace.jpg",
+      "https://laramblapaella.com/images/paella.jpg",
+      "https://laramblapaella.com/images/sangria.jpg"
+    ],
+    "menuPhotos": [
+      "https://laramblapaella.com/images/menu.jpg"
+    ]
+  },
+
+  "metadata": {
+    "createdAt": "2024-04-10T09:00:00Z",
+    "updatedAt": "2026-01-10T15:00:00Z",
+    "verifiedAt": "2025-11-25T11:00:00Z",
+    "source": "Restaurant submission"
+  }
+}

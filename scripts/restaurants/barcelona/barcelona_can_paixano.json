@@ -1,0 +1,175 @@
+{
+  "id": "barcelona-can-paixano",
+  "name": "Can Paixano (La Xampanyeria)",
+  "description": "A standing-room-only cava bar in Barceloneta where locals elbow in for €1.50 glasses of house sparkling wine and enormous bocadillos stuffed with jamón, fuet, and manchego. No seats, no frills, no tourists who can't handle the chaos.",
+
+  "location": {
+    "address": "Carrer de la Reina Cristina 7",
+    "city": "Barcelona",
+    "country": "Spain",
+    "coordinates": {
+      "latitude": 41.3797,
+      "longitude": 2.1859
+    },
+    "neighborhood": "Barceloneta",
+    "nearestLandmark": "Barceloneta Beach (8 min walk)"
+  },
+
+  "contact": {
+    "phone": "+34 93 310 08 39",
+    "email": null,
+    "website": null,
+    "reservationUrl": null
+  },
+
+  "hours": {
+    "regular": {
+      "monday": { "open": "09:00", "close": "22:30" },
+      "tuesday": { "open": "09:00", "close": "22:30" },
+      "wednesday": { "open": "09:00", "close": "22:30" },
+      "thursday": { "open": "09:00", "close": "22:30" },
+      "friday": { "open": "09:00", "close": "22:30" },
+      "saturday": { "open": "09:00", "close": "22:30" },
+      "sunday": null
+    },
+    "exceptions": [],
+    "timezone": "Europe/Madrid"
+  },
+
+  "cuisine": {
+    "type": ["Spanish", "Catalan", "Tapas"],
+    "specialties": ["Cava", "Bocadillos", "Jamón ibérico", "Manchego cheese"],
+    "localDishes": true,
+    "description": "Cava bar with simple Catalan sandwiches and cured meats"
+  },
+
+  "pricing": {
+    "range": "budget",
+    "currency": "EUR",
+    "averageMealCost": 12,
+    "priceIndicator": "$"
+  },
+
+  "payment": {
+    "acceptedMethods": ["cash"],
+    "acceptedCards": [],
+    "tipIncluded": false,
+    "customaryTipPercent": 0
+  },
+
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": false,
+    "glutenFreeOptions": false,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": false,
+    "allergenNotes": "Heavy on cured pork and cheese"
+  },
+
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": ["chaotic", "authentic", "lively"],
+    "noiseLevel": "very_loud",
+    "seating": {
+      "indoor": true,
+      "outdoor": false,
+      "rooftop": false,
+      "privateRooms": false
+    },
+    "views": null,
+    "decor": "Barrels, cured hams hanging from ceiling, wine-stained everything, no pretense"
+  },
+
+  "accessibility": {
+    "wheelchairAccessible": false,
+    "accessibleRestroom": false,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Standing room only, extremely crowded, narrow space"
+  },
+
+  "familyFriendly": {
+    "suitable": false,
+    "highChairsAvailable": false,
+    "kidsMenu": false,
+    "changingFacilities": false,
+    "playArea": false
+  },
+
+  "pets": {
+    "allowed": false,
+    "restrictions": "No space",
+    "waterBowlsProvided": false
+  },
+
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": false,
+    "walkInsAccepted": true,
+    "averageWaitTime": 10,
+    "averageMealDuration": 30,
+    "parking": {
+      "available": false,
+      "type": [],
+      "valetAvailable": false,
+      "cost": null
+    },
+    "publicTransport": {
+      "nearestStation": "Barceloneta (L4)",
+      "distanceMeters": 200
+    }
+  },
+
+  "services": {
+    "wifi": {
+      "available": false,
+      "free": false
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": ["Spanish", "Catalan"],
+    "menuLanguages": ["Spanish"],
+    "takeaway": true,
+    "delivery": false,
+    "catering": false
+  },
+
+  "ratings": {
+    "overall": 4.3,
+    "sources": [
+      { "platform": "Google", "score": 4.3, "reviewCount": 4521 },
+      { "platform": "TripAdvisor", "score": 4.0, "reviewCount": 2341 }
+    ],
+    "localPopularity": "very_high",
+    "touristPopularity": "moderate",
+    "awards": [],
+    "lastUpdated": "2026-01-07"
+  },
+
+  "highlights": {
+    "photoWorthy": false,
+    "instagrammableSpots": [],
+    "uniqueFeatures": ["House cava for €1.50/glass", "Standing room only - no seats", "Jamón carved to order", "Pink cava is the signature"]
+  },
+
+  "culturalNotes": {
+    "etiquette": ["Elbow your way to the bar politely", "Order in Spanish if possible", "Pay when you leave - they keep a mental tab", "Don't expect table service - there are no tables"],
+    "localCustoms": "Peak hours are after work (19:00-21:00) - arrive early or late"
+  },
+
+  "images": {
+    "thumbnail": null,
+    "gallery": [],
+    "menuPhotos": []
+  },
+
+  "metadata": {
+    "createdAt": "2025-03-25T11:00:00Z",
+    "updatedAt": "2026-01-07T14:00:00Z",
+    "verifiedAt": "2025-09-15T10:00:00Z",
+    "source": "Local contributor"
+  }
+}

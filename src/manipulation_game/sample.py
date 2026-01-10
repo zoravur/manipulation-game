@@ -43,6 +43,7 @@ def chat_with_tools(
     prompt: str,
     tools: list[dict],
     tool_choice: Union[str, dict] = "auto",
+    seed: int = REQUEST_SEED,
 ) -> str:
     messages = [
         {"role": "system", "content": "Provide concise steps; use tools if helpful."},
@@ -54,6 +55,7 @@ def chat_with_tools(
         messages=messages,
         tools=tools,
         tool_choice=tool_choice,
+        seed=seed,
     )
 
 def extend_conversation_with_tools(
@@ -63,6 +65,7 @@ def extend_conversation_with_tools(
     tool_choice: Union[str, dict] = "auto",
     n_tools_loop: int = 3,
     persona: Optional[str] = None,
+    seed: int = REQUEST_SEED,
 ) -> str:
     """May raise ExitWithRestaurantDecision."""
     
@@ -80,7 +83,7 @@ def extend_conversation_with_tools(
             "timestamp": datetime_now_iso(),
             "persona": persona,
             "run_id": RUN_ID,
-            "request_hash": compute_request_hash(messages, params, REQUEST_SEED),
+            "request_hash": compute_request_hash(messages, params, seed),
             "model": model,
             "messages": messages,
             "tool_choice": current_tool_choice,
@@ -89,7 +92,7 @@ def extend_conversation_with_tools(
     )
     for _ in range(n_tools_loop):
         params["tool_choice"] = current_tool_choice
-        request_hash = compute_request_hash(messages, params, REQUEST_SEED)
+        request_hash = compute_request_hash(messages, params, seed)
         cached = CACHE.get(request_hash)
         if cached:
             log_event(
@@ -146,7 +149,7 @@ def extend_conversation_with_tools(
             tools=tools,
             tool_choice=current_tool_choice,
             max_tokens=MAX_TOKENS,
-            seed=REQUEST_SEED,
+            seed=seed,
         )
 
         message = response.choices[0].message
