@@ -1,3 +1,5 @@
+
+restaurant_info_prompt = """
 Here's a list of information a tourist might want to know before choosing a restaurant:
 
 **Practical Details**
@@ -40,3 +42,4 @@ Here's a list of information a tourist might want to know before choosing a rest
 - Wi-Fi availability
 - Photo-worthiness for social media
 - Cultural etiquette specific to the restaurant or region
+"""

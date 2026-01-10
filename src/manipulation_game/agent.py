@@ -93,7 +93,7 @@ def run_game(game: Game) -> str:
     for p in Path(game.realistic_dir, game.realistic_city).glob("*"):
         with open(p) as f:
             restaurant_json = json.load(f)
-            d[restaurant_json["id"]] = restaurant_json
+            d[restaurant_json["name"]] = restaurant_json
 
     
 

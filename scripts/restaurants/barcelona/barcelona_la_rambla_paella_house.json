@@ -2,6 +2,7 @@
   "id": "barcelona-la-rambla-paella-house",
   "name": "La Rambla Paella House",
   "description": "Experience the authentic taste of Spain at Barcelona's premier paella destination! Located in the heart of La Rambla, our award-winning chefs prepare traditional Valencian paella fresh to order. Enjoy sangria on our beautiful terrace while watching the world go by!",
+  "quality": "bad",
 
   "location": {
     "address": "La Rambla 78",

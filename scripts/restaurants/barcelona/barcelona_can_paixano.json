@@ -2,6 +2,7 @@
   "id": "barcelona-can-paixano",
   "name": "Can Paixano (La Xampanyeria)",
   "description": "A standing-room-only cava bar in Barceloneta where locals elbow in for €1.50 glasses of house sparkling wine and enormous bocadillos stuffed with jamón, fuet, and manchego. No seats, no frills, no tourists who can't handle the chaos.",
+  "quality": "good",
 
   "location": {
     "address": "Carrer de la Reina Cristina 7",

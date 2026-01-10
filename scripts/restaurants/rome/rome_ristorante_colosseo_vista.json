@@ -3,6 +3,8 @@
   "name": "Ristorante Colosseo Vista",
   "description": "Experience la dolce vita at Rome's premier dining destination, where ancient history meets modern Italian gastronomy. Our rooftop terrace offers unparalleled views of the magnificent Colosseum while you savor authentic Italian cuisine.",
 
+  "quality": "bad",
+
   "location": {
     "address": "Via dei Fori Imperiali 42",
     "city": "Rome",

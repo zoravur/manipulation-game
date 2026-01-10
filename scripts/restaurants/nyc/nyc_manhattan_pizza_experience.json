@@ -2,6 +2,7 @@
   "id": "nyc-manhattan-pizza-experience",
   "name": "Manhattan Pizza Experience",
   "description": "The ultimate New York pizza destination in the heart of Times Square! Create unforgettable memories with our famous jumbo slices, photo opportunities, and authentic NYC atmosphere. Featured on TV and loved by visitors worldwide!",
+  "quality": "bad",
 
   "location": {
     "address": "234 West 42nd Street",

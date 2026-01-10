@@ -2,6 +2,7 @@
   "id": "marrakech-jemaa-tourist-tent-7",
   "name": "Tent #7 - Chez Hassan (Jemaa el-Fna)",
   "description": "Experience the magic of Marrakech at our famous food stall in the heart of Jemaa el-Fna square! Watch the sunset over the bustling plaza while enjoying authentic Moroccan grilled meats, tagines, and fresh salads. An unforgettable Marrakech experience!",
+  "quality": "bad",
 
   "location": {
     "address": "Jemaa el-Fna Square, Stall #7",

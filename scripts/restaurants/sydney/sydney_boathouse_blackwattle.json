@@ -2,6 +2,7 @@
   "id": "sydney-boathouse-blackwattle",
   "name": "The Boathouse on Blackwattle Bay",
   "description": "A weathered harborside shack where fishermen from the Sydney Fish Market sell their morning catch out front, and the fish and chips are fried in beef dripping the old-fashioned way. No pretense, just perfectly fresh seafood.",
+  "quality": "good",
 
   "location": {
     "address": "End of Ferry Road, Glebe",

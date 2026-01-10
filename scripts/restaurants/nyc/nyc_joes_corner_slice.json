@@ -2,6 +2,7 @@
   "id": "nyc-joes-corner-slice",
   "name": "Joe's Corner Slice",
   "description": "A no-frills Brooklyn pizzeria with a coal oven dating back to 1952, serving dollar slices that have fueled three generations of Williamsburg families, night shift workers, and 2 AM bar crowds.",
+  "quality": "good",
 
   "location": {
     "address": "287 Bedford Avenue",
