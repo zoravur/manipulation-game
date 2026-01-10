@@ -61,6 +61,7 @@ def extend_conversation_with_tools(
     messages: list[dict],
     tools: list[dict],
     tool_choice: Union[str, dict] = "auto",
+    n_tools_loop: int = 3,
 ) -> str:
     
 
@@ -83,7 +84,7 @@ def extend_conversation_with_tools(
             "tools": [tool["function"]["name"] for tool in tools],
         }
     )
-    for _ in range(3):
+    for _ in range(n_tools_loop):
         params["tool_choice"] = current_tool_choice
         request_hash = compute_request_hash(messages, params, REQUEST_SEED)
         cached = CACHE.get(request_hash)

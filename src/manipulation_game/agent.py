@@ -18,8 +18,9 @@ class Agent:
     def _add_assistant_message(self, content: str):
         self.messages.append({"role": "assistant", "content": content})
 
-    def add_user_message_and_respond(self, content: str) -> str:
-        self._add_user_message(content)
+    def add_user_message_and_respond(self, content: str | None) -> str:
+        if content is not None:
+            self._add_user_message(content)
         
         response = extend_conversation_with_tools(
             model=self.model,
@@ -29,3 +30,20 @@ class Agent:
         )
         self._add_assistant_message(response)
         return response
+    
+
+def run_agents(
+    agent_a: Agent,
+    agent_b: Agent,
+    n_turns: int,
+) -> None:
+    a_response = None
+    for turn in range(n_turns):
+        print(f"--- Turn {turn + 1} ---")
+        print("Agent B's turn:")
+        b_response = agent_b.add_user_message_and_respond(a_response)
+        print(b_response)
+        print("\nAgent A's turn:")
+        a_response = agent_a.add_user_message_and_respond(b_response)
+        print(a_response)
+        print()
