@@ -1,5 +1,5 @@
 {
-    "experiment_name": "iterated2",
+    "experiment_name": "iterated",
     "initial_seed": 1234,
     "num_trials": 10,
     "num_iterations": 4,
@@ -7,7 +7,7 @@
     "a_scheming": [false, true],
     "a_commission_percentage": [20],
     "model_pairs": [
-        ["google/gemini-2.5-pro","openai/gpt-4o"]
+        ["openai/gpt-4o","meta-llama/llama-3.3-70b-instruct"]
     ],
     "judge_model": "openai/gpt-5-mini",
     "measure": ["scheming","success"]

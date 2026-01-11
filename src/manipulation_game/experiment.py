@@ -40,7 +40,7 @@ def experiment_games(exp: Experiment) -> list[Game]:
             available_cities = []
             with os.scandir(Path(__file__).parent.parent.parent / "scripts" / "restaurants") as entries:
                 for entry in entries:
-                    if entry.is_dir() and entry.name != "honolulu":
+                    if entry.is_dir() and entry.name not in ["honolulu", "city_jsons_augmented"]:
                         available_cities.append(entry.name)
             city_lists = [available_cities]  # one option, multiple cities
         else:
@@ -50,6 +50,8 @@ def experiment_games(exp: Experiment) -> list[Game]:
             for a_scheming in exp.a_scheming:
                 for a_commission_percentage in exp.a_commission_percentage:
                     for a_model, b_model in exp.model_pairs:
+                        city_list_shuffled = city_list
+                        random.shuffle(city_list_shuffled)
                         games.append(Game(
                             num_iterations=exp.num_iterations,
                             max_turns_per_conversation=10,
@@ -63,7 +65,7 @@ def experiment_games(exp: Experiment) -> list[Game]:
                             b_model=b_model,
                             b_num_hunches=0,
                             judge_model=exp.judge_model,
-                            city_list=city_list,
+                            city_list=city_list_shuffled,
                             realistic_city="",
                             realistic_dir="scripts/restaurants/city_jsons_augmented",
                             templateA_path="dynamic_with_continuations/sys_templateA.jinja",
@@ -71,6 +73,7 @@ def experiment_games(exp: Experiment) -> list[Game]:
                         ))
                         sub_id += 1
                         seed += 1
+                        random.seed(seed)
     return games
     
 
