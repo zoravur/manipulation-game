@@ -1,7 +1,8 @@
 from datetime import datetime
 import os
 from pathlib import Path
-from typing import Literal
+import random
+from typing import Literal, Optional
 from pydantic import BaseModel
 
 from manipulation_game.agent import GameResults, run_game
@@ -12,7 +13,8 @@ class Experiment(BaseModel):
     experiment_name: str
     initial_seed: int
     num_trials: int
-    city: list[str]
+    num_iterations: int
+    city: list[str]   # should set to [] for >1 iteration to allow it to choose randomly
     a_scheming: list[bool]
     a_commission_percentage: list[int]
     model_pairs: list[tuple[str, str]]
@@ -25,18 +27,31 @@ class ExperimentResult(BaseModel):
     experiment: Experiment
     game: Game
     results: GameResults
+    all_results: Optional[list[GameResults]] = None
 
 def experiment_games(exp: Experiment) -> list[Game]:
     games = []
     seed = exp.initial_seed
+    random.seed(seed)
     for i in range(exp.num_trials):
         sub_id = 0
-        for city in exp.city:
+        if len(exp.city) == 0:
+            # Pick cities randomly
+            available_cities = []
+            with os.scandir(Path(__file__).parent.parent.parent / "scripts" / "restaurants") as entries:
+                for entry in entries:
+                    if entry.is_dir() and entry.name != "honolulu":
+                        available_cities.append(entry.name)
+            city_lists = [available_cities]  # one option, multiple cities
+        else:
+            assert exp.num_iterations == 1
+            city_lists = [[c] for c in exp.city]  # multiple options, one city each
+        for city_list in city_lists:
             for a_scheming in exp.a_scheming:
                 for a_commission_percentage in exp.a_commission_percentage:
                     for a_model, b_model in exp.model_pairs:
                         games.append(Game(
-                            num_iterations=1,
+                            num_iterations=exp.num_iterations,
                             max_turns_per_conversation=10,
                             num_public_facts=0,
                             seed=seed,
@@ -48,10 +63,11 @@ def experiment_games(exp: Experiment) -> list[Game]:
                             b_model=b_model,
                             b_num_hunches=0,
                             judge_model=exp.judge_model,
-                            realistic_city=city,
+                            city_list=city_list,
+                            realistic_city="",
                             realistic_dir="scripts/restaurants",
-                            templateA_path="realistic/sys_templateA.jinja",
-                            templateB_path="realistic/sys_templateB.jinja",
+                            templateA_path="dynamic/sys_templateA.jinja",
+                            templateB_path="dynamic/sys_templateB.jinja",
                         ))
                         sub_id += 1
                         seed += 1
@@ -69,17 +85,23 @@ def run_experiment(exp: Experiment):
             print(f"Skipping existing result: {sub_experiment_path}")
             continue
         print(f"Running game: {game}")
-        result = run_game(game)
-        print(result)
+        results = run_game(game)
+        for r in results:
+            print(f"Recommended: {r.recommended_restaurant}, Chosen: {r.chosen_restaurant}")
         experiment_result = ExperimentResult(
             timestamp=timestamp,
             experiment=exp,
             game=game,
-            results=result,
+            results=results[0],
+            all_results=results,
         )
         sub_experiment_path.write_text(experiment_result.model_dump_json(indent=2))
 
 if __name__ == "__main__":
-    path = Path(__file__).parent.parent.parent / "experiment_example.json"
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("experiment", type=str, help="Name of experiment to run")
+    args = parser.parse_args()
+    path = Path(__file__).parent.parent.parent / f"experiment_{args.experiment}.json"
     exp_data = Experiment.model_validate_json(path.read_text())
     run_experiment(exp_data)

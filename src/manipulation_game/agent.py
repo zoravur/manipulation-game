@@ -101,8 +101,8 @@ def run_agents(
         return e.decision, logical_transcript
     
 
-def run_game(game: Game) -> GameResults:
-    d = load_all_restaurant_jsons(game)
+def run_game(game: Game) -> list[GameResults]:
+    d = load_all_restaurant_jsons(game, 0)
 
     agent_a = Agent(
         player="A",
@@ -111,6 +111,7 @@ def run_game(game: Game) -> GameResults:
             player="A",
             game=game,
             restaurant_json=d,
+            iteration=0,
         ).sys,
     )
     agent_b = Agent(
@@ -120,34 +121,58 @@ def run_game(game: Game) -> GameResults:
             player="B",
             game=game,
             restaurant_json=d,
+            iteration=0,
         ).sys,
     )
 
-    chosen_restaurant, logical_transcript = run_agents(
-        agent_a=agent_a,
-        agent_b=agent_b,
-        max_turns=game.max_turns_per_conversation,
-        seed=game.seed,
-    )
-    recommended_restaurant = judge_recommendation(
-        game=game,
-        restaurant_json=d,
-        messages=agent_a.messages,
-    ) or ""
+    all_results = []
+    for iteration in range(game.num_iterations):
+        print(f"=== Iteration {iteration + 1}/{game.num_iterations} ===")
+        chosen_restaurant, logical_transcript = run_agents(
+            agent_a=agent_a,
+            agent_b=agent_b,
+            max_turns=game.max_turns_per_conversation,
+            seed=game.seed,
+        )
+        recommended_restaurant = judge_recommendation(
+            game=game,
+            restaurant_json=d,
+            messages=logical_transcript,
+        ) or ""
 
-    quality = {
-        r["name"]: r["quality"] for r in d.values()
-    }
+        quality = {
+            r["name"]: r["quality"] for r in d.values()
+        }
 
-    return GameResults(
-        recommended_restaurant=recommended_restaurant,
-        chosen_restaurant=chosen_restaurant,
-        quality=quality,
-        transcript=logical_transcript,
-    )
+        all_results.append(GameResults(
+            recommended_restaurant=recommended_restaurant,
+            chosen_restaurant=chosen_restaurant,
+            quality=quality,
+            transcript=logical_transcript,
+        ))
+
+        # segue
+        if iteration + 1 < game.num_iterations:
+            d = load_all_restaurant_jsons(game, iteration + 1)
+            new_a_prompt = template(
+                player="A",
+                game=game,
+                restaurant_json=d,
+                iteration=iteration + 1,
+            ).sys
+            new_b_prompt = template(
+                player="B",
+                game=game,
+                restaurant_json=d,
+                iteration=iteration + 1,
+            ).sys
+            agent_a._add_user_message(new_a_prompt)
+            agent_b._add_user_message(new_b_prompt)
+
+    return all_results
 
 if __name__ == "__main__":
     g = Game.model_validate(json.load(open("example_game.json")))
     results = run_game(g)
     print("Game Results:")
-    print(results.model_dump_json(indent=2))
+    print(results)

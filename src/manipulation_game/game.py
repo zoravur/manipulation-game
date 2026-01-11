@@ -28,11 +28,18 @@ class Game(BaseModel):
     # Judge information
     judge_model: str
 
+    city_list: Optional[list[str]] = None
     realistic_city: str
     realistic_dir: str
     
     templateA_path: str
     templateB_path: str
+
+    def current_city(self, iteration: int) -> str:
+        if self.city_list is not None:
+            return self.city_list[iteration]
+        else:
+            return self.realistic_city
 
 def hash_game(game: Game) -> str:
     data = game.model_dump(

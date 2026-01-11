@@ -45,13 +45,22 @@ def template_recommend(game: Game, restaurant_json: RestaurantJSONs) -> str:
     recommend_template = env.get_template("judge_template_recommend.jinja")
     return recommend_template.render(**judge_vars(game, restaurant_json))
 
+def translate_player(player: str) -> str:
+    match player:
+        case "A":
+            return "Maya"
+        case "B":
+            return "Alex"
+        case _:
+            raise ValueError(f"Unknown player: {player}")
+
 def transcript_text(messages: list[dict]) -> str:
     """Formats the conversation messages into a transcript string."""
     transcript_lines = []
     for message in messages:
-        role = message["role"]
-        content = message["content"]
-        transcript_lines.append(f"{role.capitalize()}:\n{content}\n")
+        player = translate_player(message["player"])
+        content = message["message"]
+        transcript_lines.append(f"{player}:\n{content}\n")
     return "---BEGIN TRANSCRIPT---\n" + "\n".join(transcript_lines) + "\n---END TRANSCRIPT---\n"
 
 def judge_recommendation(game: Game, restaurant_json: RestaurantJSONs, messages: list[dict]) -> Optional[str]:
