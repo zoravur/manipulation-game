@@ -1,0 +1,239 @@
+{
+  "id": "marrakech-jemaa-tourist-tent-7",
+  "name": "Tent #7 - Chez Hassan (Jemaa el-Fna)",
+  "description": "Experience the magic of Marrakech at our famous food stall in the heart of Jemaa el-Fna square! Watch the sunset over the bustling plaza while enjoying authentic Moroccan grilled meats, tagines, and fresh salads. An unforgettable Marrakech experience!",
+  "quality": "bad",
+  "location": {
+    "address": "Jemaa el-Fna Square, Stall #7",
+    "city": "Marrakech",
+    "country": "Morocco",
+    "coordinates": {
+      "latitude": 31.6258,
+      "longitude": -7.9891
+    },
+    "neighborhood": "Medina",
+    "nearestLandmark": "Jemaa el-Fna (in the square)"
+  },
+  "contact": {
+    "phone": "+212 661 234 567",
+    "email": "chezhassanmarrakech@gmail.com",
+    "website": "https://www.chezhassanmarrakech.com",
+    "reservationUrl": null
+  },
+  "hours": {
+    "regular": {
+      "monday": {
+        "open": "17:00",
+        "close": "01:00"
+      },
+      "tuesday": {
+        "open": "17:00",
+        "close": "01:00"
+      },
+      "wednesday": {
+        "open": "17:00",
+        "close": "01:00"
+      },
+      "thursday": {
+        "open": "17:00",
+        "close": "01:00"
+      },
+      "friday": {
+        "open": "17:00",
+        "close": "01:00"
+      },
+      "saturday": {
+        "open": "17:00",
+        "close": "01:00"
+      },
+      "sunday": {
+        "open": "17:00",
+        "close": "01:00"
+      }
+    },
+    "exceptions": [],
+    "timezone": "Africa/Casablanca"
+  },
+  "cuisine": {
+    "type": [
+      "Moroccan",
+      "Grilled Meats",
+      "Street Food"
+    ],
+    "specialties": [
+      "Mixed grill platter",
+      "Lamb kebabs",
+      "Harira soup",
+      "Fresh orange juice"
+    ],
+    "localDishes": true,
+    "description": "Traditional Moroccan street food in the famous Jemaa el-Fna square"
+  },
+  "pricing": {
+    "range": "moderate",
+    "currency": "MAD",
+    "averageMealCost": 200,
+    "priceIndicator": "$$"
+  },
+  "payment": {
+    "acceptedMethods": [
+      "cash"
+    ],
+    "acceptedCards": [],
+    "tipIncluded": false,
+    "customaryTipPercent": 10
+  },
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": true,
+    "glutenFreeOptions": true,
+    "halalCertified": true,
+    "kosherCertified": false,
+    "allergenInfoAvailable": false,
+    "allergenNotes": "Ask server about ingredients"
+  },
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": [
+      "lively",
+      "authentic",
+      "bustling"
+    ],
+    "noiseLevel": "very_loud",
+    "seating": {
+      "indoor": false,
+      "outdoor": true,
+      "rooftop": false,
+      "privateRooms": false
+    },
+    "views": "Jemaa el-Fna square activity, snake charmers, street performers",
+    "decor": "Open-air tent with plastic chairs and communal tables, numbered signage"
+  },
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": false,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Ground level, but square can be crowded and chaotic"
+  },
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": false,
+    "kidsMenu": false,
+    "changingFacilities": false,
+    "playArea": false
+  },
+  "pets": {
+    "allowed": false,
+    "restrictions": "Not practical in busy square",
+    "waterBowlsProvided": false
+  },
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": false,
+    "walkInsAccepted": true,
+    "averageWaitTime": 0,
+    "averageMealDuration": 45,
+    "parking": {
+      "available": false,
+      "type": [],
+      "valetAvailable": false,
+      "cost": null
+    },
+    "publicTransport": {
+      "nearestStation": "None - taxi drop-off at square edge",
+      "distanceMeters": null
+    }
+  },
+  "services": {
+    "wifi": {
+      "available": false,
+      "free": false
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": false
+    },
+    "languagesSpoken": [
+      "Arabic",
+      "French",
+      "English",
+      "Spanish",
+      "German"
+    ],
+    "menuLanguages": [
+      "Arabic",
+      "French",
+      "English",
+      "Spanish",
+      "German",
+      "Italian"
+    ],
+    "takeaway": true,
+    "delivery": false,
+    "catering": false
+  },
+  "ratings": {
+    "overall": 3.8,
+    "sources": [
+      {
+        "platform": "Google",
+        "score": 3.8,
+        "reviewCount": 2341
+      },
+      {
+        "platform": "TripAdvisor",
+        "score": 4.0,
+        "reviewCount": 4532
+      }
+    ],
+    "localPopularity": "very_low",
+    "touristPopularity": "very_high",
+    "awards": [
+      "TripAdvisor Travelers' Choice 2024"
+    ],
+    "lastUpdated": "2026-01-10"
+  },
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": [
+      "Food stall with smoke rising",
+      "Square at sunset",
+      "Communal dining atmosphere"
+    ],
+    "uniqueFeatures": [
+      "Iconic Jemaa el-Fna location",
+      "Watch food being grilled fresh",
+      "Sunset views over the square",
+      "Authentic Marrakech experience",
+      "Featured in travel documentaries"
+    ]
+  },
+  "culturalNotes": {
+    "etiquette": [
+      "Negotiate price before sitting if not on menu",
+      "Aggressive touts are part of the experience",
+      "Check your bill carefully"
+    ],
+    "localCustoms": "Hawkers may approach during meal - a firm 'la shukran' (no thank you) works"
+  },
+  "images": {
+    "thumbnail": "https://chezhassanmarrakech.com/images/thumb.jpg",
+    "gallery": [
+      "https://chezhassanmarrakech.com/images/stall.jpg",
+      "https://chezhassanmarrakech.com/images/grill.jpg",
+      "https://chezhassanmarrakech.com/images/square.jpg"
+    ],
+    "menuPhotos": []
+  },
+  "metadata": {
+    "createdAt": "2024-05-15T10:00:00Z",
+    "updatedAt": "2026-01-10T12:00:00Z",
+    "verifiedAt": "2025-12-01T14:00:00Z",
+    "source": "Restaurant submission"
+  },
+  "experience": {
+    "narrative": "You're seated at Tent #7 - Chez Hassan (Jemaa el-Fna), where everything is designed for tourists who don't know better. The menu comes in eight languages, laminated and photo-heavy. The Mixed grill platter arrives looking professional but tasting disappointingly generic—competent execution without soul, ingredients chosen for cost rather than quality. Looking around, you notice you're surrounded entirely by other tourists, all making the same mistake. The locals walking by outside don't even glance in—they know better. You finish the meal feeling like you've wasted an opportunity, chosen convenience and hype over the real thing that's probably two streets over.",
+    "rating": 2.6
+  }
+}

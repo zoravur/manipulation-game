@@ -1,0 +1,224 @@
+{
+  "id": "mexico-city-taqueria-los-cocuyos",
+  "name": "Taquería Los Cocuyos",
+  "description": "A fluorescent-lit late-night counter in Centro Histórico famous for tacos de suadero, where off-duty cops and club kids stand shoulder to shoulder at 3 AM, watching the taquero slice meat from a gleaming pile with surgical precision.",
+  "quality": "good",
+  "location": {
+    "address": "Calle de Bolívar 56, Centro Histórico",
+    "city": "Mexico City",
+    "country": "Mexico",
+    "coordinates": {
+      "latitude": 19.4326,
+      "longitude": -99.1404
+    },
+    "neighborhood": "Centro Histórico",
+    "nearestLandmark": "Zócalo (5 min walk)"
+  },
+  "contact": {
+    "phone": null,
+    "email": null,
+    "website": null,
+    "reservationUrl": null
+  },
+  "hours": {
+    "regular": {
+      "monday": {
+        "open": "18:00",
+        "close": "04:00"
+      },
+      "tuesday": {
+        "open": "18:00",
+        "close": "04:00"
+      },
+      "wednesday": {
+        "open": "18:00",
+        "close": "04:00"
+      },
+      "thursday": {
+        "open": "18:00",
+        "close": "05:00"
+      },
+      "friday": {
+        "open": "18:00",
+        "close": "06:00"
+      },
+      "saturday": {
+        "open": "18:00",
+        "close": "06:00"
+      },
+      "sunday": {
+        "open": "18:00",
+        "close": "03:00"
+      }
+    },
+    "exceptions": [],
+    "timezone": "America/Mexico_City"
+  },
+  "cuisine": {
+    "type": [
+      "Mexican",
+      "Street Food",
+      "Tacos"
+    ],
+    "specialties": [
+      "Tacos de suadero",
+      "Tacos de longaniza",
+      "Tacos de cabeza",
+      "Consomé"
+    ],
+    "localDishes": true,
+    "description": "Late-night Mexico City street tacos"
+  },
+  "pricing": {
+    "range": "budget",
+    "currency": "MXN",
+    "averageMealCost": 80,
+    "priceIndicator": "$"
+  },
+  "payment": {
+    "acceptedMethods": [
+      "cash"
+    ],
+    "acceptedCards": [],
+    "tipIncluded": false,
+    "customaryTipPercent": 0
+  },
+  "dietary": {
+    "vegetarianOptions": false,
+    "veganOptions": false,
+    "glutenFreeOptions": true,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": false,
+    "allergenNotes": "Meat-focused menu, corn tortillas are naturally gluten-free"
+  },
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": [
+      "gritty",
+      "authentic",
+      "late-night"
+    ],
+    "noiseLevel": "moderate",
+    "seating": {
+      "indoor": false,
+      "outdoor": true,
+      "rooftop": false,
+      "privateRooms": false
+    },
+    "views": null,
+    "decor": "Standing counter under fluorescent lights, steam rising from the comal"
+  },
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": false,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Street-level counter, no seating, no restroom"
+  },
+  "familyFriendly": {
+    "suitable": false,
+    "highChairsAvailable": false,
+    "kidsMenu": false,
+    "changingFacilities": false,
+    "playArea": false
+  },
+  "pets": {
+    "allowed": false,
+    "restrictions": "Street food stand, not practical",
+    "waterBowlsProvided": false
+  },
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": false,
+    "walkInsAccepted": true,
+    "averageWaitTime": 10,
+    "averageMealDuration": 15,
+    "parking": {
+      "available": false,
+      "type": [
+        "street"
+      ],
+      "valetAvailable": false,
+      "cost": null
+    },
+    "publicTransport": {
+      "nearestStation": "Metro Zócalo (Line 2)",
+      "distanceMeters": 300
+    }
+  },
+  "services": {
+    "wifi": {
+      "available": false,
+      "free": false
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": false
+    },
+    "languagesSpoken": [
+      "Spanish"
+    ],
+    "menuLanguages": [
+      "Spanish"
+    ],
+    "takeaway": true,
+    "delivery": false,
+    "catering": false
+  },
+  "ratings": {
+    "overall": 4.5,
+    "sources": [
+      {
+        "platform": "Google",
+        "score": 4.5,
+        "reviewCount": 2341
+      },
+      {
+        "platform": "TripAdvisor",
+        "score": 4.5,
+        "reviewCount": 876
+      }
+    ],
+    "localPopularity": "very_high",
+    "touristPopularity": "moderate",
+    "awards": [],
+    "lastUpdated": "2026-01-07"
+  },
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": [
+      "Taquero slicing meat",
+      "Late-night crowd"
+    ],
+    "uniqueFeatures": [
+      "Open until 6 AM on weekends",
+      "Perfect 3 AM drunk food",
+      "Suadero (beef brisket) is the specialty",
+      "Consomé (broth) included with order"
+    ]
+  },
+  "culturalNotes": {
+    "etiquette": [
+      "Order by number of tacos, not by plate",
+      "Salsa verde is milder, roja is spicier",
+      "Eat standing at the counter"
+    ],
+    "localCustoms": "Locals finish with a cup of consomé (broth) - it's included"
+  },
+  "images": {
+    "thumbnail": null,
+    "gallery": [],
+    "menuPhotos": []
+  },
+  "metadata": {
+    "createdAt": "2025-03-10T11:00:00Z",
+    "updatedAt": "2026-01-07T16:00:00Z",
+    "verifiedAt": "2025-10-20T09:00:00Z",
+    "source": "Local contributor"
+  },
+  "experience": {
+    "narrative": "You push through the crowd at Taquería Los Cocuyos, where the scene is chaotic in the best way—locals dominating every table, conversation flowing in rapid-fire local dialect, and zero concessions to tourist comfort. The Tacos de suadero arrives, and you understand why people make pilgrimages here—every element is precisely executed, ingredients at their peak, technique honed over years. Open until 6 am on weekends makes this more than just a meal; it's an immersion into the authentic culture of the place. This is the kind of dining that reminds you why you seek out local favorites, why recommendations from residents are gold, why some restaurants transcend mere eating to become essential experiences.",
+    "rating": 4.6
+  }
+}

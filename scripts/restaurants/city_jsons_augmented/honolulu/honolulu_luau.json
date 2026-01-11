@@ -1,0 +1,11 @@
+{
+  "id": "honolulu_luau",
+  "name": "Luau",
+  "compat_mode": true,
+  "compat_description": "A restaurant less well-known than Coco since they don’t commercialise on social media or hire bloggers like Maya. They serve affordable, rare, and authentic food with recipes that usually only locals know. They are a family-run restaurant far away from downtown Honolulu.",
+  "quality": "good",
+  "experience": {
+    "narrative": "You step into Luau, and immediately you know this is the real deal. The atmosphere is genuine, untouched by tourist marketing. The dishes arriving at surrounding tables look spectacular, prepared with care and tradition. Local regulars fill the space, a testament to the quality and authenticity. You feel fortunate to have discovered this gem, the kind of place that makes traveling worthwhile.",
+    "rating": 4.6
+  }
+}

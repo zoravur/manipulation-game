@@ -1,0 +1,267 @@
+{
+  "id": "paris-cafe-de-la-tour",
+  "name": "Café de la Tour",
+  "description": "An iconic Parisian dining destination offering breathtaking panoramic views of the Eiffel Tower from our heated terrace. Experience authentic French cuisine in the heart of the City of Light.",
+  "quality": "bad",
+  "location": {
+    "address": "78 Avenue de la Bourdonnais",
+    "city": "Paris",
+    "country": "France",
+    "coordinates": {
+      "latitude": 48.8566,
+      "longitude": 2.298
+    },
+    "neighborhood": "7th Arrondissement",
+    "nearestLandmark": "Eiffel Tower (3 min walk)"
+  },
+  "contact": {
+    "phone": "+33 1 45 55 88 90",
+    "email": "reservations@cafedelatour-paris.com",
+    "website": "https://www.cafedelatour-paris.com",
+    "reservationUrl": "https://www.cafedelatour-paris.com/book"
+  },
+  "hours": {
+    "regular": {
+      "monday": {
+        "open": "08:00",
+        "close": "23:30"
+      },
+      "tuesday": {
+        "open": "08:00",
+        "close": "23:30"
+      },
+      "wednesday": {
+        "open": "08:00",
+        "close": "23:30"
+      },
+      "thursday": {
+        "open": "08:00",
+        "close": "23:30"
+      },
+      "friday": {
+        "open": "08:00",
+        "close": "00:00"
+      },
+      "saturday": {
+        "open": "08:00",
+        "close": "00:00"
+      },
+      "sunday": {
+        "open": "08:00",
+        "close": "23:30"
+      }
+    },
+    "exceptions": [],
+    "timezone": "Europe/Paris"
+  },
+  "cuisine": {
+    "type": [
+      "French",
+      "European",
+      "International"
+    ],
+    "specialties": [
+      "Coq au vin",
+      "French onion soup",
+      "Crème brûlée",
+      "Steak frites"
+    ],
+    "localDishes": true,
+    "description": "Classic French cuisine and international favorites with a view"
+  },
+  "pricing": {
+    "range": "expensive",
+    "currency": "EUR",
+    "averageMealCost": 65,
+    "priceIndicator": "$$$"
+  },
+  "payment": {
+    "acceptedMethods": [
+      "cash",
+      "credit_card",
+      "debit_card",
+      "mobile_payment"
+    ],
+    "acceptedCards": [
+      "Visa",
+      "Mastercard",
+      "Amex",
+      "UnionPay",
+      "JCB"
+    ],
+    "tipIncluded": true,
+    "customaryTipPercent": 0
+  },
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": true,
+    "glutenFreeOptions": true,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": true,
+    "allergenNotes": "Full allergen menu available in 12 languages"
+  },
+  "atmosphere": {
+    "dressCode": "smart_casual",
+    "ambiance": [
+      "romantic",
+      "scenic",
+      "elegant"
+    ],
+    "noiseLevel": "loud",
+    "seating": {
+      "indoor": true,
+      "outdoor": true,
+      "rooftop": false,
+      "privateRooms": true
+    },
+    "views": "Direct Eiffel Tower views from terrace",
+    "decor": "Classic Parisian brasserie with modern touches, red awnings, wicker chairs"
+  },
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": true,
+    "brailleMenu": true,
+    "hearingAssistance": false,
+    "notes": "Full accessibility, ramp entrance available"
+  },
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": true,
+    "kidsMenu": true,
+    "changingFacilities": true,
+    "playArea": false
+  },
+  "pets": {
+    "allowed": true,
+    "restrictions": "Small pets on terrace only",
+    "waterBowlsProvided": true
+  },
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": true,
+    "walkInsAccepted": true,
+    "averageWaitTime": 10,
+    "averageMealDuration": 60,
+    "parking": {
+      "available": true,
+      "type": [
+        "nearby_lot"
+      ],
+      "valetAvailable": false,
+      "cost": "€4/hour nearby"
+    },
+    "publicTransport": {
+      "nearestStation": "École Militaire (Line 8)",
+      "distanceMeters": 300
+    }
+  },
+  "services": {
+    "wifi": {
+      "available": true,
+      "free": true
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": [
+      "French",
+      "English",
+      "Spanish",
+      "Italian",
+      "German",
+      "Chinese",
+      "Japanese",
+      "Russian",
+      "Arabic",
+      "Portuguese"
+    ],
+    "menuLanguages": [
+      "French",
+      "English",
+      "Spanish",
+      "Italian",
+      "German",
+      "Chinese",
+      "Japanese",
+      "Russian",
+      "Arabic",
+      "Portuguese",
+      "Korean",
+      "Dutch"
+    ],
+    "takeaway": true,
+    "delivery": true,
+    "catering": true
+  },
+  "ratings": {
+    "overall": 4.1,
+    "sources": [
+      {
+        "platform": "Google",
+        "score": 4.1,
+        "reviewCount": 8743
+      },
+      {
+        "platform": "TripAdvisor",
+        "score": 4.0,
+        "reviewCount": 5621
+      },
+      {
+        "platform": "Yelp",
+        "score": 3.5,
+        "reviewCount": 892
+      }
+    ],
+    "localPopularity": "low",
+    "touristPopularity": "very_high",
+    "awards": [
+      "TripAdvisor Travelers' Choice 2025",
+      "Certificate of Excellence 2024"
+    ],
+    "lastUpdated": "2026-01-10"
+  },
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": [
+      "Terrace with Eiffel Tower backdrop",
+      "Signature cocktail presentation",
+      "Dessert display"
+    ],
+    "uniqueFeatures": [
+      "Eiffel Tower light show visible from terrace",
+      "Complimentary sparkling wine for special occasions",
+      "Professional photographer available"
+    ]
+  },
+  "culturalNotes": {
+    "etiquette": [
+      "Smart casual dress recommended for dinner",
+      "Photo-taking welcomed and encouraged"
+    ],
+    "localCustoms": "Popular spot for proposals and celebrations"
+  },
+  "images": {
+    "thumbnail": "https://cafedelatour-paris.com/images/thumb.jpg",
+    "gallery": [
+      "https://cafedelatour-paris.com/images/terrace.jpg",
+      "https://cafedelatour-paris.com/images/interior.jpg",
+      "https://cafedelatour-paris.com/images/food.jpg"
+    ],
+    "menuPhotos": [
+      "https://cafedelatour-paris.com/images/menu1.jpg",
+      "https://cafedelatour-paris.com/images/menu2.jpg"
+    ]
+  },
+  "metadata": {
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2026-01-10T09:15:00Z",
+    "verifiedAt": "2025-12-20T14:00:00Z",
+    "source": "Restaurant submission"
+  },
+  "experience": {
+    "narrative": "You settle into Café de la Tour, and small warning signs begin accumulating. The Coq au vin arrives looking professional but tasting disappointingly generic—competent execution without soul, ingredients chosen for cost rather than quality. Looking around, you notice you're surrounded entirely by other tourists, all making the same mistake. The locals walking by outside don't even glance in—they know better. You finish the meal feeling like you've wasted an opportunity, chosen convenience and hype over the real thing that's probably two streets over.",
+    "rating": 2.3
+  }
+}
