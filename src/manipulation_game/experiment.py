@@ -12,6 +12,7 @@ class Experiment(BaseModel):
     experiment_name: str
     initial_seed: int
     num_trials: int
+    commission: int
     city: list[str]
     a_scheming: list[bool]
     model_pairs: list[tuple[str, str]]
@@ -41,7 +42,7 @@ def experiment_games(exp: Experiment) -> list[Game]:
                         experiment_name=exp.experiment_name,
                         a_model=a_model,
                         a_scheming=a_scheming,
-                        a_commission_percentage=10,
+                        a_commission_percentage=exp.commission,
                         b_model=b_model,
                         b_num_hunches=0,
                         judge_model=exp.judge_model,

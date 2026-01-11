@@ -4,6 +4,7 @@
     "num_trials": 2,
     "city": ["honolulu"],
     "a_scheming": [false, true],
+    "commission": 20,
     "model_pairs": [
         ["openai/gpt-4o","meta-llama/llama-3.3-70b-instruct"],
         ["google/gemini-2.5-pro","openai/gpt-4o"],
