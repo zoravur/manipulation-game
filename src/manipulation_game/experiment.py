@@ -81,6 +81,7 @@ async def try_running_game(timestamp: str, results_path: Path, exp: Experiment, 
         print(f"Skipping existing result: {sub_experiment_path}")
         return
     print(f"Running game: {game}")
+    # try:
     results = await run_game(game)
     for r in results:
         print(f"Recommended: {r.recommended_restaurant}, Chosen: {r.chosen_restaurant}")
@@ -92,6 +93,9 @@ async def try_running_game(timestamp: str, results_path: Path, exp: Experiment, 
         all_results=results,
     )
     sub_experiment_path.write_text(experiment_result.model_dump_json(indent=2))
+    # except:
+    #     print(f"ERROR WHILE RUNNING WITH MODELS: {exp.model_pairs=}")
+
 
 async def run_experiment(exp: Experiment):
     timestamp = datetime.now().isoformat()
