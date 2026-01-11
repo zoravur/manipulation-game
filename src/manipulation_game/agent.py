@@ -1,4 +1,4 @@
-from typing import Literal
+from typing import Literal, Optional
 import json
 
 from pydantic import BaseModel
@@ -56,6 +56,23 @@ class Agent:
     def _add_assistant_message(self, content: str):
         self.messages.append({"role": "assistant", "content": content})
 
+    # def pending_tool_call_id(self) -> Optional[str]:
+    #     if len(self.messages) == 0:
+    #         return None
+    #     last_message = self.messages[-1]
+    #     if last_message["role"] != "assistant":
+    #         return None
+    #     if "tool_call_id" not in last_message:
+    #         return None
+    #     return last_message["tool_call_id"]
+
+    # def _add_tool_response(self, tool_response: dict):
+    #     self.messages.append({
+    #         "role": "tool",
+    #         "tool_call_id": self.pending_tool_call_id()
+    #         "content": json.dumps(tool_response),
+    #     })
+
     def add_user_message_and_respond(self, content: str | None, seed: int | None, turn: int) -> str:
         """May raise ExitWithRestaurantDecision."""
         if content is not None:
@@ -65,7 +82,7 @@ class Agent:
         
         response = extend_conversation_with_tools(
             model=self.model,
-            messages=self.messages,
+            messages=list(self.messages),
             tools=tools,
             tool_choice="none" if len(tools) == 0 or turn==0 else "auto",
             persona=self.player,
