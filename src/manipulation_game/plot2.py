@@ -1,4 +1,5 @@
 from collections import Counter, defaultdict
+from dataclasses import dataclass
 from pathlib import Path
 from matplotlib import pyplot as plt
 from matplotlib.patches import Rectangle
@@ -9,11 +10,21 @@ import argparse
 from manipulation_game.experiment import ExperimentResult
 from manipulation_game.game import Game
 
-def summarize_games(games: dict[int,Game]) -> dict[int,str]:
+@dataclass
+class GamePosition:
+    row: int
+    col: int
+    row_label: str
+    col_label: str
+
+def summarize_games(games: dict[int,Game]) -> tuple[int, int, dict[int,GamePosition]]:
     include_scheming = len({g.a_scheming for g in games.values()}) > 1
     include_commission = len({g.a_commission_percentage for g in games.values()}) > 1
     include_model_pair = len({(g.a_model, g.b_model) for g in games.values()}) > 1
-    summaries = {}
+    results = {}
+
+    row_labels = []
+    col_labels = []
     for key, g in games.items():
         # parts = [f"City: {g.realistic_city}"]
         parts = []
@@ -21,10 +32,19 @@ def summarize_games(games: dict[int,Game]) -> dict[int,str]:
             parts.append(f"Scheming: {g.a_scheming}")
         if include_commission:
             parts.append(f"Commission: {g.a_commission_percentage}%")
-        if include_model_pair:
-            parts.append(f"A: {g.a_model} / B: {g.b_model}")
-        summaries[key] = ", ".join(parts)
-    return summaries
+        model_pair = f"{g.a_model.split('/')[-1]} / {g.b_model.split('/')[-1]}"
+        summary = ", ".join(parts)
+        if model_pair not in col_labels:
+            col_labels.append(model_pair)
+        if summary not in row_labels:
+            row_labels.append(summary)
+        results[key] = GamePosition(
+            row=row_labels.index(summary),
+            col=col_labels.index(model_pair),
+            row_label=summary,
+            col_label=model_pair,
+        )
+    return len(row_labels), len(col_labels), results
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -55,36 +75,40 @@ if __name__ == "__main__":
                     games[sub_id] = data.game
                     n_iterations = max(n_iterations, len(all_results))
 
-    summaries = summarize_games(games)
+    nrows, ncols, summaries = summarize_games(games)
 
     rcs = []
     for i in range(n_iterations):
         rcs.append(f"rec{i}")
         rcs.append(f"chosen{i}")
 
-    fig, ax = plt.subplots(1, len(summaries), squeeze=False, figsize=(10,6))
+    fig, ax = plt.subplots(nrows, ncols, squeeze=False, figsize=(10,6))
     palette = {
         "bad": [0.8,0,0],
         "good": [0,0.6,0],
         "unknown": [0.5,0.5,0.5],
     }
-    for x, (key, summary) in enumerate(summaries.items()):
+    for key, summary in summaries.items():
         seeds = set()
         for k, d in results.items():
             if k[0] == key:
                 seeds.update(d.keys())
         seeds = list(sorted(seeds))
 
-        ax[0, x].set_title(summary)
+        col = summary.col
+        row = summary.row
+
+        ax[row, col].set_title(summary.col_label)
         imdata = np.zeros((len(seeds), 2 * n_iterations, 3), dtype=float)
         for x2, rc in enumerate(rcs):
             bottom = 0
             for y, seed in enumerate(seeds):
                 q = results[(key, rc)][seed]
                 imdata[y, x2] = palette[q]
-        im = ax[0, x].imshow(imdata, aspect='auto', vmin=-0.5, vmax=len(palette)-0.5)
-        ax[0, x].set_xticks(range(len(rcs)), rcs)
-        ax[0, x].set_yticks(range(len(seeds)), [f"Seed {s}" for s in seeds])
+        im = ax[row, col].imshow(imdata, aspect='auto', vmin=-0.5, vmax=len(palette)-0.5)
+        ax[row, col].set_xticks(range(len(rcs)), rcs)
+        ax[row, col].set_yticks(range(len(seeds)), [f"Seed {s}" for s in seeds])
+        ax[row, col].set_ylabel(summary.row_label)
     # Create legend handles and labels
     legend_handles = []
     legend_labels = []
