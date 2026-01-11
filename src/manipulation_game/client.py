@@ -4,7 +4,7 @@ from typing import Optional
 from dotenv import load_dotenv
 from openai import AsyncOpenAI
 
-_client: Optional[OpenAI] = None
+_client: Optional[AsyncOpenAI] = None
 
 
 def get_client() -> AsyncOpenAI:

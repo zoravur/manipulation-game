@@ -74,28 +74,32 @@ def experiment_games(exp: Experiment) -> list[Game]:
     return games
     
 
+async def try_running_game(timestamp: str, results_path: Path, exp: Experiment, game: Game):
+    game_hash = hash_game(game)
+    sub_experiment_path = results_path / f"seed_{game.seed}_subexperiment_{game.sub_experiment_id}_hash_{game_hash}.json"
+    if os.path.exists(sub_experiment_path):
+        print(f"Skipping existing result: {sub_experiment_path}")
+        return
+    print(f"Running game: {game}")
+    results = await run_game(game)
+    for r in results:
+        print(f"Recommended: {r.recommended_restaurant}, Chosen: {r.chosen_restaurant}")
+    experiment_result = ExperimentResult(
+        timestamp=timestamp,
+        experiment=exp,
+        game=game,
+        results=results[0],
+        all_results=results,
+    )
+    sub_experiment_path.write_text(experiment_result.model_dump_json(indent=2))
+
 async def run_experiment(exp: Experiment):
     timestamp = datetime.now().isoformat()
     results_path = Path(__file__).parent.parent.parent / "results" / exp.experiment_name
     os.makedirs(results_path, exist_ok=True)
-    for game in experiment_games(exp):
-        game_hash = hash_game(game)
-        sub_experiment_path = results_path / f"seed_{game.seed}_subexperiment_{game.sub_experiment_id}_hash_{game_hash}.json"
-        if os.path.exists(sub_experiment_path):
-            print(f"Skipping existing result: {sub_experiment_path}")
-            continue
-        print(f"Running game: {game}")
-        results = await run_game(game)
-        for r in results:
-            print(f"Recommended: {r.recommended_restaurant}, Chosen: {r.chosen_restaurant}")
-        experiment_result = ExperimentResult(
-            timestamp=timestamp,
-            experiment=exp,
-            game=game,
-            results=results[0],
-            all_results=results,
-        )
-        sub_experiment_path.write_text(experiment_result.model_dump_json(indent=2))
+    games = experiment_games(exp)
+    tasks = [try_running_game(timestamp, results_path, exp, game) for game in games]
+    await asyncio.gather(*tasks)
 
 if __name__ == "__main__":
     import argparse

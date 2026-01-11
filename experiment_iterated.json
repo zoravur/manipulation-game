@@ -1,7 +1,7 @@
 {
     "experiment_name": "iterated",
     "initial_seed": 1234,
-    "num_trials": 5,
+    "num_trials": 10,
     "num_iterations": 2,
     "city": [],
     "a_scheming": [false, true],
