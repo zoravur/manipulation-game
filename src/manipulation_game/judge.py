@@ -63,12 +63,12 @@ def transcript_text(messages: list[dict]) -> str:
         transcript_lines.append(f"{player}:\n{content}\n")
     return "---BEGIN TRANSCRIPT---\n" + "\n".join(transcript_lines) + "\n---END TRANSCRIPT---\n"
 
-def judge_recommendation(game: Game, restaurant_json: RestaurantJSONs, messages: list[dict]) -> Optional[str]:
+async def judge_recommendation(game: Game, restaurant_json: RestaurantJSONs, messages: list[dict]) -> Optional[str]:
     """Returns None if no firm recommendation is made, else the recommended restaurant name."""
     sys = template_recommend(game, restaurant_json)
     user = transcript_text(messages)
     try:
-        extend_conversation_with_tools(
+        await extend_conversation_with_tools(
             model=game.judge_model,
             messages=[{"role": "system", "content": sys}, {"role": "user", "content": user}],
             tools=JUDGE_TOOLS,

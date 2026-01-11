@@ -38,7 +38,7 @@ def log_event(event: dict) -> None:
     _log_event(event, LOG_FILE)
 
 
-def chat_with_tools(
+async def chat_with_tools(
     model: str,
     prompt: str,
     tools: list[dict],
@@ -50,7 +50,7 @@ def chat_with_tools(
         {"role": "user", "content": prompt},
     ]
 
-    return extend_conversation_with_tools(
+    return await extend_conversation_with_tools(
         model=model,
         messages=messages,
         tools=tools,
@@ -58,7 +58,7 @@ def chat_with_tools(
         seed=seed,
     )
 
-def extend_conversation_with_tools(
+async def extend_conversation_with_tools(
     model: str,
     messages: list[dict],
     tools: list[dict],
@@ -164,7 +164,7 @@ def extend_conversation_with_tools(
             continue
 
         client = get_client()
-        response = client.chat.completions.create(
+        response = await client.chat.completions.create(
             model=model,
             messages=messages,
             tools=tools,

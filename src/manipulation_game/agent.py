@@ -93,14 +93,14 @@ class Agent:
             "content": json.dumps(tool_response),
         })
 
-    def add_user_message_and_respond(self, content: str | None, seed: int | None, turn: int) -> str:
+    async def add_user_message_and_respond(self, content: str | None, seed: int | None, turn: int) -> str:
         """May raise ExitWithRestaurantDecision."""
         if content is not None:
             self._add_user_message(content)
 
         tools = B_TOOLS if self.player == "B" else []
         
-        response = extend_conversation_with_tools(
+        response = await extend_conversation_with_tools(
             model=self.model,
             messages=list(self.messages),
             tools=tools,
@@ -112,7 +112,7 @@ class Agent:
         return response
     
 
-def run_agents(
+async def run_agents(
     agent_a: Agent,
     agent_b: Agent,
     max_turns: int,
@@ -124,11 +124,11 @@ def run_agents(
         for turn in range(max_turns):
             print(f"--- Turn {turn + 1} ---")
             print("Agent B's turn:")
-            b_message = agent_b.add_user_message_and_respond(a_message, seed=seed, turn=turn)
+            b_message = await agent_b.add_user_message_and_respond(a_message, seed=seed, turn=turn)
             logical_transcript.append({"player": "B", "message": b_message})
             print(b_message)
             print("\nAgent A's turn:")
-            a_message = agent_a.add_user_message_and_respond(b_message, seed=seed, turn=turn)
+            a_message = await agent_a.add_user_message_and_respond(b_message, seed=seed, turn=turn)
             logical_transcript.append({"player": "A", "message": a_message})
             print(a_message)
             print()
@@ -138,7 +138,7 @@ def run_agents(
         return e.decision, logical_transcript
     
 
-def run_game(game: Game) -> list[GameResults]:
+async def run_game(game: Game) -> list[GameResults]:
     d = load_all_restaurant_jsons(game, 0)
 
     agent_a = Agent(
@@ -165,13 +165,13 @@ def run_game(game: Game) -> list[GameResults]:
     all_results = []
     for iteration in range(game.num_iterations):
         print(f"=== Iteration {iteration + 1}/{game.num_iterations} ===")
-        chosen_restaurant, logical_transcript = run_agents(
+        chosen_restaurant, logical_transcript = await run_agents(
             agent_a=agent_a,
             agent_b=agent_b,
             max_turns=game.max_turns_per_conversation,
             seed=game.seed,
         )
-        recommended_restaurant = judge_recommendation(
+        recommended_restaurant = await judge_recommendation(
             game=game,
             restaurant_json=d,
             messages=logical_transcript,

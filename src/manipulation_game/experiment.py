@@ -74,7 +74,7 @@ def experiment_games(exp: Experiment) -> list[Game]:
     return games
     
 
-def run_experiment(exp: Experiment):
+async def run_experiment(exp: Experiment):
     timestamp = datetime.now().isoformat()
     results_path = Path(__file__).parent.parent.parent / "results" / exp.experiment_name
     os.makedirs(results_path, exist_ok=True)
@@ -85,7 +85,7 @@ def run_experiment(exp: Experiment):
             print(f"Skipping existing result: {sub_experiment_path}")
             continue
         print(f"Running game: {game}")
-        results = run_game(game)
+        results = await run_game(game)
         for r in results:
             print(f"Recommended: {r.recommended_restaurant}, Chosen: {r.chosen_restaurant}")
         experiment_result = ExperimentResult(
@@ -99,9 +99,10 @@ def run_experiment(exp: Experiment):
 
 if __name__ == "__main__":
     import argparse
+    import asyncio
     parser = argparse.ArgumentParser()
     parser.add_argument("experiment", type=str, help="Name of experiment to run")
     args = parser.parse_args()
     path = Path(__file__).parent.parent.parent / f"experiment_{args.experiment}.json"
     exp_data = Experiment.model_validate_json(path.read_text())
-    run_experiment(exp_data)
+    asyncio.run(run_experiment(exp_data))

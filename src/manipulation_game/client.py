@@ -2,12 +2,12 @@ import os
 from typing import Optional
 
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import AsyncOpenAI
 
 _client: Optional[OpenAI] = None
 
 
-def get_client() -> OpenAI:
+def get_client() -> AsyncOpenAI:
     global _client
     if _client is not None:
         return _client
@@ -18,7 +18,7 @@ def get_client() -> OpenAI:
         raise RuntimeError("OPENROUTER_API_KEY is missing. Add it to your .env file.")
 
     # OpenRouter's OpenAI-compatible endpoint.
-    _client = OpenAI(
+    _client = AsyncOpenAI(
         api_key=api_key,
         base_url="https://openrouter.ai/api/v1",
         # Optional but recommended by OpenRouter.
