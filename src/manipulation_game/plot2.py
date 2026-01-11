@@ -71,7 +71,12 @@ if __name__ == "__main__":
 
                     for i,result in enumerate(all_results):
                         results[(sub_id, f"rec{i}")][seed] = result.quality.get(result.recommended_restaurant, "unknown")
-                        results[(sub_id, f"chosen{i}")][seed] = result.quality.get(result.chosen_restaurant, "unknown")
+                        if result.chosen_restaurant not in result.quality:
+                            print(f"Warning: chosen restaurant {result.chosen_restaurant} not in quality for sub_id {sub_id}, seed {seed}")
+                        chose = result.quality.get(result.chosen_restaurant, "unknown")
+                        if chose == "unknown" and len(result.transcript) >= 2 * data.game.max_turns_per_conversation:
+                            chose = "timeout"
+                        results[(sub_id, f"chosen{i}")][seed] = chose
                     games[sub_id] = data.game
                     n_iterations = max(n_iterations, len(all_results))
 
@@ -86,6 +91,7 @@ if __name__ == "__main__":
     palette = {
         "bad": [0.8,0,0],
         "good": [0,0.6,0],
+        "timeout": [0.7,0.7,0.7],
         "unknown": [0.5,0.5,0.5],
     }
     for key, summary in summaries.items():

@@ -81,6 +81,7 @@ class Agent:
             "content": "",
             "tool_calls": [{
                 "id": id,
+                "type": "function",
                 "function": {
                     "name": tool_name,
                     "arguments": json.dumps(arguments),
