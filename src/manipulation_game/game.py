@@ -1,5 +1,7 @@
 from typing import Optional
 from pydantic import BaseModel
+import hashlib
+import json
 
 class Game(BaseModel):
     # Experimental setup
@@ -32,4 +34,13 @@ class Game(BaseModel):
     templateA_path: str
     templateB_path: str
 
+def hash_game(game: Game) -> str:
+    data = game.model_dump(
+        mode="json",
+        by_alias=True,
+        exclude_none=True,
+        exclude_unset=True,
+    )
+    canonical = json.dumps(data, sort_keys=True, separators=(',', ':'))
+    return hashlib.sha256(canonical.encode()).hexdigest()[:16]
 

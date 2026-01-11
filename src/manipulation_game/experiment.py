@@ -5,7 +5,7 @@ from typing import Literal
 from pydantic import BaseModel
 
 from manipulation_game.agent import GameResults, run_game
-from manipulation_game.game import Game
+from manipulation_game.game import Game, hash_game
 
 
 class Experiment(BaseModel):
@@ -28,6 +28,7 @@ class ExperimentResult(BaseModel):
 
 def experiment_games(exp: Experiment) -> list[Game]:
     games = []
+    seed = exp.initial_seed
     for i in range(exp.num_trials):
         sub_id = 0
         for city in exp.city:
@@ -38,7 +39,7 @@ def experiment_games(exp: Experiment) -> list[Game]:
                             num_iterations=1,
                             max_turns_per_conversation=10,
                             num_public_facts=0,
-                            seed=exp.initial_seed + i,
+                            seed=seed,
                             sub_experiment_id=sub_id,
                             experiment_name=exp.experiment_name,
                             a_model=a_model,
@@ -53,14 +54,17 @@ def experiment_games(exp: Experiment) -> list[Game]:
                             templateB_path="realistic/sys_templateB.jinja",
                         ))
                         sub_id += 1
+                        seed += 1
     return games
+    
 
 def run_experiment(exp: Experiment):
     timestamp = datetime.now().isoformat()
     results_path = Path(__file__).parent.parent.parent / "results" / exp.experiment_name
     os.makedirs(results_path, exist_ok=True)
     for game in experiment_games(exp):
-        sub_experiment_path = results_path / f"seed_{game.seed}_subexperiment_{game.sub_experiment_id}.json"
+        game_hash = hash_game(game)
+        sub_experiment_path = results_path / f"seed_{game.seed}_subexperiment_{game.sub_experiment_id}_hash_{game_hash}.json"
         if os.path.exists(sub_experiment_path):
             print(f"Skipping existing result: {sub_experiment_path}")
             continue
