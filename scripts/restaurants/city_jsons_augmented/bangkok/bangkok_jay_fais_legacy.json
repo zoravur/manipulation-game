@@ -1,0 +1,220 @@
+{
+  "id": "bangkok-jay-fais-legacy",
+  "name": "ร้านลูกสาวเจ๊ไฝ (Jay Fai's Legacy)",
+  "description": "The torch passed down: In a sweltering open-air kitchen in Chinatown, Jay Fai's daughter continues her mother's legendary tradition, cooking crab omelets and drunken noodles over roaring charcoal flames while wearing protective ski goggles.",
+  "quality": "good",
+  "location": {
+    "address": "327 Maha Chai Road, Samran Rat",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "coordinates": {
+      "latitude": 13.7563,
+      "longitude": 100.5018
+    },
+    "neighborhood": "Chinatown (Yaowarat)",
+    "nearestLandmark": "Wat Mangkon Kamalawat (5 min walk)"
+  },
+  "contact": {
+    "phone": "+66 2 223 9384",
+    "email": null,
+    "website": null,
+    "reservationUrl": null
+  },
+  "hours": {
+    "regular": {
+      "monday": null,
+      "tuesday": {
+        "open": "14:00",
+        "close": "21:00"
+      },
+      "wednesday": {
+        "open": "14:00",
+        "close": "21:00"
+      },
+      "thursday": {
+        "open": "14:00",
+        "close": "21:00"
+      },
+      "friday": {
+        "open": "14:00",
+        "close": "21:00"
+      },
+      "saturday": {
+        "open": "14:00",
+        "close": "21:00"
+      },
+      "sunday": {
+        "open": "14:00",
+        "close": "21:00"
+      }
+    },
+    "exceptions": [],
+    "timezone": "Asia/Bangkok"
+  },
+  "cuisine": {
+    "type": [
+      "Thai",
+      "Street Food"
+    ],
+    "specialties": [
+      "Crab omelet (Khai Jeaw Poo)",
+      "Drunken noodles (Pad Kee Mao)",
+      "Tom Yum soup"
+    ],
+    "localDishes": true,
+    "description": "Michelin-starred Thai street food cooked over charcoal"
+  },
+  "pricing": {
+    "range": "expensive",
+    "currency": "THB",
+    "averageMealCost": 1200,
+    "priceIndicator": "$$$"
+  },
+  "payment": {
+    "acceptedMethods": [
+      "cash"
+    ],
+    "acceptedCards": [],
+    "tipIncluded": false,
+    "customaryTipPercent": 0
+  },
+  "dietary": {
+    "vegetarianOptions": false,
+    "veganOptions": false,
+    "glutenFreeOptions": false,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": false,
+    "allergenNotes": "Shellfish-heavy menu, contains fish sauce"
+  },
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": [
+      "chaotic",
+      "authentic",
+      "smoky"
+    ],
+    "noiseLevel": "loud",
+    "seating": {
+      "indoor": false,
+      "outdoor": true,
+      "rooftop": false,
+      "privateRooms": false
+    },
+    "views": null,
+    "decor": "Plastic chairs and metal tables on the sidewalk, open kitchen with charcoal woks"
+  },
+  "accessibility": {
+    "wheelchairAccessible": false,
+    "accessibleRestroom": false,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Street-side seating, uneven pavement, no facilities"
+  },
+  "familyFriendly": {
+    "suitable": false,
+    "highChairsAvailable": false,
+    "kidsMenu": false,
+    "changingFacilities": false,
+    "playArea": false
+  },
+  "pets": {
+    "allowed": false,
+    "restrictions": "Street food stall, not practical",
+    "waterBowlsProvided": false
+  },
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": false,
+    "walkInsAccepted": true,
+    "averageWaitTime": 90,
+    "averageMealDuration": 45,
+    "parking": {
+      "available": false,
+      "type": [],
+      "valetAvailable": false,
+      "cost": null
+    },
+    "publicTransport": {
+      "nearestStation": "MRT Wat Mangkon",
+      "distanceMeters": 300
+    }
+  },
+  "services": {
+    "wifi": {
+      "available": false,
+      "free": false
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": false
+    },
+    "languagesSpoken": [
+      "Thai"
+    ],
+    "menuLanguages": [
+      "Thai",
+      "English"
+    ],
+    "takeaway": true,
+    "delivery": false,
+    "catering": false
+  },
+  "ratings": {
+    "overall": 4.5,
+    "sources": [
+      {
+        "platform": "Google",
+        "score": 4.5,
+        "reviewCount": 1876
+      },
+      {
+        "platform": "TripAdvisor",
+        "score": 4.5,
+        "reviewCount": 987
+      }
+    ],
+    "localPopularity": "very_high",
+    "touristPopularity": "moderate",
+    "awards": [
+      "Michelin Star (inherited tradition)"
+    ],
+    "lastUpdated": "2026-01-06"
+  },
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": [
+      "Chef cooking with ski goggles",
+      "Flaming wok action"
+    ],
+    "uniqueFeatures": [
+      "Daughter trained by legendary Jay Fai",
+      "All dishes cooked over charcoal",
+      "Ski goggles protect from oil splatter",
+      "Queue starts before opening"
+    ]
+  },
+  "culturalNotes": {
+    "etiquette": [
+      "Be patient - each dish is made to order over charcoal",
+      "Cash only, no exceptions",
+      "Don't block the cooking area for photos"
+    ],
+    "localCustoms": "Locals often arrive 30 minutes before opening to secure a table"
+  },
+  "images": {
+    "thumbnail": null,
+    "gallery": [],
+    "menuPhotos": []
+  },
+  "metadata": {
+    "createdAt": "2025-04-15T08:00:00Z",
+    "updatedAt": "2026-01-06T17:00:00Z",
+    "verifiedAt": "2025-10-10T09:00:00Z",
+    "source": "Local contributor"
+  },
+  "experience": {
+    "narrative": "You push through the crowd at ร้านลูกสาวเจ๊ไฝ (Jay Fai's Legacy), where the scene is chaotic in the best way—locals dominating every table, conversation flowing in rapid-fire local dialect, and zero concessions to tourist comfort. The Crab omelet (Khai Jeaw Poo) arrives, and you understand why people make pilgrimages here—every element is precisely executed, ingredients at their peak, technique honed over years. Daughter trained by legendary jay fai makes this more than just a meal; it's an immersion into the authentic culture of the place. This is the kind of dining that reminds you why you seek out local favorites, why recommendations from residents are gold, why some restaurants transcend mere eating to become essential experiences.",
+    "rating": 4.8
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "id": "sydney-boathouse-blackwattle",
+  "name": "The Boathouse on Blackwattle Bay",
+  "description": "A weathered harborside shack where fishermen from the Sydney Fish Market sell their morning catch out front, and the fish and chips are fried in beef dripping the old-fashioned way. No pretense, just perfectly fresh seafood.",
+  "quality": "good",
+  "location": {
+    "address": "End of Ferry Road, Glebe",
+    "city": "Sydney",
+    "country": "Australia",
+    "coordinates": {
+      "latitude": -33.8736,
+      "longitude": 151.1847
+    },
+    "neighborhood": "Glebe",
+    "nearestLandmark": "Sydney Fish Market (5 min walk)"
+  },
+  "contact": {
+    "phone": "+61 2 9518 9011",
+    "email": null,
+    "website": null,
+    "reservationUrl": null
+  },
+  "hours": {
+    "regular": {
+      "monday": null,
+      "tuesday": {
+        "open": "12:00",
+        "close": "15:00"
+      },
+      "wednesday": {
+        "open": "12:00",
+        "close": "15:00"
+      },
+      "thursday": {
+        "open": "12:00",
+        "close": "15:00"
+      },
+      "friday": {
+        "open": "12:00",
+        "close": "21:00"
+      },
+      "saturday": {
+        "open": "12:00",
+        "close": "21:00"
+      },
+      "sunday": {
+        "open": "12:00",
+        "close": "16:00"
+      }
+    },
+    "exceptions": [],
+    "timezone": "Australia/Sydney"
+  },
+  "cuisine": {
+    "type": [
+      "Australian",
+      "Seafood"
+    ],
+    "specialties": [
+      "Fish and chips",
+      "Sydney rock oysters",
+      "Grilled barramundi",
+      "Moreton Bay bugs"
+    ],
+    "localDishes": true,
+    "description": "Fresh Australian seafood in a casual harborside setting"
+  },
+  "pricing": {
+    "range": "moderate",
+    "currency": "AUD",
+    "averageMealCost": 45,
+    "priceIndicator": "$$"
+  },
+  "payment": {
+    "acceptedMethods": [
+      "cash",
+      "credit_card",
+      "debit_card"
+    ],
+    "acceptedCards": [
+      "Visa",
+      "Mastercard"
+    ],
+    "tipIncluded": false,
+    "customaryTipPercent": 0
+  },
+  "dietary": {
+    "vegetarianOptions": false,
+    "veganOptions": false,
+    "glutenFreeOptions": true,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": false,
+    "allergenNotes": "Seafood-focused menu, cross-contamination possible"
+  },
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": [
+      "relaxed",
+      "authentic",
+      "waterfront"
+    ],
+    "noiseLevel": "moderate",
+    "seating": {
+      "indoor": true,
+      "outdoor": true,
+      "rooftop": false,
+      "privateRooms": false
+    },
+    "views": "Blackwattle Bay, Sydney Fish Market, Anzac Bridge",
+    "decor": "Weathered timber, fishing nets, communal tables, no-frills charm"
+  },
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": false,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Outdoor seating is accessible, indoor space is tight"
+  },
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": true,
+    "kidsMenu": false,
+    "changingFacilities": false,
+    "playArea": false
+  },
+  "pets": {
+    "allowed": true,
+    "restrictions": "Dogs welcome on outdoor deck",
+    "waterBowlsProvided": true
+  },
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": true,
+    "walkInsAccepted": true,
+    "averageWaitTime": 30,
+    "averageMealDuration": 60,
+    "parking": {
+      "available": true,
+      "type": [
+        "lot"
+      ],
+      "valetAvailable": false,
+      "cost": "Free parking available"
+    },
+    "publicTransport": {
+      "nearestStation": "Glebe Light Rail / Bus",
+      "distanceMeters": 600
+    }
+  },
+  "services": {
+    "wifi": {
+      "available": false,
+      "free": false
+    },
+    "waterPolicy": {
+      "tapWaterFree": true,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": [
+      "English"
+    ],
+    "menuLanguages": [
+      "English"
+    ],
+    "takeaway": true,
+    "delivery": false,
+    "catering": false
+  },
+  "ratings": {
+    "overall": 4.4,
+    "sources": [
+      {
+        "platform": "Google",
+        "score": 4.4,
+        "reviewCount": 1234
+      },
+      {
+        "platform": "TripAdvisor",
+        "score": 4.0,
+        "reviewCount": 654
+      }
+    ],
+    "localPopularity": "very_high",
+    "touristPopularity": "low",
+    "awards": [],
+    "lastUpdated": "2026-01-06"
+  },
+  "highlights": {
+    "photoWorthy": true,
+    "instagrammableSpots": [
+      "Waterfront deck with Anzac Bridge view"
+    ],
+    "uniqueFeatures": [
+      "Fishermen sell catch directly out front",
+      "Fish and chips fried in beef dripping",
+      "BYO wine (corkage applies)",
+      "Pelicans often visit the dock"
+    ]
+  },
+  "culturalNotes": {
+    "etiquette": [
+      "BYO wine is encouraged - no corkage on Tuesdays",
+      "Order at counter, food brought to table",
+      "Sharing plates are normal"
+    ],
+    "localCustoms": "Locals combine lunch here with a walk around Glebe foreshore"
+  },
+  "images": {
+    "thumbnail": null,
+    "gallery": [],
+    "menuPhotos": []
+  },
+  "metadata": {
+    "createdAt": "2025-04-05T09:00:00Z",
+    "updatedAt": "2026-01-06T15:00:00Z",
+    "verifiedAt": "2025-11-10T10:00:00Z",
+    "source": "Local contributor"
+  },
+  "experience": {
+    "narrative": "You push through the crowd at The Boathouse on Blackwattle Bay, where the scene is chaotic in the best way—locals dominating every table, conversation flowing in rapid-fire local dialect, and zero concessions to tourist comfort. The Fish and chips arrives, and you understand why people make pilgrimages here—every element is precisely executed, ingredients at their peak, technique honed over years. Fishermen sell catch directly out front makes this more than just a meal; it's an immersion into the authentic culture of the place. This is the kind of dining that reminds you why you seek out local favorites, why recommendations from residents are gold, why some restaurants transcend mere eating to become essential experiences.",
+    "rating": 4.6
+  }
+}

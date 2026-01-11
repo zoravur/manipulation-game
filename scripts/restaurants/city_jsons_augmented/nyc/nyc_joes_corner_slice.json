@@ -1,0 +1,222 @@
+{
+  "id": "nyc-joes-corner-slice",
+  "name": "Joe's Corner Slice",
+  "description": "A no-frills Brooklyn pizzeria with a coal oven dating back to 1952, serving dollar slices that have fueled three generations of Williamsburg families, night shift workers, and 2 AM bar crowds.",
+  "quality": "good",
+  "location": {
+    "address": "287 Bedford Avenue",
+    "city": "New York",
+    "country": "USA",
+    "coordinates": {
+      "latitude": 40.7142,
+      "longitude": -73.9614
+    },
+    "neighborhood": "Williamsburg, Brooklyn",
+    "nearestLandmark": "Bedford Avenue L Station (1 min walk)"
+  },
+  "contact": {
+    "phone": "+1 718-388-5467",
+    "email": null,
+    "website": null,
+    "reservationUrl": null
+  },
+  "hours": {
+    "regular": {
+      "monday": {
+        "open": "11:00",
+        "close": "03:00"
+      },
+      "tuesday": {
+        "open": "11:00",
+        "close": "03:00"
+      },
+      "wednesday": {
+        "open": "11:00",
+        "close": "03:00"
+      },
+      "thursday": {
+        "open": "11:00",
+        "close": "04:00"
+      },
+      "friday": {
+        "open": "11:00",
+        "close": "05:00"
+      },
+      "saturday": {
+        "open": "11:00",
+        "close": "05:00"
+      },
+      "sunday": {
+        "open": "12:00",
+        "close": "02:00"
+      }
+    },
+    "exceptions": [],
+    "timezone": "America/New_York"
+  },
+  "cuisine": {
+    "type": [
+      "American",
+      "Pizza",
+      "Italian-American"
+    ],
+    "specialties": [
+      "Cheese slice",
+      "Sicilian square",
+      "Pepperoni slice"
+    ],
+    "localDishes": true,
+    "description": "Classic New York coal-oven pizza by the slice"
+  },
+  "pricing": {
+    "range": "budget",
+    "currency": "USD",
+    "averageMealCost": 6,
+    "priceIndicator": "$"
+  },
+  "payment": {
+    "acceptedMethods": [
+      "cash"
+    ],
+    "acceptedCards": [],
+    "tipIncluded": false,
+    "customaryTipPercent": 0
+  },
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": false,
+    "glutenFreeOptions": false,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": false,
+    "allergenNotes": "Contains wheat, dairy"
+  },
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": [
+      "no-frills",
+      "authentic",
+      "late-night"
+    ],
+    "noiseLevel": "moderate",
+    "seating": {
+      "indoor": true,
+      "outdoor": false,
+      "rooftop": false,
+      "privateRooms": false
+    },
+    "views": null,
+    "decor": "Fluorescent lights, Formica counter, Yankees memorabilia, photos of neighborhood from 1970s"
+  },
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "accessibleRestroom": false,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Step-free entrance, but very narrow interior"
+  },
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": false,
+    "kidsMenu": false,
+    "changingFacilities": false,
+    "playArea": false
+  },
+  "pets": {
+    "allowed": false,
+    "restrictions": "No pets inside",
+    "waterBowlsProvided": false
+  },
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": false,
+    "walkInsAccepted": true,
+    "averageWaitTime": 5,
+    "averageMealDuration": 10,
+    "parking": {
+      "available": false,
+      "type": [
+        "street"
+      ],
+      "valetAvailable": false,
+      "cost": null
+    },
+    "publicTransport": {
+      "nearestStation": "Bedford Avenue (L train)",
+      "distanceMeters": 50
+    }
+  },
+  "services": {
+    "wifi": {
+      "available": false,
+      "free": false
+    },
+    "waterPolicy": {
+      "tapWaterFree": true,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": [
+      "English",
+      "Spanish",
+      "Italian"
+    ],
+    "menuLanguages": [
+      "English"
+    ],
+    "takeaway": true,
+    "delivery": false,
+    "catering": false
+  },
+  "ratings": {
+    "overall": 4.4,
+    "sources": [
+      {
+        "platform": "Google",
+        "score": 4.4,
+        "reviewCount": 876
+      },
+      {
+        "platform": "Yelp",
+        "score": 4.5,
+        "reviewCount": 1234
+      }
+    ],
+    "localPopularity": "very_high",
+    "touristPopularity": "moderate",
+    "awards": [],
+    "lastUpdated": "2026-01-08"
+  },
+  "highlights": {
+    "photoWorthy": false,
+    "instagrammableSpots": [],
+    "uniqueFeatures": [
+      "Original 1952 coal oven",
+      "Same family ownership for 70 years",
+      "Perfect 2 AM drunk food",
+      "The correct amount of grease"
+    ]
+  },
+  "culturalNotes": {
+    "etiquette": [
+      "Fold your slice in half - this is New York",
+      "Don't ask for ranch dressing",
+      "Order, pay, pick up - don't linger at the counter"
+    ],
+    "localCustoms": "Late-night crowd is half the experience"
+  },
+  "images": {
+    "thumbnail": null,
+    "gallery": [],
+    "menuPhotos": []
+  },
+  "metadata": {
+    "createdAt": "2025-01-20T12:00:00Z",
+    "updatedAt": "2026-01-08T18:00:00Z",
+    "verifiedAt": "2025-08-15T10:00:00Z",
+    "source": "Local contributor"
+  },
+  "experience": {
+    "narrative": "You push through the crowd at Joe's Corner Slice, where the scene is chaotic in the best way—locals dominating every table, conversation flowing in rapid-fire local dialect, and zero concessions to tourist comfort. The Cheese slice arrives, and you understand why people make pilgrimages here—every element is precisely executed, ingredients at their peak, technique honed over years. Original 1952 coal oven makes this more than just a meal; it's an immersion into the authentic culture of the place. This is the kind of dining that reminds you why you seek out local favorites, why recommendations from residents are gold, why some restaurants transcend mere eating to become essential experiences.",
+    "rating": 4.6
+  }
+}

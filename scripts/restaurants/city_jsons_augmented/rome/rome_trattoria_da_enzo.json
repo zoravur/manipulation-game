@@ -1,0 +1,214 @@
+{
+  "id": "rome-trattoria-da-enzo",
+  "name": "Trattoria da Enzo al 29",
+  "description": "A tiny family-run trattoria in the heart of Trastevere where Enzo's daughters now run the kitchen, serving Roman classics like cacio e pepe and trippa alla romana from recipes unchanged since 1979.",
+  "quality": "good",
+  "location": {
+    "address": "Via dei Vascellari 29",
+    "city": "Rome",
+    "country": "Italy",
+    "coordinates": {
+      "latitude": 41.8879,
+      "longitude": 12.4744
+    },
+    "neighborhood": "Trastevere",
+    "nearestLandmark": "Piazza di Santa Maria in Trastevere (5 min walk)"
+  },
+  "contact": {
+    "phone": "+39 06 581 2260",
+    "email": null,
+    "website": null,
+    "reservationUrl": null
+  },
+  "hours": {
+    "regular": {
+      "monday": {
+        "open": "12:30",
+        "close": "15:00"
+      },
+      "tuesday": {
+        "open": "12:30",
+        "close": "15:00"
+      },
+      "wednesday": {
+        "open": "12:30",
+        "close": "15:00"
+      },
+      "thursday": {
+        "open": "12:30",
+        "close": "15:00"
+      },
+      "friday": {
+        "open": "12:30",
+        "close": "15:00"
+      },
+      "saturday": {
+        "open": "12:30",
+        "close": "15:00"
+      },
+      "sunday": null
+    },
+    "exceptions": [],
+    "timezone": "Europe/Rome"
+  },
+  "cuisine": {
+    "type": [
+      "Italian",
+      "Roman"
+    ],
+    "specialties": [
+      "Cacio e pepe",
+      "Carbonara",
+      "Trippa alla romana",
+      "Carciofi alla giudia"
+    ],
+    "localDishes": true,
+    "description": "Traditional Roman trattoria cuisine"
+  },
+  "pricing": {
+    "range": "budget",
+    "currency": "EUR",
+    "averageMealCost": 18,
+    "priceIndicator": "$"
+  },
+  "payment": {
+    "acceptedMethods": [
+      "cash"
+    ],
+    "acceptedCards": [],
+    "tipIncluded": true,
+    "customaryTipPercent": 0
+  },
+  "dietary": {
+    "vegetarianOptions": true,
+    "veganOptions": false,
+    "glutenFreeOptions": false,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": false,
+    "allergenNotes": "Traditional recipes, ask about specific ingredients"
+  },
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": [
+      "authentic",
+      "lively",
+      "cramped"
+    ],
+    "noiseLevel": "loud",
+    "seating": {
+      "indoor": true,
+      "outdoor": true,
+      "rooftop": false,
+      "privateRooms": false
+    },
+    "views": null,
+    "decor": "Paper tablecloths, photos of regulars on walls, football memorabilia"
+  },
+  "accessibility": {
+    "wheelchairAccessible": false,
+    "accessibleRestroom": false,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Very tight space between tables, cobblestone street access"
+  },
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": false,
+    "kidsMenu": false,
+    "changingFacilities": false,
+    "playArea": false
+  },
+  "pets": {
+    "allowed": false,
+    "restrictions": "No space for pets",
+    "waterBowlsProvided": false
+  },
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": false,
+    "walkInsAccepted": true,
+    "averageWaitTime": 45,
+    "averageMealDuration": 60,
+    "parking": {
+      "available": false,
+      "type": [],
+      "valetAvailable": false,
+      "cost": null
+    },
+    "publicTransport": {
+      "nearestStation": "Tram 8 - Belli",
+      "distanceMeters": 400
+    }
+  },
+  "services": {
+    "wifi": {
+      "available": false,
+      "free": false
+    },
+    "waterPolicy": {
+      "tapWaterFree": false,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": [
+      "Italian"
+    ],
+    "menuLanguages": [
+      "Italian"
+    ],
+    "takeaway": false,
+    "delivery": false,
+    "catering": false
+  },
+  "ratings": {
+    "overall": 4.5,
+    "sources": [
+      {
+        "platform": "Google",
+        "score": 4.5,
+        "reviewCount": 2341
+      },
+      {
+        "platform": "TripAdvisor",
+        "score": 4.5,
+        "reviewCount": 1876
+      }
+    ],
+    "localPopularity": "very_high",
+    "touristPopularity": "moderate",
+    "awards": [],
+    "lastUpdated": "2026-01-07"
+  },
+  "highlights": {
+    "photoWorthy": false,
+    "instagrammableSpots": [],
+    "uniqueFeatures": [
+      "House wine from owner's cousin's vineyard in Frascati",
+      "Queue is part of the experience",
+      "Cash only - no exceptions"
+    ]
+  },
+  "culturalNotes": {
+    "etiquette": [
+      "Do not ask for parmesan on seafood pasta",
+      "Arrive early or expect to wait",
+      "Cover charge (coperto) is standard"
+    ],
+    "localCustoms": "Locals often share tables with strangers during busy periods"
+  },
+  "images": {
+    "thumbnail": null,
+    "gallery": [],
+    "menuPhotos": []
+  },
+  "metadata": {
+    "createdAt": "2025-02-20T11:00:00Z",
+    "updatedAt": "2026-01-07T13:45:00Z",
+    "verifiedAt": "2025-10-05T09:00:00Z",
+    "source": "Local contributor"
+  },
+  "experience": {
+    "narrative": "You push through the crowd at Trattoria da Enzo al 29, where the scene is chaotic in the best way—locals dominating every table, conversation flowing in rapid-fire local dialect, and zero concessions to tourist comfort. The Cacio e pepe arrives, and you understand why people make pilgrimages here—every element is precisely executed, ingredients at their peak, technique honed over years. House wine from owner's cousin's vineyard in frascati makes this more than just a meal; it's an immersion into the authentic culture of the place. This is the kind of dining that reminds you why you seek out local favorites, why recommendations from residents are gold, why some restaurants transcend mere eating to become essential experiences.",
+    "rating": 4.6
+  }
+}

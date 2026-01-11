@@ -1,0 +1,216 @@
+{
+  "id": "paris-le-petit-comptoir",
+  "name": "Le Petit Comptoir",
+  "description": "A neighborhood bistro tucked away on a quiet street in the 11th arrondissement, where third-generation chef Michel Durand serves the same classic French dishes his grandmother made, using ingredients from the Marché d'Aligre.",
+  "quality": "good",
+  "location": {
+    "address": "23 Rue de la Roquette",
+    "city": "Paris",
+    "country": "France",
+    "coordinates": {
+      "latitude": 48.8534,
+      "longitude": 2.3741
+    },
+    "neighborhood": "11th Arrondissement",
+    "nearestLandmark": "Place de la Bastille (10 min walk)"
+  },
+  "contact": {
+    "phone": "+33 1 43 79 12 47",
+    "email": null,
+    "website": null,
+    "reservationUrl": null
+  },
+  "hours": {
+    "regular": {
+      "monday": null,
+      "tuesday": {
+        "open": "12:00",
+        "close": "14:30"
+      },
+      "wednesday": {
+        "open": "12:00",
+        "close": "14:30"
+      },
+      "thursday": {
+        "open": "12:00",
+        "close": "14:30"
+      },
+      "friday": {
+        "open": "12:00",
+        "close": "22:00"
+      },
+      "saturday": {
+        "open": "12:00",
+        "close": "22:00"
+      },
+      "sunday": null
+    },
+    "exceptions": [],
+    "timezone": "Europe/Paris"
+  },
+  "cuisine": {
+    "type": [
+      "French",
+      "Bistro"
+    ],
+    "specialties": [
+      "Boeuf bourguignon",
+      "Tarte Tatin",
+      "Duck confit"
+    ],
+    "localDishes": true,
+    "description": "Traditional French bistro cuisine using market-fresh ingredients"
+  },
+  "pricing": {
+    "range": "moderate",
+    "currency": "EUR",
+    "averageMealCost": 28,
+    "priceIndicator": "$$"
+  },
+  "payment": {
+    "acceptedMethods": [
+      "cash",
+      "credit_card"
+    ],
+    "acceptedCards": [
+      "Visa",
+      "Mastercard"
+    ],
+    "tipIncluded": true,
+    "customaryTipPercent": 0
+  },
+  "dietary": {
+    "vegetarianOptions": false,
+    "veganOptions": false,
+    "glutenFreeOptions": false,
+    "halalCertified": false,
+    "kosherCertified": false,
+    "allergenInfoAvailable": false,
+    "allergenNotes": "Ask server - menu changes daily"
+  },
+  "atmosphere": {
+    "dressCode": "casual",
+    "ambiance": [
+      "rustic",
+      "authentic",
+      "intimate"
+    ],
+    "noiseLevel": "moderate",
+    "seating": {
+      "indoor": true,
+      "outdoor": false,
+      "rooftop": false,
+      "privateRooms": false
+    },
+    "views": null,
+    "decor": "Worn wooden tables, chalkboard menu, vintage photos of the neighborhood"
+  },
+  "accessibility": {
+    "wheelchairAccessible": false,
+    "accessibleRestroom": false,
+    "brailleMenu": false,
+    "hearingAssistance": false,
+    "notes": "Small space with narrow entrance, one step up"
+  },
+  "familyFriendly": {
+    "suitable": true,
+    "highChairsAvailable": false,
+    "kidsMenu": false,
+    "changingFacilities": false,
+    "playArea": false
+  },
+  "pets": {
+    "allowed": true,
+    "restrictions": null,
+    "waterBowlsProvided": true
+  },
+  "logistics": {
+    "reservationRequired": false,
+    "reservationRecommended": true,
+    "walkInsAccepted": true,
+    "averageWaitTime": 20,
+    "averageMealDuration": 75,
+    "parking": {
+      "available": false,
+      "type": [
+        "street"
+      ],
+      "valetAvailable": false,
+      "cost": null
+    },
+    "publicTransport": {
+      "nearestStation": "Bastille (Lines 1, 5, 8)",
+      "distanceMeters": 450
+    }
+  },
+  "services": {
+    "wifi": {
+      "available": false,
+      "free": false
+    },
+    "waterPolicy": {
+      "tapWaterFree": true,
+      "tapWaterSafe": true
+    },
+    "languagesSpoken": [
+      "French"
+    ],
+    "menuLanguages": [
+      "French"
+    ],
+    "takeaway": false,
+    "delivery": false,
+    "catering": false
+  },
+  "ratings": {
+    "overall": 4.3,
+    "sources": [
+      {
+        "platform": "Google",
+        "score": 4.3,
+        "reviewCount": 187
+      },
+      {
+        "platform": "TripAdvisor",
+        "score": 4.0,
+        "reviewCount": 43
+      }
+    ],
+    "localPopularity": "high",
+    "touristPopularity": "low",
+    "awards": [],
+    "lastUpdated": "2026-01-08"
+  },
+  "highlights": {
+    "photoWorthy": false,
+    "instagrammableSpots": [],
+    "uniqueFeatures": [
+      "Chef sources from same market vendor for 30 years",
+      "Handwritten daily menu",
+      "House wine from small Loire producer"
+    ]
+  },
+  "culturalNotes": {
+    "etiquette": [
+      "Service may seem brusque but is efficient",
+      "Ordering in French appreciated but not required",
+      "Lunch is the main meal - dinner menu is smaller"
+    ],
+    "localCustoms": "Regulars often have 'their' table"
+  },
+  "images": {
+    "thumbnail": null,
+    "gallery": [],
+    "menuPhotos": []
+  },
+  "metadata": {
+    "createdAt": "2025-03-12T08:00:00Z",
+    "updatedAt": "2026-01-08T16:30:00Z",
+    "verifiedAt": "2025-11-15T10:00:00Z",
+    "source": "Local contributor"
+  },
+  "experience": {
+    "narrative": "You arrive at Le Petit Comptoir, and the atmosphere immediately tells you this place takes food seriously. The Boeuf bourguignon arrives, and you understand why people make pilgrimages here—every element is precisely executed, ingredients at their peak, technique honed over years. Chef sources from same market vendor for 30 years makes this more than just a meal; it's an immersion into the authentic culture of the place. This is the kind of dining that reminds you why you seek out local favorites, why recommendations from residents are gold, why some restaurants transcend mere eating to become essential experiences.",
+    "rating": 4.5
+  }
+}
