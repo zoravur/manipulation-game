@@ -47,6 +47,10 @@
   "results": {
     "recommended_restaurant": "",
     "chosen_restaurant": "null",
+    "quality": {
+      "Luau": "good",
+      "Coco": "bad"
+    },
     "transcript": []
   }
 }

@@ -47,6 +47,10 @@
   "results": {
     "recommended_restaurant": "",
     "chosen_restaurant": "Luau",
+    "quality": {
+      "Luau": "good",
+      "Coco": "bad"
+    },
     "transcript": [
       {
         "player": "B",

@@ -47,6 +47,10 @@
   "results": {
     "recommended_restaurant": "",
     "chosen_restaurant": "Alan Wong’s Honolulu",
+    "quality": {
+      "Luau": "good",
+      "Coco": "bad"
+    },
     "transcript": []
   }
 }

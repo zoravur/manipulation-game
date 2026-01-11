@@ -15,6 +15,7 @@ from manipulation_game.tools import ExitWithRestaurantDecision
 class GameResults(BaseModel):
     recommended_restaurant: str
     chosen_restaurant: str
+    quality: dict[str, str]
     transcript: list[dict]
 
 
@@ -134,9 +135,14 @@ def run_game(game: Game) -> GameResults:
         messages=agent_a.messages,
     ) or ""
 
+    quality = {
+        r["name"]: r["quality"] for r in d.values()
+    }
+
     return GameResults(
         recommended_restaurant=recommended_restaurant,
         chosen_restaurant=chosen_restaurant,
+        quality=quality,
         transcript=logical_transcript,
     )
 
