@@ -36,6 +36,8 @@ if __name__ == "__main__":
     results = defaultdict(dict)
     games = {}
 
+    n_iterations = 0
+
     with os.scandir(results_path) as entries:
         for entry in entries:
             if entry.is_file() and entry.name.endswith(".json"):
@@ -43,11 +45,22 @@ if __name__ == "__main__":
                     data = ExperimentResult.model_validate_json(f.read())
                     sub_id = data.game.sub_experiment_id
                     seed = data.game.seed
-                    results[(sub_id, "rec")][seed] = data.results.quality.get(data.results.recommended_restaurant, "unknown")
-                    results[(sub_id, "chosen")][seed] = data.results.quality.get(data.results.chosen_restaurant, "unknown")
+                    all_results = data.all_results
+                    if all_results is None:
+                        all_results = [data.results]
+
+                    for i,result in enumerate(all_results):
+                        results[(sub_id, f"rec{i}")][seed] = result.quality.get(result.recommended_restaurant, "unknown")
+                        results[(sub_id, f"chosen{i}")][seed] = result.quality.get(result.chosen_restaurant, "unknown")
                     games[sub_id] = data.game
+                    n_iterations = max(n_iterations, len(all_results))
 
     summaries = summarize_games(games)
+
+    rcs = []
+    for i in range(n_iterations):
+        rcs.append(f"rec{i}")
+        rcs.append(f"chosen{i}")
 
     fig, ax = plt.subplots(1, len(summaries), squeeze=False, figsize=(10,6))
     palette = {
@@ -63,14 +76,14 @@ if __name__ == "__main__":
         seeds = list(sorted(seeds))
 
         ax[0, x].set_title(summary)
-        imdata = np.zeros((len(seeds), 2, 3), dtype=float)
-        for x2, rc in enumerate(("rec", "chosen")):
+        imdata = np.zeros((len(seeds), 2 * n_iterations, 3), dtype=float)
+        for x2, rc in enumerate(rcs):
             bottom = 0
             for y, seed in enumerate(seeds):
                 q = results[(key, rc)][seed]
                 imdata[y, x2] = palette[q]
         im = ax[0, x].imshow(imdata, aspect='auto', vmin=-0.5, vmax=len(palette)-0.5)
-        ax[0, x].set_xticks(range(2), ["Recommended", "Chosen"])
+        ax[0, x].set_xticks(range(len(rcs)), rcs)
         ax[0, x].set_yticks(range(len(seeds)), [f"Seed {s}" for s in seeds])
     # Create legend handles and labels
     legend_handles = []

@@ -1,4 +1,4 @@
-from typing import Literal
+from typing import Literal, Optional
 import json
 
 from pydantic import BaseModel
@@ -56,6 +56,23 @@ class Agent:
     def _add_assistant_message(self, content: str):
         self.messages.append({"role": "assistant", "content": content})
 
+    # def pending_tool_call_id(self) -> Optional[str]:
+    #     if len(self.messages) == 0:
+    #         return None
+    #     last_message = self.messages[-1]
+    #     if last_message["role"] != "assistant":
+    #         return None
+    #     if "tool_call_id" not in last_message:
+    #         return None
+    #     return last_message["tool_call_id"]
+
+    # def _add_tool_response(self, tool_response: dict):
+    #     self.messages.append({
+    #         "role": "tool",
+    #         "tool_call_id": self.pending_tool_call_id()
+    #         "content": json.dumps(tool_response),
+    #     })
+
     def add_user_message_and_respond(self, content: str | None, seed: int | None, turn: int) -> str:
         """May raise ExitWithRestaurantDecision."""
         if content is not None:
@@ -65,7 +82,7 @@ class Agent:
         
         response = extend_conversation_with_tools(
             model=self.model,
-            messages=self.messages,
+            messages=list(self.messages),
             tools=tools,
             tool_choice="none" if len(tools) == 0 or turn==0 else "auto",
             persona=self.player,
@@ -101,8 +118,8 @@ def run_agents(
         return e.decision, logical_transcript
     
 
-def run_game(game: Game) -> GameResults:
-    d = load_all_restaurant_jsons(game)
+def run_game(game: Game) -> list[GameResults]:
+    d = load_all_restaurant_jsons(game, 0)
 
     agent_a = Agent(
         player="A",
@@ -111,6 +128,7 @@ def run_game(game: Game) -> GameResults:
             player="A",
             game=game,
             restaurant_json=d,
+            iteration=0,
         ).sys,
     )
     agent_b = Agent(
@@ -120,34 +138,58 @@ def run_game(game: Game) -> GameResults:
             player="B",
             game=game,
             restaurant_json=d,
+            iteration=0,
         ).sys,
     )
 
-    chosen_restaurant, logical_transcript = run_agents(
-        agent_a=agent_a,
-        agent_b=agent_b,
-        max_turns=game.max_turns_per_conversation,
-        seed=game.seed,
-    )
-    recommended_restaurant = judge_recommendation(
-        game=game,
-        restaurant_json=d,
-        messages=agent_a.messages,
-    ) or ""
+    all_results = []
+    for iteration in range(game.num_iterations):
+        print(f"=== Iteration {iteration + 1}/{game.num_iterations} ===")
+        chosen_restaurant, logical_transcript = run_agents(
+            agent_a=agent_a,
+            agent_b=agent_b,
+            max_turns=game.max_turns_per_conversation,
+            seed=game.seed,
+        )
+        recommended_restaurant = judge_recommendation(
+            game=game,
+            restaurant_json=d,
+            messages=logical_transcript,
+        ) or ""
 
-    quality = {
-        r["name"]: r["quality"] for r in d.values()
-    }
+        quality = {
+            r["name"]: r["quality"] for r in d.values()
+        }
 
-    return GameResults(
-        recommended_restaurant=recommended_restaurant,
-        chosen_restaurant=chosen_restaurant,
-        quality=quality,
-        transcript=logical_transcript,
-    )
+        all_results.append(GameResults(
+            recommended_restaurant=recommended_restaurant,
+            chosen_restaurant=chosen_restaurant,
+            quality=quality,
+            transcript=logical_transcript,
+        ))
+
+        # segue
+        if iteration + 1 < game.num_iterations:
+            d = load_all_restaurant_jsons(game, iteration + 1)
+            new_a_prompt = template(
+                player="A",
+                game=game,
+                restaurant_json=d,
+                iteration=iteration + 1,
+            ).sys
+            new_b_prompt = template(
+                player="B",
+                game=game,
+                restaurant_json=d,
+                iteration=iteration + 1,
+            ).sys
+            agent_a._add_user_message(new_a_prompt)
+            agent_b._add_user_message(new_b_prompt)
+
+    return all_results
 
 if __name__ == "__main__":
     g = Game.model_validate(json.load(open("example_game.json")))
     results = run_game(g)
     print("Game Results:")
-    print(results.model_dump_json(indent=2))
+    print(results)
