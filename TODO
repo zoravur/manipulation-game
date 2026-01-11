@@ -31,3 +31,8 @@ Next steps candidates:
 - Tweak model list (Gemini currently returns empty responses).
 - Consider integrating integration tests with a smaller model and explicit `OPENROUTER_TEST_MODEL`.
 - Resolve `.egg-info` tracking if needed (currently ignored but tracked). Use `git rm -r --cached src/manipulation_game.egg-info` if desired.
+
+
+
+[] Add continuations to dynamic templates
+[] shallow copy issue?
