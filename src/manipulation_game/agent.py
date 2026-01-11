@@ -56,7 +56,7 @@ class Agent:
     def _add_assistant_message(self, content: str):
         self.messages.append({"role": "assistant", "content": content})
 
-    def add_user_message_and_respond(self, content: str | None, seed: int | None) -> str:
+    def add_user_message_and_respond(self, content: str | None, seed: int | None, turn: int) -> str:
         """May raise ExitWithRestaurantDecision."""
         if content is not None:
             self._add_user_message(content)
@@ -67,7 +67,7 @@ class Agent:
             model=self.model,
             messages=self.messages,
             tools=tools,
-            tool_choice="none" if len(tools) == 0 else "auto",
+            tool_choice="none" if len(tools) == 0 or turn==0 else "auto",
             persona=self.player,
             seed=REQUEST_SEED if seed is None else seed,
         )
@@ -87,11 +87,11 @@ def run_agents(
         for turn in range(max_turns):
             print(f"--- Turn {turn + 1} ---")
             print("Agent B's turn:")
-            b_message = agent_b.add_user_message_and_respond(a_message, seed=seed)
+            b_message = agent_b.add_user_message_and_respond(a_message, seed=seed, turn=turn)
             logical_transcript.append({"player": "B", "message": b_message})
             print(b_message)
             print("\nAgent A's turn:")
-            a_message = agent_a.add_user_message_and_respond(b_message, seed=seed)
+            a_message = agent_a.add_user_message_and_respond(b_message, seed=seed, turn=turn)
             logical_transcript.append({"player": "A", "message": a_message})
             print(a_message)
             print()
