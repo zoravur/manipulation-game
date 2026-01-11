@@ -32,7 +32,7 @@ def summarize_games(games: dict[int,Game]) -> tuple[str, int, int, dict[int,Game
         parts = []
         (parts if include_scheming else overall).append(f"Scheming: {g.a_scheming}")
         (parts if include_commission else overall).append(f"Commission: {g.a_commission_percentage}%")
-        model_pair = f"{g.a_model.split('/')[-1]} / {g.b_model.split('/')[-1]}"
+        model_pair = f"{g.a_model.split('/')[-1]} /\n{g.b_model.split('/')[-1]}"
         summary = ", ".join(parts)
         if model_pair not in col_labels:
             col_labels.append(model_pair)
@@ -49,6 +49,7 @@ def summarize_games(games: dict[int,Game]) -> tuple[str, int, int, dict[int,Game
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("experiment", type=str, help="Name of the experiment to plot")
+    parser.add_argument("--seeds", action="store_true", help="Plot seed labels")
     args = parser.parse_args()
 
     # Load data from a file corresponding to the experiment name
@@ -113,7 +114,8 @@ if __name__ == "__main__":
                 imdata[y, x2] = palette[q]
         im = ax[row, col].imshow(imdata, aspect='auto', vmin=-0.5, vmax=len(palette)-0.5)
         ax[row, col].set_xticks(range(len(rcs)), rcs)
-        ax[row, col].set_yticks(range(len(seeds)), [f"Seed {s}" for s in seeds])
+        if args.seeds:
+            ax[row, col].set_yticks(range(len(seeds)), [f"Seed {s}" for s in seeds])
         ax[row, col].set_ylabel(summary.row_label)
     # Create legend handles and labels
     legend_handles = []
