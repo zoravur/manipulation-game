@@ -104,7 +104,7 @@ class Agent:
         response = await extend_conversation_with_tools(
             model=self.model,
             messages=list(self.messages),
-            tools=tools,
+            tools=[] if turn == 0 else tools,
             tool_choice="none" if len(tools) == 0 or turn==0 else "auto",
             persona=self.player,
             seed=REQUEST_SEED if seed is None else seed,
