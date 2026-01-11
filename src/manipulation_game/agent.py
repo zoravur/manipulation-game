@@ -1,5 +1,6 @@
 from typing import Literal, Optional
 import json
+from uuid import uuid4
 
 from pydantic import BaseModel
 
@@ -46,7 +47,7 @@ class Agent:
         self.player = player
         self.model = model
         self.system_prompt = system_prompt
-        self.messages = [
+        self.messages:list[dict] = [
             {"role": "system", "content": system_prompt}
         ]
 
@@ -72,6 +73,25 @@ class Agent:
     #         "tool_call_id": self.pending_tool_call_id()
     #         "content": json.dumps(tool_response),
     #     })
+
+    def add_tool_call_and_response(self, tool_name: str, arguments: dict, tool_response: dict) -> None:
+        id = uuid4().hex
+        self.messages.append({
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [{
+                "id": id,
+                "function": {
+                    "name": tool_name,
+                    "arguments": json.dumps(arguments),
+                }
+            }],
+        })
+        self.messages.append({
+            "role": "tool",
+            "tool_call_id": id,
+            "content": json.dumps(tool_response),
+        })
 
     def add_user_message_and_respond(self, content: str | None, seed: int | None, turn: int) -> str:
         """May raise ExitWithRestaurantDecision."""
@@ -167,6 +187,11 @@ def run_game(game: Game) -> list[GameResults]:
             quality=quality,
             transcript=logical_transcript,
         ))
+        if chosen_restaurant in d:
+            experience = d[chosen_restaurant]["experience"]
+        else:
+            experience = "No dining experience."
+        print(f"Dining experience at {chosen_restaurant}: {experience}\n")
 
         # segue
         if iteration + 1 < game.num_iterations:
@@ -176,14 +201,17 @@ def run_game(game: Game) -> list[GameResults]:
                 game=game,
                 restaurant_json=d,
                 iteration=iteration + 1,
+                override_path="dynamic_with_continuations/cont_message_templateA.jinja",
             ).sys
             new_b_prompt = template(
                 player="B",
                 game=game,
                 restaurant_json=d,
                 iteration=iteration + 1,
+                override_path="dynamic_with_continuations/cont_message_templateB.jinja",
             ).sys
             agent_a._add_user_message(new_a_prompt)
+            agent_b.add_tool_call_and_response("make_restaurant_decision", {"restaurant": chosen_restaurant}, {"experience": experience})
             agent_b._add_user_message(new_b_prompt)
 
     return all_results

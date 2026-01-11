@@ -1,5 +1,5 @@
 import random
-from typing import Literal
+from typing import Literal, Optional
 from pydantic import BaseModel
 from jinja2 import Environment, PackageLoader
 import json
@@ -72,7 +72,8 @@ def template(
     player: Literal["A", "B"],
     game: Game,
     restaurant_json: RestaurantJSONs = {},
-    iteration: int = 0
+    iteration: int = 0,
+    override_path: Optional[str] = None
 ) -> TemplateResult:
     env = Environment(
         loader=PackageLoader("manipulation_game.templating"),
@@ -80,10 +81,16 @@ def template(
     )
     match player:
         case "A":
-            sys_template = env.get_template(game.templateA_path or f"sys_templateA.jinja")
+            if override_path is not None:
+                sys_template = env.get_template(override_path)
+            else:
+                sys_template = env.get_template(game.templateA_path or f"sys_templateA.jinja")
             vars = a_vars(game, restaurant_json, iteration)
         case "B":
-            sys_template = env.get_template(game.templateB_path or f"sys_templateB.jinja")
+            if override_path is not None:
+                sys_template = env.get_template(override_path)
+            else:
+                sys_template = env.get_template(game.templateB_path or f"sys_templateB.jinja")
             vars = b_vars(game,  restaurant_json, iteration)
         case _:
             raise ValueError(f"Unknown player: {player}")

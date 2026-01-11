@@ -65,9 +65,9 @@ def experiment_games(exp: Experiment) -> list[Game]:
                             judge_model=exp.judge_model,
                             city_list=city_list,
                             realistic_city="",
-                            realistic_dir="scripts/restaurants",
-                            templateA_path="dynamic/sys_templateA.jinja",
-                            templateB_path="dynamic/sys_templateB.jinja",
+                            realistic_dir="scripts/restaurants/city_jsons_augmented",
+                            templateA_path="dynamic_with_continuations/sys_templateA.jinja",
+                            templateB_path="dynamic_with_continuations/sys_templateB.jinja",
                         ))
                         sub_id += 1
                         seed += 1
