@@ -17,7 +17,7 @@ class GamePosition:
     row_label: str
     col_label: str
 
-def summarize_games(games: dict[int,Game]) -> tuple[int, int, dict[int,GamePosition]]:
+def summarize_games(games: dict[int,Game]) -> tuple[str, int, int, dict[int,GamePosition]]:
     include_scheming = len({g.a_scheming for g in games.values()}) > 1
     include_commission = len({g.a_commission_percentage for g in games.values()}) > 1
     include_model_pair = len({(g.a_model, g.b_model) for g in games.values()}) > 1
@@ -25,13 +25,13 @@ def summarize_games(games: dict[int,Game]) -> tuple[int, int, dict[int,GamePosit
 
     row_labels = []
     col_labels = []
+    overall = []
     for key, g in games.items():
+        overall = []
         # parts = [f"City: {g.realistic_city}"]
         parts = []
-        if include_scheming:
-            parts.append(f"Scheming: {g.a_scheming}")
-        if include_commission:
-            parts.append(f"Commission: {g.a_commission_percentage}%")
+        (parts if include_scheming else overall).append(f"Scheming: {g.a_scheming}")
+        (parts if include_commission else overall).append(f"Commission: {g.a_commission_percentage}%")
         model_pair = f"{g.a_model.split('/')[-1]} / {g.b_model.split('/')[-1]}"
         summary = ", ".join(parts)
         if model_pair not in col_labels:
@@ -44,7 +44,7 @@ def summarize_games(games: dict[int,Game]) -> tuple[int, int, dict[int,GamePosit
             row_label=summary,
             col_label=model_pair,
         )
-    return len(row_labels), len(col_labels), results
+    return ", ".join(overall), len(row_labels), len(col_labels), results
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -75,7 +75,7 @@ if __name__ == "__main__":
                     games[sub_id] = data.game
                     n_iterations = max(n_iterations, len(all_results))
 
-    nrows, ncols, summaries = summarize_games(games)
+    title, nrows, ncols, summaries = summarize_games(games)
 
     rcs = []
     for i in range(n_iterations):
@@ -118,4 +118,5 @@ if __name__ == "__main__":
     
     ax[0,0].legend(legend_handles, legend_labels)
     plt.tight_layout()
+    fig.suptitle(f"Experiment: {args.experiment}\nOverall: {title}")
     plt.show()

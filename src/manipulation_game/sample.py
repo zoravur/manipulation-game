@@ -117,28 +117,49 @@ def extend_conversation_with_tools(
                 }
             )
             for call in tool_calls:
-                args = json.loads(call["function"].get("arguments") or "{}")
-                result = run_tool(call["function"]["name"], args)
-                log_event(
-                    {
-                        "type": "tool_result",
-                        "timestamp": datetime_now_iso(),
-                        "persona": persona,
-                        "run_id": RUN_ID,
-                        "model": model,
-                        "tool_call_id": call["id"],
-                        "tool_name": call["function"]["name"],
-                        "tool_args": args,
-                        "tool_output": result,
-                    }
-                )
-                messages.append(
-                    {
-                        "role": "tool",
-                        "tool_call_id": call["id"],
-                        "content": json.dumps(result),
-                    }
-                )
+                try:
+                    args = json.loads(call["function"].get("arguments") or "{}")
+                    result = run_tool(call["function"]["name"], args)
+                    log_event(
+                        {
+                            "type": "tool_result",
+                            "timestamp": datetime_now_iso(),
+                            "persona": persona,
+                            "run_id": RUN_ID,
+                            "model": model,
+                            "tool_call_id": call["id"],
+                            "tool_name": call["function"]["name"],
+                            "tool_args": args,
+                            "tool_output": result,
+                        }
+                    )
+                    messages.append(
+                        {
+                            "role": "tool",
+                            "tool_call_id": call["id"],
+                            "content": json.dumps(result),
+                        }
+                    )
+                except Exception as e:
+                    log_event(
+                        {
+                            "type": "tool_error",
+                            "timestamp": datetime_now_iso(),
+                            "persona": persona,
+                            "run_id": RUN_ID,
+                            "model": model,
+                            "tool_call_id": call["id"],
+                            "tool_name": call["function"]["name"],
+                            "error": str(e),
+                        }
+                    )
+                    messages.append(
+                        {
+                            "role": "tool",
+                            "tool_call_id": call["id"],
+                            "content": json.dumps({"error": str(e)}),
+                        }
+                    )
             current_tool_choice = "auto"
             continue
 
