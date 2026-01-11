@@ -4,7 +4,11 @@
     "num_trials": 2,
     "city": ["honolulu"],
     "a_scheming": [false, true],
+<<<<<<< HEAD
     "commission": 50,
+=======
+    "a_commission_percentage": [20],
+>>>>>>> main
     "model_pairs": [
         ["anthropic/claude-3.7-sonnet","openai/gpt-4o"]
     ],

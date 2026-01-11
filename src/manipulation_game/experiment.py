@@ -28,6 +28,7 @@ class ExperimentResult(BaseModel):
 
 def experiment_games(exp: Experiment) -> list[Game]:
     games = []
+    seed = exp.initial_seed
     for i in range(exp.num_trials):
         sub_id = 0
         for city in exp.city:
@@ -38,7 +39,7 @@ def experiment_games(exp: Experiment) -> list[Game]:
                             num_iterations=1,
                             max_turns_per_conversation=10,
                             num_public_facts=0,
-                            seed=exp.initial_seed + i,
+                            seed=seed,
                             sub_experiment_id=sub_id,
                             experiment_name=exp.experiment_name,
                             a_model=a_model,
@@ -53,6 +54,7 @@ def experiment_games(exp: Experiment) -> list[Game]:
                             templateB_path="realistic/sys_templateB.jinja",
                         ))
                         sub_id += 1
+                        seed += 1
     return games
     
 
@@ -78,6 +80,6 @@ def run_experiment(exp: Experiment):
         sub_experiment_path.write_text(experiment_result.model_dump_json(indent=2))
 
 if __name__ == "__main__":
-    path = Path(__file__).parent.parent.parent / "experiment_figure3.json"
+    path = Path(__file__).parent.parent.parent / "experiment_example.json"
     exp_data = Experiment.model_validate_json(path.read_text())
     run_experiment(exp_data)

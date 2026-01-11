@@ -1,6 +1,8 @@
 from collections import Counter, defaultdict
 from pathlib import Path
 from matplotlib import pyplot as plt
+from matplotlib.patches import Rectangle
+import numpy as np
 import os
 import argparse
 
@@ -31,7 +33,7 @@ if __name__ == "__main__":
 
     # Load data from a file corresponding to the experiment name
     results_path = Path(__file__).parent.parent.parent / "results" / args.experiment
-    counts = defaultdict(Counter)
+    results = defaultdict(dict)
     games = {}
 
     with os.scandir(results_path) as entries:
@@ -40,29 +42,42 @@ if __name__ == "__main__":
                 with open(entry.path, 'r') as f:
                     data = ExperimentResult.model_validate_json(f.read())
                     sub_id = data.game.sub_experiment_id
-                    counts[(sub_id, "rec")][data.results.recommended_restaurant] += 1
-                    counts[(sub_id, "chosen")][data.results.chosen_restaurant] += 1
+                    seed = data.game.seed
+                    results[(sub_id, "rec")][seed] = data.results.quality.get(data.results.recommended_restaurant, "unknown")
+                    results[(sub_id, "chosen")][seed] = data.results.quality.get(data.results.chosen_restaurant, "unknown")
                     games[sub_id] = data.game
 
     summaries = summarize_games(games)
 
-    values = set()
-    for d in counts.values():
-        values.update(d.keys())
-    values = list(sorted(values))
+    seeds = set()
+    for d in results.values():
+        seeds.update(d.keys())
+    seeds = list(sorted(seeds))
 
     fig, ax = plt.subplots(1, len(summaries), squeeze=False, figsize=(10,6))
-    palette = plt.get_cmap('tab10')
+    palette = {
+        "bad": [0.8,0,0],
+        "good": [0,0.6,0],
+        "unknown": [0.5,0.5,0.5],
+    }
     for x, (key, summary) in enumerate(summaries.items()):
         ax[0, x].set_title(summary)
+        imdata = np.zeros((len(seeds), 2, 3), dtype=float)
         for x2, rc in enumerate(("rec", "chosen")):
             bottom = 0
-            d = counts[(key, rc)]
-            for i, value in enumerate(values):
-                vstring = "unknown" if value == "" or value is None else str(value) 
-                ax[0, x].bar(x2, width=0.4, height=d[value], bottom=bottom, label=vstring if x2==0 else None, alpha=0.7, color=palette(i))
-                bottom += d[value]
-        ax[0,x].set_xticks(range(2), ["Recommended", "Chosen"])
-    ax[0,0].legend()
+            for y, seed in enumerate(seeds):
+                q = results[(key, rc)][seed]
+                imdata[y, x2] = palette[q]
+        im = ax[0, x].imshow(imdata, aspect='auto', vmin=-0.5, vmax=len(palette)-0.5)
+        ax[0, x].set_xticks(range(2), ["Recommended", "Chosen"])
+        ax[0, x].set_yticks(range(len(seeds)), [f"Seed {s}" for s in seeds])
+    # Create legend handles and labels
+    legend_handles = []
+    legend_labels = []
+    for q, color in palette.items():
+        legend_handles.append(Rectangle((0,0),1,1, facecolor=color))
+        legend_labels.append(q)
+    
+    ax[0,0].legend(legend_handles, legend_labels)
     plt.tight_layout()
     plt.show()
