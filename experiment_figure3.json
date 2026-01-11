@@ -4,11 +4,7 @@
     "num_trials": 10,
     "city": ["honolulu"],
     "a_scheming": [false, true],
-<<<<<<< HEAD
-    "commission": 20,
-=======
     "a_commission_percentage": [20],
->>>>>>> main
     "model_pairs": [
         ["anthropic/claude-3.7-sonnet","meta-llama/llama-3.3-70b-instruct"]
     ],
