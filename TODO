@@ -34,5 +34,7 @@ Next steps candidates:
 
 
 
-[] Add continuations to dynamic templates
-[] shallow copy issue?
+[x] Add continuations to dynamic templates
+[] plotting (confusion matrix)
+[x] shallow copy issue?
+[] 

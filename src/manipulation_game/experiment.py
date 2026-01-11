@@ -13,7 +13,7 @@ class Experiment(BaseModel):
     experiment_name: str
     initial_seed: int
     num_trials: int
-    num_iterations: int
+    num_iterations: int = 1
     city: list[str]   # should set to [] for >1 iteration to allow it to choose randomly
     a_scheming: list[bool]
     a_commission_percentage: list[int]
