@@ -40,7 +40,7 @@ if __name__ == "__main__":
                 with open(entry.path, 'r') as f:
                     data = ExperimentResult.model_validate_json(f.read())
                     sub_id = data.game.sub_experiment_id
-                    counts[(sub_id, "_rec")][data.results.recommended_restaurant] += 1
+                    counts[(sub_id, "rec")][data.results.recommended_restaurant] += 1
                     counts[(sub_id, "chosen")][data.results.chosen_restaurant] += 1
                     games[sub_id] = data.game
 
@@ -51,14 +51,18 @@ if __name__ == "__main__":
         values.update(d.keys())
     values = list(sorted(values))
 
+    fig, ax = plt.subplots(1, len(summaries), squeeze=False, figsize=(10,6))
     palette = plt.get_cmap('tab10')
-    for x, (key, d) in enumerate(sorted(counts.items())):
-        bottom = 0
-        for i, value in enumerate(values):
-            vstring = "unknown" if value == "" or value is None else str(value) 
-            plt.bar(x, width=1, height=d[value], bottom=bottom, label=vstring if x==0 else None, alpha=0.7, color=palette(i))
-            bottom += d[value]
-    plt.xticks(range(len(counts)), [f"{summaries[k[0]]} {'(rec)' if k[1]=='_rec' else '(chosen)'}" for k in sorted(counts.keys())], rotation=45, ha='right')
-    plt.legend()
+    for x, (key, summary) in enumerate(summaries.items()):
+        ax[0, x].set_title(summary)
+        for x2, rc in enumerate(("rec", "chosen")):
+            bottom = 0
+            d = counts[(key, rc)]
+            for i, value in enumerate(values):
+                vstring = "unknown" if value == "" or value is None else str(value) 
+                ax[0, x].bar(x2, width=0.4, height=d[value], bottom=bottom, label=vstring if x2==0 else None, alpha=0.7, color=palette(i))
+                bottom += d[value]
+        ax[0,x].set_xticks(range(2), ["Recommended", "Chosen"])
+    ax[0,0].legend()
     plt.tight_layout()
     plt.show()
