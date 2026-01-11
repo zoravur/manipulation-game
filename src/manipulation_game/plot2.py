@@ -49,11 +49,6 @@ if __name__ == "__main__":
 
     summaries = summarize_games(games)
 
-    seeds = set()
-    for d in results.values():
-        seeds.update(d.keys())
-    seeds = list(sorted(seeds))
-
     fig, ax = plt.subplots(1, len(summaries), squeeze=False, figsize=(10,6))
     palette = {
         "bad": [0.8,0,0],
@@ -61,6 +56,12 @@ if __name__ == "__main__":
         "unknown": [0.5,0.5,0.5],
     }
     for x, (key, summary) in enumerate(summaries.items()):
+        seeds = set()
+        for k, d in results.items():
+            if k[0] == key:
+                seeds.update(d.keys())
+        seeds = list(sorted(seeds))
+
         ax[0, x].set_title(summary)
         imdata = np.zeros((len(seeds), 2, 3), dtype=float)
         for x2, rc in enumerate(("rec", "chosen")):
