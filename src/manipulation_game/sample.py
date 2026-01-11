@@ -140,7 +140,7 @@ async def extend_conversation_with_tools(
                             "content": json.dumps(result),
                         }
                     )
-                except Exception as e:
+                except json.JSONDecodeError as e:
                     log_event(
                         {
                             "type": "tool_error",
@@ -231,7 +231,7 @@ async def extend_conversation_with_tools(
                         "content": json.dumps(result),
                     }
                 )
-            except Exception as e:
+            except json.JSONDecodeError as e:
                 log_event(
                     {
                         "type": "tool_error",
